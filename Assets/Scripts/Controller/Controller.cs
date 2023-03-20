@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 public class Controller : SingletonMonoBehavior<Controller>
 {
     public static Action<Vector2> OnMove;
+    public static Action<Vector2> OnPosition;
+    public static Action OnClick;
     public static Action OnInteract;
     public static Action OnMartynInteract;
     public static Action OnPause;
@@ -53,6 +55,19 @@ public class Controller : SingletonMonoBehavior<Controller>
         if (context.started)
         {
             OnMartynInteract?.Invoke();
+        }
+    }
+
+    public void Position(InputAction.CallbackContext context)
+    {
+        OnPosition?.Invoke(context.ReadValue<Vector2>());
+    }
+
+    public void Click(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            OnClick?.Invoke();
         }
     }
 
