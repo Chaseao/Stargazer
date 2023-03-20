@@ -14,10 +14,9 @@ public class InteractSystem : MonoBehaviour
     private IInteractable item;
     private GameObject glowPlane;
     private Dictionary<GameObject, Boolean> objectsHit = new Dictionary<GameObject, bool>();
-    [SerializeField] private SOConversationData startingDialogue;
+    //[SerializeField] private SOConversationData startingDialogue;
     private bool hasHitItem;
     private bool hasHitItem1;
-    [SerializeField] private bool isLevel0;
     private GameObject closestItem;
 
     private void OnEnable()
@@ -32,22 +31,20 @@ public class InteractSystem : MonoBehaviour
 
     void Start()
     {
-        DialogueManager.Instance.StartDialogue(startingDialogue);
+        //DialogueManager.Instance.StartDialogue(startingDialogue);
     }
 
     void Update()
     {
-        if (Martyn.hasStartedMartynDialogue > 0) isLevel0 = false;
-        RaycastHit[] hits;
+        RaycastHit2D[] hits;
         float minDistance = 1000f;
-        hits = Physics.SphereCastAll(this.transform.position, rangeOfInteract, transform.forward, 0);
-        foreach (RaycastHit hit in hits)
+        hits = Physics2D.CircleCastAll(transform.position, rangeOfInteract, transform.up, 0);
+        Debug.DrawRay(transform.position, transform.up, Color.green);
+        foreach (RaycastHit2D hit in hits)
         {
-            if (!isLevel0)
-            {
                 if (hit.collider.gameObject.CompareTag("Item") || hit.collider.gameObject.CompareTag("Key"))
                 {
-                    hasHitItem = true;
+                hasHitItem = true;
                     if (!objectsHit.ContainsKey(hit.collider.gameObject)) objectsHit.Add(hit.collider.gameObject, false);
                     if (hit.distance < minDistance)
                     {
@@ -55,20 +52,6 @@ public class InteractSystem : MonoBehaviour
                         minDistance = hit.distance;
                     }
                 }
-            }
-            else
-            {
-                if (hit.collider.gameObject.name.Equals("Martyn"))
-                {
-                    hasHitItem = true;
-                    if (!objectsHit.ContainsKey(hit.collider.gameObject)) objectsHit.Add(hit.collider.gameObject, false);
-                    if (hit.distance < minDistance)
-                    {
-                        closestItem = hit.collider.gameObject;
-                        minDistance = hit.distance;
-                    }
-                }
-            }
         }
         if(!hasHitItem) foreach (GameObject key in objectsHit.Keys.ToList()) objectsHit[key] = false;
         else
@@ -99,13 +82,11 @@ public class InteractSystem : MonoBehaviour
 
     void Interact()
     {
-        RaycastHit[] hits;
+        RaycastHit2D[] hits;
         float minDistance = 1000f;
-        hits = Physics.SphereCastAll(this.transform.position, rangeOfInteract, transform.forward, 0);
-        foreach (RaycastHit hit in hits)
+        hits = Physics2D.CircleCastAll(transform.position, rangeOfInteract, transform.up, 0);
+        foreach (RaycastHit2D hit in hits)
         {
-            if (!isLevel0)
-            {
                 if (hit.collider.gameObject.CompareTag("Item") || hit.collider.gameObject.CompareTag("Key"))
                 {
                     hasHitItem1 = true;
@@ -115,19 +96,6 @@ public class InteractSystem : MonoBehaviour
                         minDistance = hit.distance;
                     }
                 }
-            }
-            else
-            {
-                if (hit.collider.gameObject.name.Equals("Martyn"))
-                {
-                    hasHitItem1 = true;
-                    if (hit.distance < minDistance)
-                    {
-                        item = hit.collider.gameObject.GetComponent<IInteractable>();
-                        minDistance = hit.distance;
-                    }
-                }
-            }
         }
         if (hasHitItem1)
         {
