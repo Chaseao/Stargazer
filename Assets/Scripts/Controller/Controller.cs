@@ -10,7 +10,6 @@ public class Controller : SingletonMonoBehavior<Controller>
     public static Action<Vector2> OnPosition;
     public static Action OnClick;
     public static Action OnInteract;
-    public static Action OnMartynInteract;
     public static Action OnPause;
 
     public static Action<Vector2> OnNavigateMenu;
@@ -47,14 +46,6 @@ public class Controller : SingletonMonoBehavior<Controller>
         if (context.started)
         {
             OnPause?.Invoke();
-        }
-    }
-
-    public void MartynInteract(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            OnMartynInteract?.Invoke();
         }
     }
 
