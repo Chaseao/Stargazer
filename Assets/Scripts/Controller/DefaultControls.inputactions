@@ -24,15 +24,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Martyn Interact",
-                    "type": "Button",
-                    "id": "ff3256d5-019a-4e23-9d22-352e10e17247",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Pause",
                     "type": "Button",
                     "id": "b6b61349-4087-436f-818c-19001bc83357",
@@ -80,17 +71,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6b8531f7-9457-43ea-b026-cea341cf7ea5",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Martyn Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
