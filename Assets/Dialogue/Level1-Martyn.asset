@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: Level1-Martyn
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: Level1-Martyn
+    Conversant: Martyn
+    Unlocks: N/A
+    Dialogues:
+    - WickIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: "What\u2019s on your mind?"
+    Choices:
+    - BranchText: "\u201CThoughts about the mother?\u201D"
+      isPuzzle: 0
+      Requirements:
+      - SeenNewspaper
+    - BranchText: "\u201CWow\u2026 that busted window\u2026\u201D"
+      isPuzzle: 0
+      Requirements:
+      - SeenWindow
+    - BranchText: "More options\u2026"
+      isPuzzle: 0
+      Requirements: []
+    - BranchText: "\u201CNevermind.\u201D"
+      isPuzzle: 0
+      Requirements: []
+    LeadsTo:
+    - BranchText: Level1-Newspaper_M
+      isPuzzle: 1
+      Requirements: []
+    - BranchText: Level1-Window_M
+      isPuzzle: 0
+      Requirements: []
+    - BranchText: Level1-Martyn_More
+      isPuzzle: 0
+      Requirements: []
+    - BranchText: Exit
+      isPuzzle: 0
+      Requirements: []

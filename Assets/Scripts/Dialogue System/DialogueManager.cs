@@ -19,12 +19,13 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
     [SerializeField] float dialogueSpeed;
     [SerializeField] float dialogueFastSpeed;
     [SerializeField] List<SOConversationData> conversationGroup;
-    [SerializeField] public List<string> dialogueUnlocks;
+    [SerializeField] List<string> dialogueUnlocks;
 
     Dictionary<string, DialogueBranchData> choiceToPath = new Dictionary<string, DialogueBranchData>();
 
     float currentDialogueSpeed;
     bool inDialogue;
+    bool nextIsPuzzle;
     bool continueInputRecieved;
     string choiceSelected;
     public bool InDialogue => inDialogue;
@@ -94,17 +95,26 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
         GenerateChoiceToPath(data);
         yield return HandleChoices();
         string nextDialogue = HandleLeadsTo(data.LeadsTo);
+
+        if (nextIsPuzzle)
+        {
+            Debug.Log("STARTING PUZZLE: " + nextDialogue);
+            // YIELD RETURN START PUZZLE
+        }
+
         StartDialogue(nextDialogue);
     }
 
     private string HandleLeadsTo(List<DialogueBranchData> leadsTo)
     {
+        nextIsPuzzle = false;
         if (choiceToPath.Count != 0) return choiceToPath[choiceSelected].BranchText;
 
         foreach(var route in leadsTo)
         {
             if(route.Requirements.Count == 0 || CheckIfMeetsRequirements(route))
             {
+                nextIsPuzzle = route.isPuzzle;
                 return route.BranchText;
             }
         }

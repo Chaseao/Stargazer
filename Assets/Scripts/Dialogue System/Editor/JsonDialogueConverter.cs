@@ -14,7 +14,6 @@ public static class JsonDialogueConverter
     private static readonly string DIALOGUE_MARKER = "Dialogue:";
     private static readonly string WICK_MARKER = "Wick: ";
     private static readonly string VOICE_MARKER = "Voice: ";
-    private static readonly string SOUND_MARKER = "Sound Profile:";
     private static readonly string CHOICES_MARKER = "Choices:";
     private static readonly string LEADS_TO_MARKER = "Leads to:";
 
@@ -69,14 +68,6 @@ public static class JsonDialogueConverter
         AssertMarker(lines[0], CONVERSANT_MARKER);
         conversation.Conversant = lines[0].Substring(CONVERSANT_MARKER.Length);
         lines.RemoveAt(0);
-
-        AssertMarker(lines[0], SOUND_MARKER);
-        lines.RemoveAt(0);
-        for(int i = 0; i < 6; i++)
-        {
-            conversation.EmotionsValue[i] = int.Parse(lines[0].Split(": ")[1].Trim());
-            lines.RemoveAt(0);
-        }
 
         AssertMarker(lines[0], UNLOCKS_MARKER);
         conversation.Unlocks = lines[0].Substring(UNLOCKS_MARKER.Length);
@@ -137,6 +128,10 @@ public static class JsonDialogueConverter
         {
             var branchLines = lines[0].Split('~').Select(x => x.Trim()).ToArray();
             var branchData = new DialogueBranchData();
+
+            Debug.Log(branchLines[0] + "|" + branchLines[0][0]);
+            branchData.isPuzzle = branchLines[0][0] == '*';
+            branchLines[0] = branchData.isPuzzle ? branchLines[0].Substring(1) : branchLines[0];
 
             branchData.BranchText = branchLines[0];
             branchData.Requirements = new List<string>();
