@@ -13,6 +13,12 @@ public class CursorController : MonoBehaviour
 
     [SerializeField] private float distanceThreshold;
 
+    [SerializeField] private Texture2D interactiveCursorTexture;
+
+    private Cursor cursor;
+
+    private bool cursorIsInteractive = false;
+
     private Vector2 inputPositionVector;
 
     [SerializeField] private AudioSource interactSound;
@@ -45,6 +51,7 @@ public class CursorController : MonoBehaviour
             {
                 //Found an interable exit out of loop
                 newSelectionTransform = interactablesManager.Interactables[itemIndex].transform;
+                if (!cursorIsInteractive) InteractiveCursorTexture();
                 break;
             }        
         }
@@ -53,6 +60,7 @@ public class CursorController : MonoBehaviour
         {
             //Make CursorDefault no interactable found
             currentSelectionTransform = newSelectionTransform;
+            DefaultCursorTexture();
         }
     }
 
@@ -78,5 +86,18 @@ public class CursorController : MonoBehaviour
             }
             newSelectionTransform = null;
         }
+    }
+
+    private void InteractiveCursorTexture()
+    {
+        cursorIsInteractive = true;
+        Vector2 hotspot = new Vector2(interactiveCursorTexture.width / 2, 0);
+        Cursor.SetCursor(interactiveCursorTexture, hotspot, CursorMode.Auto);
+    }
+
+    private void DefaultCursorTexture()
+    {
+        cursorIsInteractive = false;
+        Cursor.SetCursor(default, default, default);
     }
 }
