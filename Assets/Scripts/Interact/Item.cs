@@ -7,7 +7,7 @@ public class Item : MonoBehaviour, IInteractable
     [SerializeField] private SOConversationData dialogue;
     public bool ExecuteDialogue()
     {
-        //DialogueManager.Instance.StartDialogue(dialogue);
+        DialogueManager.Instance.StartDialogue(dialogue);
         print("Item Description");
         return true;
     }
