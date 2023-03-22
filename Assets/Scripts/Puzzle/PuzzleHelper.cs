@@ -15,7 +15,7 @@ public class PuzzleHelper
         }
 
         public Puzzle Type;
-        public ItemHelper.ItemData Item;
+        public InventoryHelper.ItemData Item;
         public SOConversationData Dialogue;
     }
 }
