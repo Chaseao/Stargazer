@@ -436,6 +436,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "UIPuzzle",
+            "id": "0e2447fc-91b1-4524-bbab-6b22ee148cb6",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "6c76f926-55ee-4390-a1df-43bf8f2086d3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cafc98a6-9cc6-40f0-8aa3-7d982e2e871d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

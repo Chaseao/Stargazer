@@ -26,6 +26,8 @@ public class Controller : SingletonMonoBehavior<Controller>
     public void SwapToUI() { playerInput.SwitchCurrentActionMap("UI"); inGameplay = false; }
     public void SwapToGameplay() { playerInput.SwitchCurrentActionMap("Gameplay"); inGameplay = true; }
 
+    public void SwapToUIPuzzle() { playerInput.SwitchCurrentActionMap("UIPuzzle"); inGameplay = false; }
+
     #region Gameplay Layout
 
     public void Move(InputAction.CallbackContext context)
@@ -103,6 +105,10 @@ public class Controller : SingletonMonoBehavior<Controller>
             OnSkip?.Invoke();
         }
     }
+
+    #endregion
+
+    #region UIPuzzle Layout
 
     #endregion
 }

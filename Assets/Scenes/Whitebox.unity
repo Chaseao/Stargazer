@@ -702,6 +702,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1435420250 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6471329649880384007, guid: 055f911451af8944b8c4057d99e48674, type: 3}
+  m_PrefabInstance: {fileID: 6471329650921742723}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b9584e58f13cd45bc2e75d0132c95b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1745260140
 GameObject:
   m_ObjectHideFlags: 0
@@ -2664,6 +2675,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6471329649880384000, guid: 055f911451af8944b8c4057d99e48674, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471329649880384000, guid: 055f911451af8944b8c4057d99e48674, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionId
+      value: 6c76f926-55ee-4390-a1df-43bf8f2086d3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471329649880384000, guid: 055f911451af8944b8c4057d99e48674, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionName
+      value: UIPuzzle/Click[/Mouse/leftButton]
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471329649880384000, guid: 055f911451af8944b8c4057d99e48674, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471329649880384000, guid: 055f911451af8944b8c4057d99e48674, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471329649880384000, guid: 055f911451af8944b8c4057d99e48674, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1435420250}
+    - target: {fileID: 6471329649880384000, guid: 055f911451af8944b8c4057d99e48674, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471329649880384000, guid: 055f911451af8944b8c4057d99e48674, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471329649880384000, guid: 055f911451af8944b8c4057d99e48674, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Controller, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471329649880384000, guid: 055f911451af8944b8c4057d99e48674, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6471329649880384001, guid: 055f911451af8944b8c4057d99e48674, type: 3}
       propertyPath: m_Name
       value: Controller

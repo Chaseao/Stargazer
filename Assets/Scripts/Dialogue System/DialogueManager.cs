@@ -101,9 +101,15 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
         {
             Debug.Log("STARTING PUZZLE: " + nextDialogue);
             // YIELD RETURN START PUZZLE
+            PuzzleSystem.Instance.StartPuzzle(nextDialogue);
+            ExitDialogue();
+        }
+        else
+        {
+            StartDialogue(nextDialogue);
         }
 
-        StartDialogue(nextDialogue);
+        
     }
 
     private string HandleLeadsTo(List<DialogueBranchData> leadsTo)

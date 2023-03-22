@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour, IInteractable
+public class InteractItem : MonoBehaviour, IInteractable
 {
     [SerializeField] private SOConversationData dialogue;
     public bool ExecuteDialogue()
