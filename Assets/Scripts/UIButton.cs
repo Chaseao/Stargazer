@@ -1,16 +1,14 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-public class UIButton : MonoBehaviour
+public abstract class UIButton : MonoBehaviour, IButton
 {
-    [SerializeField] ButtonFunctions function;
-    [SerializeField] int sceneIndex;
-    [SerializeField] PauseMenuManager pauseMenuManager;
+    public event Action<IButton> OnClick;
 
-    enum ButtonFunctions
+    public void Click()
     {
-        transtionToMenu,
-        quitGame,
-        resumeGame
+        OnClick?.Invoke(this);
+        Use();
     }
 
     public virtual void ToggleSelected(bool isSelected)
@@ -18,20 +16,5 @@ public class UIButton : MonoBehaviour
         transform.localScale = Vector3.one * (isSelected ? 1.2f : 1);
     }
 
-    public void Use()
-    {
-        switch (function)
-        {
-            case ButtonFunctions.transtionToMenu:
-                Controller.Instance.SwapToGameplay();
-                StartCoroutine(SceneTools.TransitionToScene(sceneIndex));
-                break;
-            case ButtonFunctions.quitGame:
-                Application.Quit();
-                break;
-            case ButtonFunctions.resumeGame:
-                pauseMenuManager.ResumeGame();
-                break;
-        }
-    }
+    public abstract void Use();
 }

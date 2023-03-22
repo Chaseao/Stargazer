@@ -6,7 +6,7 @@ using Sirenix.OdinInspector;
 
 public class ButtonGroup : MonoBehaviour
 {
-    List<UIButton> buttons;
+    List<IButton> buttons;
     int currentButtonIndex = -1;
 
     public void EnableButtons()
@@ -25,7 +25,13 @@ public class ButtonGroup : MonoBehaviour
 
     private void Awake()
     {
-        buttons = GetComponentsInChildren<UIButton>().ToList();
+        buttons = GetComponentsInChildren<IButton>().ToList();
+        buttons.ForEach(button => button.OnClick += Button_OnClick);
+    }
+
+    private void Button_OnClick(IButton obj)
+    {
+        SetButton(buttons.FindIndex(button => obj == button));
     }
 
     private void SetButton(int index)
@@ -59,6 +65,8 @@ public class ButtonGroup : MonoBehaviour
 
     private void OnDestroy()
     {
+        buttons.ForEach(button => button.OnClick -= Button_OnClick);
+
         Controller.OnNavigateMenu -= SwapButton;
         Controller.OnSelect -= ActivateButton;
     }

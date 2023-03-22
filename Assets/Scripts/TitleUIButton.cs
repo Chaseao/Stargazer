@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class TitleUIButton : UIButton
+public class TitleUIButton : MenuUIButton
 {
     [SerializeField] GameObject starImage;
 
