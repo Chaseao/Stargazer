@@ -32,7 +32,7 @@ public static class JsonDialogueConverter
             SOConversationData conversation = ScriptableObject.CreateInstance<SOConversationData>();
             conversation.SetConversation(ConvertFromJson(ConvertToJson(ConvertToConversation(dialogueScene))));
 
-            string filePath = $"Assets/Dialogue/{conversation.Data.ID}.asset";
+            string filePath = $"Assets/Resources/Dialogue/{conversation.Data.ID}.asset";
             if (System.IO.File.Exists(filePath))
             {
                 var file = AssetDatabase.LoadAssetAtPath(filePath, typeof(SOConversationData)) as SOConversationData;

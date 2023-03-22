@@ -18,8 +18,8 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
 
     [SerializeField] float dialogueSpeed;
     [SerializeField] float dialogueFastSpeed;
-    [SerializeField] List<SOConversationData> conversationGroup;
-    [SerializeField] List<string> dialogueUnlocks;
+    [SerializeField, ReadOnly] List<SOConversationData> conversationGroup;
+    [SerializeField, ReadOnly] List<string> dialogueUnlocks;
 
     Dictionary<string, DialogueBranchData> choiceToPath = new Dictionary<string, DialogueBranchData>();
 
@@ -32,6 +32,7 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
 
     private void Start()
     {
+        conversationGroup = Resources.LoadAll<SOConversationData>("Dialogue").ToList();
         SceneManager.activeSceneChanged += ClearManager;
     }
 
