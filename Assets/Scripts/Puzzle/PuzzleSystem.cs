@@ -36,6 +36,7 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
         {
             case PuzzleHelper.PuzzleData.Puzzle.CollectHerb:
                 collectHerbPuzzle.CollectHerb();
+                InventoryManager.Instance.GainItem(puzzle.Item);
                 break;
             case PuzzleHelper.PuzzleData.Puzzle.DigDirt:
                 print("Do Dig Dirt Puzzle");
