@@ -20,21 +20,12 @@ MonoBehaviour:
     - WickIsSpeaker: 0
       VoiceSpeaker: 1
       Dialogue: 'Green: Hello I''m a sick person. Thus why I''m so <i> green </i>!'
-    - WickIsSpeaker: 0
-      VoiceSpeaker: 1
-      Dialogue: 'Green: If you could get me some Carrots that''d be great!'
-    Choices:
-    - BranchText: Here you go!
+    Choices: []
+    LeadsTo:
+    - BranchText: Person (Cured)
       isPuzzle: 0
       Requirements:
-      - HasCarrot
-    - BranchText: Sorry don't have any!
-      isPuzzle: 0
-      Requirements: []
-    LeadsTo:
-    - BranchText: Person2
-      isPuzzle: 0
-      Requirements: []
-    - BranchText: Exit
+      - IsCured
+    - BranchText: Person (Uncured)
       isPuzzle: 0
       Requirements: []

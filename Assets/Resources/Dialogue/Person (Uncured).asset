@@ -10,21 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: Person2
+  m_Name: Person (Uncured)
   m_EditorClassIdentifier: 
   conversationData:
-    ID: Person2
+    ID: Person
     Conversant: green
-    Unlocks: IsCured
+    Unlocks: N/A
     Dialogues:
     - WickIsSpeaker: 0
       VoiceSpeaker: 1
-      Dialogue: 'Green: Thank you so much for the carrots! I feel so much better.'
+      Dialogue: 'Green: If you could get me some Carrots that''d be great!'
     Choices:
-    - BranchText: Yep :)
+    - BranchText: Here you go!
+      isPuzzle: 0
+      Requirements:
+      - HasCarrot
+    - BranchText: Sorry don't have any!
       isPuzzle: 0
       Requirements: []
     LeadsTo:
+    - BranchText: Person2
+      isPuzzle: 0
+      Requirements: []
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []
