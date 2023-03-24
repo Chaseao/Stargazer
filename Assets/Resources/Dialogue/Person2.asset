@@ -10,28 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: CollectHerbCarrot-0
+  m_Name: Person2
   m_EditorClassIdentifier: 
   conversationData:
-    ID: CollectHerbCarrot-0
-    Conversant: N/A
+    ID: Person2
+    Conversant: green
     Unlocks: N/A
     Dialogues:
     - WickIsSpeaker: 0
       VoiceSpeaker: 1
-      Dialogue: <i> Ooooh It's a carrot. Should I pick it? </i>
+      Dialogue: 'Green: Thank you so much for the carrots! I feel so much better.'
     Choices:
-    - BranchText: Pick the Carrot
-      isPuzzle: 1
-      Requirements:
-      - HasBasket
-    - BranchText: Nah
+    - BranchText: Yep :)
       isPuzzle: 0
       Requirements: []
     LeadsTo:
-    - BranchText: CollectHerbCarrot-1
-      isPuzzle: 1
-      Requirements: []
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []

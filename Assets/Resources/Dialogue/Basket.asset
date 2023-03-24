@@ -10,28 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: CollectHerbCarrot-0
+  m_Name: Basket
   m_EditorClassIdentifier: 
   conversationData:
-    ID: CollectHerbCarrot-0
+    ID: Basket
     Conversant: N/A
-    Unlocks: N/A
+    Unlocks: HasBasket
     Dialogues:
     - WickIsSpeaker: 0
       VoiceSpeaker: 1
-      Dialogue: <i> Ooooh It's a carrot. Should I pick it? </i>
-    Choices:
-    - BranchText: Pick the Carrot
-      isPuzzle: 1
-      Requirements:
-      - HasBasket
-    - BranchText: Nah
-      isPuzzle: 0
-      Requirements: []
+      Dialogue: <i> Cool a basket! </i>
+    Choices: []
     LeadsTo:
-    - BranchText: CollectHerbCarrot-1
-      isPuzzle: 1
-      Requirements: []
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []
