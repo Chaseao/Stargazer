@@ -3,15 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static PuzzleHelper;
+using static CollectHerbPuzzle;
 
 public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
 {
 
-    private bool inPuzzle;
+    public bool inPuzzle;
+    private String dialogueID;
     public static Action OnPuzzleExit;
+    [SerializeField] private Sprite carrotImage;
+    [SerializeField] private GameObject puzzleUI;
+    [SerializeField] private CollectHerbPuzzle collectHerbPuzzle;
 
     public void StartPuzzle(string puzzleID)
     {
+        dialogueID = puzzleID;
         if (puzzleID == null || puzzleID.Equals("Exit"))
         {
             ExitPuzzle();
@@ -24,11 +30,15 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
         }
 
         PuzzleData puzzle = CreatePuzzle(puzzleID);
+        DisplayPuzzle(puzzle);
 
         switch (puzzle.Type)
         {
             case PuzzleHelper.PuzzleData.Puzzle.CollectHerb:
-                print("Do Collect Herb Puzzle");
+                collectHerbPuzzle.CollectHerb();
+                break;
+            case PuzzleHelper.PuzzleData.Puzzle.DigDirt:
+                print("Do Dig Dirt Puzzle");
                 break;
             default:
                 print("Could not find puzzle type");
@@ -41,13 +51,19 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
         String[] puzzleIDBrokenUp = puzzleID.Split(' ');
         String item = puzzleIDBrokenUp[1];
         String puzzleType = puzzleIDBrokenUp[0];
-        //To Do - make a puzzledata object from item and puzzle type
-        return new PuzzleData();
+        return new PuzzleData(item, puzzleType, carrotImage);
     }
 
-    private void ExitPuzzle()
+    private void DisplayPuzzle(PuzzleData puzzle)
+    {
+        puzzleUI.SetActive(true);
+    }
+
+    public void ExitPuzzle()
     {
         inPuzzle = false;
+        puzzleUI.SetActive(false);
         Controller.Instance.SwapToUI();
+        DialogueManager.Instance.StartDialogue(dialogueID);
     }
 }

@@ -12,6 +12,12 @@ public class InventoryHelper
     {
         public string name;
         public Sprite itemImage;
+
+        public ItemData(string name, Sprite itemImage)
+        {
+            this.name = name;
+            this.itemImage = itemImage;
+        }
     }
 
     [System.Serializable]

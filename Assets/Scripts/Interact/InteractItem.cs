@@ -8,7 +8,6 @@ public class InteractItem : MonoBehaviour, IInteractable
     public bool ExecuteDialogue()
     {
         DialogueManager.Instance.StartDialogue(dialogue);
-        print("Item Description");
         return true;
     }
 

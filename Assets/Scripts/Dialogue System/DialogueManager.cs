@@ -96,13 +96,11 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
         GenerateChoiceToPath(data);
         yield return HandleChoices();
         string nextDialogue = HandleLeadsTo(data.LeadsTo);
-
         if (nextIsPuzzle)
         {
             Debug.Log("STARTING PUZZLE: " + nextDialogue);
             // YIELD RETURN START PUZZLE
             PuzzleSystem.Instance.StartPuzzle(nextDialogue);
-            ExitDialogue();
         }
         else
         {
