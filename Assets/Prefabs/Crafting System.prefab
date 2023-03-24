@@ -444,7 +444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   display: {fileID: 4007741927479647514}
-  inventoryButtons: {fileID: 8511159376267356040}
+  inventoryButtons: {fileID: 0}
   slotHandler: {fileID: 8511159376267356044}
 --- !u!114 &8511159376267356048
 MonoBehaviour:
@@ -480,15 +480,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 0
-    SerializedBytes: 01010c0000006300720061006600740052006500730075006c00740073002f00000000018a000000530079007300740065006d002e0043006f006c006c0065006300740069006f006e0073002e00470065006e0065007200690063002e00440069006300740069006f006e00610072007900600032005b005b0049006e00760065006e0074006f0072007900480065006c007000650072002b004900740065006d0050006100690072002c00200041007300730065006d0062006c0079002d004300530068006100720070005d002c005b0049006e00760065006e0074006f0072007900480065006c007000650072002b004900740065006d0044006100740061002c00200041007300730065006d0062006c0079002d004300530068006100720070005d005d002c0020006d00730063006f0072006c00690062000000000001010800000063006f006d00700061007200650072002f01000000016a000000530079007300740065006d002e0043006f006c006c0065006300740069006f006e0073002e00470065006e0065007200690063002e004f0062006a0065006300740045007100750061006c0069007400790043006f006d0070006100720065007200600031005b005b0049006e00760065006e0074006f0072007900480065006c007000650072002b004900740065006d0050006100690072002c00200041007300730065006d0062006c0079002d004300530068006100720070005d005d002c0020006d00730063006f0072006c00690062000100000005060100000000000000042e01010200000024006b002f02000000012900000049006e00760065006e0074006f0072007900480065006c007000650072002b004900740065006d0050006100690072002c00200041007300730065006d0062006c0079002d00430053006800610072007000020000002701070000006900740065006d004f006e00650001060000004300610072006c00650079002701070000006900740065006d00540077006f0001040000004a006f0068006e0005010102000000240076002f03000000012900000049006e00760065006e0074006f0072007900480065006c007000650072002b004900740065006d0044006100740061002c00200041007300730065006d0062006c0079002d00430053006800610072007000030000002701040000006e0061006d006500010300000054006f006d000b01090000006900740065006d0049006d006100670065000000000005050705
+    SerializedFormat: 2
+    SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 21300000, guid: d24e7e0b75e1a244bb9687d6fd4315ef, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: craftResults
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[InventoryHelper+ItemPair,
+        Assembly-CSharp],[InventoryHelper+ItemData, Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.ObjectEqualityComparer`1[[InventoryHelper+ItemPair,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 2|InventoryHelper+ItemPair, Assembly-CSharp
+    - Name: itemOne
+      Entry: 1
+      Data: Carley
+    - Name: itemTwo
+      Entry: 1
+      Data: John
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 3|InventoryHelper+ItemData, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Tom
+    - Name: itemImage
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
 --- !u!1 &2264945552899426992
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,7 +729,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7385942216079619639}
   - component: {fileID: 571484628145187556}
-  - component: {fileID: 8511159376267356040}
   - component: {fileID: 8511159376267356044}
   m_Layer: 0
   m_Name: Inventory Slots
@@ -748,20 +797,6 @@ MonoBehaviour:
   m_Spacing: {x: 10, y: 10}
   m_Constraint: 1
   m_ConstraintCount: 4
---- !u!114 &8511159376267356040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8573299085573476580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e42764cd3a8b604c9c6fe933da5009f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gridMode: 1
-  columns: 4
 --- !u!114 &8511159376267356044
 MonoBehaviour:
   m_ObjectHideFlags: 0

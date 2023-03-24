@@ -17,6 +17,7 @@ public class CraftingSystem : SingletonMonoBehavior<CraftingSystem>
     {
         ShowScreen();
         Controller.Instance.SwapToUI();
+        Controller.OnResume += CloseScreen;
         slotHandler.Open();
     }
 
@@ -25,6 +26,7 @@ public class CraftingSystem : SingletonMonoBehavior<CraftingSystem>
     {
         HideScreen();
         Controller.Instance.SwapToGameplay();
+        Controller.OnResume -= CloseScreen;
         slotHandler.Close();
     }
 
@@ -38,5 +40,10 @@ public class CraftingSystem : SingletonMonoBehavior<CraftingSystem>
     {
         display.enabled = false;
         //inventoryButtons.DisableButtons();
+    }
+
+    private void OnDestroy()
+    {
+        Controller.OnResume -= CloseScreen;
     }
 }
