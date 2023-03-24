@@ -113,13 +113,19 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
     private string HandleLeadsTo(List<DialogueBranchData> leadsTo)
     {
         nextIsPuzzle = false;
-        if (choiceToPath.Count != 0) return choiceToPath[choiceSelected].BranchText;
+        if (choiceToPath.Count != 0)
+        {
+            var route = choiceToPath[choiceSelected];
+            if (route.isItemID && route.consumesItem) InventoryManager.Instance.DiscardItem(route.itemName);
+            return choiceToPath[choiceSelected].BranchText;
+        }
 
         foreach(var route in leadsTo)
         {
             if(route.Requirements.Count == 0 || CheckIfMeetsRequirements(route))
             {
                 nextIsPuzzle = route.isPuzzle;
+                if (route.isItemID && route.consumesItem) InventoryManager.Instance.DiscardItem(route.itemName);
                 return route.BranchText;
             }
         }
@@ -161,6 +167,8 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
 
     private bool CheckIfMeetsRequirements(DialogueBranchData branchData)
     {
+        if (branchData.isItemID && !InventoryManager.Instance.CheckForItem(branchData.itemName)) return false;
+
         branchData.Requirements.ForEach(x => Debug.Log(x));
         branchData.Requirements.Where(x => !dialogueUnlocks.Contains(x.ToLower())).ForEach(x => Debug.Log(x.ToString()));
         return branchData.Requirements.Find(x => !dialogueUnlocks.Contains(x.ToLower())) == null;

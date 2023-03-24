@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Person (Uncured)
   m_EditorClassIdentifier: 
   conversationData:
-    ID: Person
+    ID: Person (Uncured)
     Conversant: green
     Unlocks: N/A
     Dialogues:
@@ -23,15 +23,27 @@ MonoBehaviour:
     Choices:
     - BranchText: Here you go!
       isPuzzle: 0
+      isItemID: 1
+      consumesItem: 1
+      itemName: Carrot
       Requirements:
       - HasCarrot
     - BranchText: Sorry don't have any!
       isPuzzle: 0
+      isItemID: 0
+      consumesItem: 0
+      itemName: 
       Requirements: []
     LeadsTo:
     - BranchText: Person2
       isPuzzle: 0
+      isItemID: 0
+      consumesItem: 0
+      itemName: 
       Requirements: []
     - BranchText: Exit
       isPuzzle: 0
+      isItemID: 0
+      consumesItem: 0
+      itemName: 
       Requirements: []

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Person (Cured)
   m_EditorClassIdentifier: 
   conversationData:
-    ID: Person
+    ID: Person (Cured)
     Conversant: green
     Unlocks: N/A
     Dialogues:
@@ -24,4 +24,7 @@ MonoBehaviour:
     LeadsTo:
     - BranchText: Exit
       isPuzzle: 0
+      isItemID: 0
+      consumesItem: 0
+      itemName: 
       Requirements: []

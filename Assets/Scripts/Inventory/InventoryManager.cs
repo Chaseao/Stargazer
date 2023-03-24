@@ -13,9 +13,19 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
         inventory.Add(item);
     }
 
+    public void DiscardItem(string item)
+    {
+        DiscardItem(inventory.Find(x => x.name == item));
+    }
+
     public void DiscardItem(ItemData item)
     {
         Debug.Assert(inventory.Contains(item));
         inventory.Remove(item);
+    }
+
+    public bool CheckForItem(string itemName)
+    {
+        return inventory.Exists(x => x.name == itemName);
     }
 }

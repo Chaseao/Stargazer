@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Sirenix.OdinInspector;
+using System.Collections.Generic;
 using UnityEngine;
 
 public static class DialogueHelperClass
@@ -27,6 +28,9 @@ public static class DialogueHelperClass
     {
         public string BranchText;
         public bool isPuzzle;
+        public bool isItemID;
+        [ShowIf("isItemID", true)] public bool consumesItem;
+        [ShowIf("isItemID", true)] public string itemName;
         public List<string> Requirements;
     }
 
