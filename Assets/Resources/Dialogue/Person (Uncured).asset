@@ -36,7 +36,7 @@ MonoBehaviour:
       Requirements: []
     LeadsTo:
     - BranchText: Person2
-      isPuzzle: 1
+      isPuzzle: 0
       isItemID: 1
       consumesItem: 1
       itemName: Carrot
