@@ -622,9 +622,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inPuzzle: 0
-  carrotImage: {fileID: 21300000, guid: bc0cedfcc701f3149b43e79fc95f0f07, type: 3}
   puzzleUI: {fileID: 489975006}
   collectHerbPuzzle: {fileID: 260314540}
+  itemList:
+  - itemName: Carrot
+    itemSprite: {fileID: 21300000, guid: bc0cedfcc701f3149b43e79fc95f0f07, type: 3}
 --- !u!4 &260314539
 Transform:
   m_ObjectHideFlags: 0

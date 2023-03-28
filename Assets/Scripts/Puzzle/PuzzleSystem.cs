@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static PuzzleHelper;
 using static CollectHerbPuzzle;
+using static DialogueHelperClass;
 
 public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
 {
@@ -11,9 +12,27 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
     public bool inPuzzle;
     private String dialogueID;
     public static Action OnPuzzleExit;
-    [SerializeField] private Sprite carrotImage;
     [SerializeField] private GameObject puzzleUI;
     [SerializeField] private CollectHerbPuzzle collectHerbPuzzle;
+
+    [Serializable]
+    public class itemImage
+    {
+        public string itemName;
+        public Sprite itemSprite;
+    }
+
+    public List<itemImage> itemList = new List<itemImage>();
+    Dictionary<string, Sprite> Images = new Dictionary<string, Sprite>();
+
+    void Awake()
+    {
+        foreach (var item in itemList)
+        {
+            Images[item.itemName] = item.itemSprite;
+        }
+    }
+
 
     public void StartPuzzle(string puzzleID)
     {
@@ -35,7 +54,7 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
         switch (puzzle.Type)
         {
             case PuzzleHelper.PuzzleData.Puzzle.CollectHerb:
-                collectHerbPuzzle.CollectHerb();
+                collectHerbPuzzle.CollectHerb(puzzle);
                 InventoryManager.Instance.GainItem(puzzle.Item);
                 break;
             case PuzzleHelper.PuzzleData.Puzzle.DigDirt:
@@ -52,7 +71,7 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
         String[] puzzleIDBrokenUp = puzzleID.Split(' ');
         String item = puzzleIDBrokenUp[1];
         String puzzleType = puzzleIDBrokenUp[0];
-        return new PuzzleData(item, puzzleType, carrotImage);
+        return new PuzzleData(item, puzzleType, Images[item]);
     }
 
     private void DisplayPuzzle(PuzzleData puzzle)

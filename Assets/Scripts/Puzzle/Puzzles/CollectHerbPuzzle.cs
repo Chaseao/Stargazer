@@ -25,6 +25,8 @@ public class CollectHerbPuzzle : MonoBehaviour
 
     private bool cursorIsInteractive = false;
 
+    private PuzzleHelper.PuzzleData puzzleData;
+
     private void Start()
     {
         touchedHerbs = new Dictionary<GameObject, bool>();
@@ -33,8 +35,9 @@ public class CollectHerbPuzzle : MonoBehaviour
     }
 
 
-    public void CollectHerb()
+    public void CollectHerb(PuzzleHelper.PuzzleData puzzle)
     {
+        puzzleData = puzzle;
         foreach (var herb in herbs)
         {
             herb.SetActive(true);
