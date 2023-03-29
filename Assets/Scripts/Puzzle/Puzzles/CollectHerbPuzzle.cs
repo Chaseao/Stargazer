@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CollectHerbPuzzle : MonoBehaviour
 {
@@ -25,7 +26,6 @@ public class CollectHerbPuzzle : MonoBehaviour
 
     private bool cursorIsInteractive = false;
 
-    private PuzzleHelper.PuzzleData puzzleData;
 
     private void Start()
     {
@@ -37,9 +37,10 @@ public class CollectHerbPuzzle : MonoBehaviour
 
     public void CollectHerb(PuzzleHelper.PuzzleData puzzle)
     {
-        puzzleData = puzzle;
+        foreach(var herb in herbsInBasket) { herb.GetComponent<Image>().sprite = puzzle.Item.itemImage; }
         foreach (var herb in herbs)
         {
+            herb.GetComponent<Image>().sprite = puzzle.Item.itemImage;
             herb.SetActive(true);
             touchedHerbs.Add(herb, false);
         }

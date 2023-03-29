@@ -627,6 +627,8 @@ MonoBehaviour:
   itemList:
   - itemName: Carrot
     itemSprite: {fileID: 21300000, guid: bc0cedfcc701f3149b43e79fc95f0f07, type: 3}
+  - itemName: Apple
+    itemSprite: {fileID: 21300000, guid: d6bb94fc6adb36748992a265ae1494c8, type: 3}
 --- !u!4 &260314539
 Transform:
   m_ObjectHideFlags: 0
