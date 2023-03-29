@@ -10,7 +10,7 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
 {
 
     public bool inPuzzle;
-    private String dialogueID;
+    private string dialogueID;
     public static Action OnPuzzleExit;
     [SerializeField] private GameObject puzzleUI;
     [SerializeField] private CollectHerbPuzzle collectHerbPuzzle;
@@ -25,8 +25,10 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
     public List<itemImage> itemList = new List<itemImage>();
     Dictionary<string, Sprite> Images = new Dictionary<string, Sprite>();
 
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         foreach (var item in itemList)
         {
             Images[item.itemName] = item.itemSprite;

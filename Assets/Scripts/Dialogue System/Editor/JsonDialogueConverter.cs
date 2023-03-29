@@ -7,16 +7,7 @@ using UnityEditor;
 using static DialogueHelperClass;
 
 public static class JsonDialogueConverter
-{
-    private static readonly string ID_MARKER = "ID: ";
-    private static readonly string CONVERSANT_MARKER = "Conversant: ";
-    private static readonly string UNLOCKS_MARKER = "Unlocks: ";
-    private static readonly string DIALOGUE_MARKER = "Dialogue:";
-    private static readonly string WICK_MARKER = "Wick: ";
-    private static readonly string VOICE_MARKER = "Voice: ";
-    private static readonly string CHOICES_MARKER = "Choices:";
-    private static readonly string LEADS_TO_MARKER = "Leads to:";
-
+{ 
     public static string ConvertToJson(ConversationData conversation)
     {
         string jsonFile = JsonUtility.ToJson(conversation, true);
@@ -78,16 +69,16 @@ public static class JsonDialogueConverter
 
         while (!lines[0].StartsWith(CHOICES_MARKER))
         {
-            if (!lines[0].StartsWith(WICK_MARKER) && !lines[0].StartsWith($"{conversation.Conversant}: ") && !lines[0].StartsWith(VOICE_MARKER))
+            if (!lines[0].StartsWith(PLAYER_MARKER) && !lines[0].StartsWith($"{conversation.Conversant}: ") && !lines[0].StartsWith(VOICE_MARKER))
             {
                 conversation.Dialogues[conversation.Dialogues.Count - 1].Dialogue += " " + lines[0];
             }
             else
             {
                 string dialogueLine = "";
-                if (lines[0].StartsWith(WICK_MARKER))
+                if (lines[0].StartsWith(PLAYER_MARKER))
                 {
-                    dialogueLine = lines[0].Substring(WICK_MARKER.Length);
+                    dialogueLine = lines[0].Substring(PLAYER_MARKER.Length);
                 }
                 else if (lines[0].StartsWith(VOICE_MARKER))
                 {
@@ -97,7 +88,7 @@ public static class JsonDialogueConverter
                 {
                     dialogueLine = lines[0].Substring(conversation.Conversant.Length + ": ".Length);
                 }
-                conversation.Dialogues.Add(new DialogueData() { Dialogue = dialogueLine.Trim(), VoiceSpeaker = lines[0].StartsWith(VOICE_MARKER), WickIsSpeaker = lines[0].StartsWith(WICK_MARKER) });
+                conversation.Dialogues.Add(new DialogueData() { Dialogue = dialogueLine.Trim(), VoiceSpeaker = lines[0].StartsWith(VOICE_MARKER), PlayerIsSpeaker = lines[0].StartsWith(PLAYER_MARKER) });
             }
 
             lines.RemoveAt(0);

@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Sirenix.OdinInspector;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using static DialogueHelperClass;
 
-public class DialogueUIController : MonoBehaviour
+public class DialogueUIController : SerializedMonoBehaviour
 {
     [SerializeField] PortraitDisplay leftPortrait, rightPortrait;
     [SerializeField] TextBoxDisplay textBoxDisplay;

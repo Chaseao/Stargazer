@@ -18,7 +18,7 @@ public class Controller : SingletonMonoBehavior<Controller>
     public static Action OnSkip;
     public static Action OnResume;
 
-    private bool inGameplay = false;
+    private bool inGameplay = true;
     public bool InGameplay => inGameplay;
 
     [SerializeField] PlayerInput playerInput;

@@ -116,7 +116,7 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
         if (choiceToPath.Count != 0)
         {
             var route = choiceToPath[choiceSelected];
-            if (route.isItemID && route.consumesItem) InventoryManager.Instance.DiscardItem(route.itemName);
+            //if (route.isItemID && route.consumesItem) InventoryManager.Instance.DiscardItem(route.itemName);
             return choiceToPath[choiceSelected].BranchText;
         }
 
@@ -125,7 +125,7 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
             if(route.Requirements.Count == 0 || CheckIfMeetsRequirements(route))
             {
                 nextIsPuzzle = route.isPuzzle;
-                if (route.isItemID && route.consumesItem) InventoryManager.Instance.DiscardItem(route.itemName);
+                //if (route.isItemID && route.consumesItem) InventoryManager.Instance.DiscardItem(route.itemName);
                 return route.BranchText;
             }
         }
@@ -167,18 +167,21 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
 
     private bool CheckIfMeetsRequirements(DialogueBranchData branchData)
     {
-        if (branchData.isItemID && !InventoryManager.Instance.CheckForItem(branchData.itemName)) return false;
-
         branchData.Requirements.ForEach(x => Debug.Log(x));
         branchData.Requirements.Where(x => !dialogueUnlocks.Contains(x.ToLower())).ForEach(x => Debug.Log(x.ToString()));
-        return branchData.Requirements.Find(x => !dialogueUnlocks.Contains(x.ToLower())) == null;
+        return branchData.Requirements.Find(IsInvalidRequirment()) == null;
+    }
+
+    private Predicate<string> IsInvalidRequirment()
+    {
+        return x => !dialogueUnlocks.Contains(x.ToLower());
     }
 
     private void OnContinueInput() => continueInputRecieved = true;
 
     private IEnumerator ProcessDialogue(DialogueData dialogue, string conversant)
     {
-        OnTextUpdated?.Invoke("", dialogue.WickIsSpeaker);
+        OnTextUpdated?.Invoke("", dialogue.PlayerIsSpeaker);
         yield return new WaitUntil(() => FadeToBlackSystem.FadeOutComplete);
 
         continueInputRecieved = false;
@@ -186,11 +189,10 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
 
         if (!dialogue.VoiceSpeaker)
         {
-            name = (dialogue.WickIsSpeaker ? "Wick" : conversant) + ": ";
-            name = name.Replace("Human ", "");
+            name = (dialogue.PlayerIsSpeaker ? PLAYER_MARKER : conversant) + ": ";
         }
 
-        yield return TypewriterDialogue(name, dialogue.Dialogue, dialogue.WickIsSpeaker);
+        yield return TypewriterDialogue(name, dialogue.Dialogue, dialogue.PlayerIsSpeaker);
 
         Controller.OnSelect += OnContinueInput;
 

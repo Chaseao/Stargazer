@@ -17,7 +17,7 @@ MonoBehaviour:
     Conversant: N/A
     Unlocks: N/A
     Dialogues:
-    - WickIsSpeaker: 0
+    - PlayerIsSpeaker: 0
       VoiceSpeaker: 1
       Dialogue: <i> Looks like I got all the carrots! </i>
     Choices: []

@@ -66,11 +66,14 @@ public class CursorController : MonoBehaviour
 
     void Position(Vector2 input)
     {
+        if (!Controller.Instance.InGameplay) return;
+
         inputPositionVector = input;
     }
 
     void Click()
     {
+        if (!Controller.Instance.InGameplay) return;
         OnClickInteractable();
     }
 

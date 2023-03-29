@@ -4,10 +4,19 @@ using UnityEngine;
 
 public static class DialogueHelperClass
 {
+    public static readonly string ID_MARKER = "ID: ";
+    public static readonly string CONVERSANT_MARKER = "Conversant: ";
+    public static readonly string UNLOCKS_MARKER = "Unlocks: ";
+    public static readonly string DIALOGUE_MARKER = "Dialogue:";
+    public static readonly string PLAYER_MARKER = "L0-1D: ";
+    public static readonly string VOICE_MARKER = "Voice: ";
+    public static readonly string CHOICES_MARKER = "Choices:";
+    public static readonly string LEADS_TO_MARKER = "Leads to:";
+
     [System.Serializable]
     public class DialogueData
     {
-        public bool WickIsSpeaker;
+        public bool PlayerIsSpeaker;
         public bool VoiceSpeaker;
         [SerializeField, TextArea()] public string Dialogue;
     }
@@ -28,10 +37,15 @@ public static class DialogueHelperClass
     {
         public string BranchText;
         public bool isPuzzle;
-        public bool isItemID;
-        [ShowIf("isItemID", true)] public bool consumesItem;
-        [ShowIf("isItemID", true)] public string itemName;
         public List<string> Requirements;
     }
 
+    [System.Serializable]
+    public class RequirementData
+    {
+        public string requirmentName;
+        public bool isItemID;
+        [ShowIf("isItemID", true)] public bool consumesItem;
+        [ShowIf("isItemID", true)] public string itemName;
+    }
 }
