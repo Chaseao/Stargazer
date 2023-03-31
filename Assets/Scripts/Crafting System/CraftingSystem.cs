@@ -4,7 +4,6 @@ using UnityEngine;
 public class CraftingSystem : SingletonMonoBehavior<CraftingSystem>
 {
     [SerializeField] Canvas display;
-    [SerializeField] ButtonGroup inventoryButtons;
     [SerializeField] CraftingSlotHandler slotHandler;
 
     private void Start()
