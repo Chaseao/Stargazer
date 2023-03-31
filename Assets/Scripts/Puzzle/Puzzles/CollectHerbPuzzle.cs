@@ -19,6 +19,8 @@ public class CollectHerbPuzzle : MonoBehaviour
     [SerializeField] private float distanceThreshold;
     [SerializeField] private float delayBeforeLeavingPuzzle = 2f;
 
+    [SerializeField] private GameObject puzzleUI;
+
 
     [SerializeField] private Texture2D interactiveCursorTexture;
 
@@ -37,6 +39,7 @@ public class CollectHerbPuzzle : MonoBehaviour
 
     public void CollectHerb(PuzzleHelper.PuzzleData puzzle)
     {
+        puzzleUI.SetActive(true);
         foreach(var herb in herbsInBasket) { herb.GetComponent<Image>().sprite = puzzle.Item.itemImage; }
         foreach (var herb in herbs)
         {
@@ -143,6 +146,7 @@ public class CollectHerbPuzzle : MonoBehaviour
         {
             herb.SetActive(false);
         }
+        puzzleUI.SetActive(false);
         PuzzleSystem.Instance.ExitPuzzle();
     }
 }
