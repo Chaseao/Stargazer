@@ -5,42 +5,25 @@ using System.Linq;
 using UnityEngine;
 using static InventoryHelper;
 
-public class CraftingSlotHandler : MonoBehaviour
+public class CraftingSlotHandler : SlotHandlerBase
 {
     [SerializeField] ResultsSlot results;
     [SerializeField] CraftButton craftButton;
     [SerializeField] CraftingResultsTable resultsTable;
 
-    private List<CraftingSlotUIButton> slots;
-
     private CraftingSlotUIButton firstItem;
     private CraftingSlotUIButton secondItem;
 
-    private void Awake()
-    {
-        slots = transform.GetComponentsInChildren<CraftingSlotUIButton>().ToList();
-    }
+    protected override CraftButton CraftButton { get => craftButton; }
 
-    private void Start()
+    public override void Close()
     {
-        Close();
-    }
-
-    public void Close()
-    {
-        ClearSlots();
-        craftButton.OnClick -= CraftButton_OnClick;
+        base.Close();
         firstItem = null;
         secondItem = null;
     }
 
-    public void Open()
-    {     
-        SetUpSlots();
-        craftButton.OnClick += CraftButton_OnClick;
-    }
-
-    private void CraftButton_OnClick(IButton obj)
+    protected override void CraftButton_OnClick(IButton obj)
     {
         if(firstItem == null || secondItem == null) return;
 
@@ -62,17 +45,7 @@ public class CraftingSlotHandler : MonoBehaviour
         Open();
     }
 
-    private void ClearSlots()
-    {
-        for (int i = 0; i < slots.Count; i++)
-        {
-            slots[i].OnClick -= Handle_Click;
-            slots[i].SetItem(null);
-            slots[i].ToggleFrame(false);
-        }
-    }
-
-    private void Handle_Click(IButton button)
+    protected override void Handle_Click(IButton button)
     {
         var craftingButton = (CraftingSlotUIButton) button;
         if (!craftingButton.IsFilled) return;
@@ -99,16 +72,9 @@ public class CraftingSlotHandler : MonoBehaviour
             secondItem = craftingButton;
         }
     }
+}
 
-    private void SetUpSlots()
-    {
-        InventoryManager inventory = InventoryManager.Instance;
-        Debug.Assert(inventory.Inventory.Count <= slots.Count);
+public class SelectItemHandler : MonoBehaviour
+{
 
-        for(int i = 0; i < inventory.Inventory.Count; i++)
-        {
-            slots[i].OnClick += Handle_Click;
-            slots[i].SetItem(inventory.Inventory[i]);
-        }
-    }
 }

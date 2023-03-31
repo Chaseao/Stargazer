@@ -61,7 +61,6 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
         {
             case PuzzleData.Puzzle.CollectHerb:
                 collectHerbPuzzle.CollectHerb(puzzle);
-                InventoryManager.Instance.GainItem(puzzle.Item);
                 break;
             case PuzzleData.Puzzle.ClimbTree:
                 climbTreePuzzle.ClimbTree(puzzle);
