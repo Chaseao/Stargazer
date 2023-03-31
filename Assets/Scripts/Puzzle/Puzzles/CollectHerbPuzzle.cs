@@ -1,8 +1,23 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using static PuzzleHelper;
+
+public class SelectItemPuzzle : SerializedMonoBehaviour
+{
+    [SerializeField]
+    private struct SelectPuzzleData
+    {
+        public string person;
+        public string desiredItem;
+        public string dialogueOnSuccess;
+        public string dialogueOnFailure;
+        public string dialogueOnCancel;
+    }
+}
 
 public class CollectHerbPuzzle : MonoBehaviour
 {
@@ -37,7 +52,7 @@ public class CollectHerbPuzzle : MonoBehaviour
     }
 
 
-    public void CollectHerb(PuzzleHelper.PuzzleData puzzle)
+    public void CollectHerb(PuzzleData puzzle)
     {
         puzzleUI.SetActive(true);
         foreach(var herb in herbsInBasket) { herb.GetComponent<Image>().sprite = puzzle.Item.itemImage; }

@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static PuzzleHelper;
-using static CollectHerbPuzzle;
-using static DialogueHelperClass;
 
 public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
 {
@@ -35,6 +33,11 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
         }
     }
 
+    public void SwapNextDialogueID(string nextDialogue)
+    {
+        dialogueID = nextDialogue;
+    }
+
 
     public void StartPuzzle(string puzzleID)
     {
@@ -51,15 +54,15 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
         }
 
         PuzzleData puzzle = CreatePuzzle(puzzleID);
-        DisplayPuzzle(puzzle);
+        DisplayPuzzle();
 
         switch (puzzle.Type)
         {
-            case PuzzleHelper.PuzzleData.Puzzle.CollectHerb:
+            case PuzzleData.Puzzle.CollectHerb:
                 collectHerbPuzzle.CollectHerb(puzzle);
                 InventoryManager.Instance.GainItem(puzzle.Item);
                 break;
-            case PuzzleHelper.PuzzleData.Puzzle.DigDirt:
+            case PuzzleData.Puzzle.DigDirt:
                 print("Do Dig Dirt Puzzle");
                 break;
             default:
@@ -70,13 +73,13 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
 
     private PuzzleData CreatePuzzle(string puzzleID)
     {
-        String[] puzzleIDBrokenUp = puzzleID.Split(' ');
-        String item = puzzleIDBrokenUp[1];
-        String puzzleType = puzzleIDBrokenUp[0];
+        string[] puzzleIDBrokenUp = puzzleID.Split(' ');
+        string item = puzzleIDBrokenUp[1];
+        string puzzleType = puzzleIDBrokenUp[0];
         return new PuzzleData(item, puzzleType, Images[item]);
     }
 
-    private void DisplayPuzzle(PuzzleData puzzle)
+    private void DisplayPuzzle()
     {
         puzzleUI.SetActive(true);
     }
