@@ -12,6 +12,7 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
     public static Action OnPuzzleExit;
     [SerializeField] private GameObject puzzleUI;
     [SerializeField] private CollectHerbPuzzle collectHerbPuzzle;
+    [SerializeField] private ClimbTreePuzzle climbTreePuzzle;
 
     [Serializable]
     public class itemImage
@@ -62,8 +63,15 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
                 collectHerbPuzzle.CollectHerb(puzzle);
                 InventoryManager.Instance.GainItem(puzzle.Item);
                 break;
-            case PuzzleData.Puzzle.DigDirt:
-                print("Do Dig Dirt Puzzle");
+            case PuzzleData.Puzzle.ClimbTree:
+                climbTreePuzzle.ClimbTree(puzzle);
+                break;
+            case PuzzleData.Puzzle.Gain:
+                InventoryManager.Instance.GainItem(puzzle.Item);
+                ExitPuzzle();
+                break;
+            case PuzzleData.Puzzle.Select:
+                print("Bring something up");
                 break;
             default:
                 print("Could not find puzzle type");

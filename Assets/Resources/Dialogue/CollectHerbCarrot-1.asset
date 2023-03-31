@@ -17,14 +17,11 @@ MonoBehaviour:
     Conversant: N/A
     Unlocks: HasCarrot
     Dialogues:
-    - WickIsSpeaker: 0
+    - PlayerIsSpeaker: 0
       VoiceSpeaker: 1
       Dialogue: <i> Starting the collection puzzle </i>
     Choices: []
     LeadsTo:
-    - BranchText: CollectHerb Apple
+    - BranchText: ClimbTree Carrot
       isPuzzle: 1
-      isItemID: 0
-      consumesItem: 0
-      itemName: 
       Requirements: []

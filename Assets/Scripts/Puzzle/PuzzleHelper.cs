@@ -12,7 +12,9 @@ public class PuzzleHelper
         {
             //Add more puzzles
             CollectHerb,
-            DigDirt
+            ClimbTree,
+            Gain,
+            Select
         }
 
         public Puzzle Type;
@@ -28,8 +30,14 @@ public class PuzzleHelper
                 case "CollectHerb":
                     Type = Puzzle.CollectHerb;
                     break;
-                case "DigDirt":
-                    Type = Puzzle.DigDirt;
+                case "ClimbTree":
+                    Type = Puzzle.ClimbTree;
+                    break;
+                case "Gain":
+                    Type = Puzzle.Gain;
+                    break;
+                case "Select":
+                    Type = Puzzle.Select;
                     break;
                 default:
                     Debug.Log("ERROR: Could not find Puzzle Type");
