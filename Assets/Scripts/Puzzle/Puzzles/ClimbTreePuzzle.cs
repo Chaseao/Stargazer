@@ -3,21 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using static PuzzleHelper.PuzzleData;
 
 public class ClimbTreePuzzle : MonoBehaviour
 {
 
- 
     [SerializeField] private float delayBeforeLeavingPuzzle = 2f;
 
     [SerializeField] private GameObject puzzleUI;
 
     [SerializeField] private GameObject item;
 
+    [SerializeField] private Image bar;
+
+    [SerializeField] private float barRate;
+
+    private PuzzleHelper.PuzzleData currentPuzzle;
+
+    private bool goingUp;
+
+
 
     private void Start()
     {
-
+        bar.fillAmount = 0;
+        goingUp= true;
     }
 
 
@@ -44,7 +54,16 @@ public class ClimbTreePuzzle : MonoBehaviour
 
     void Update()
     {
-    
+        if (bar.fillAmount == 1) goingUp = false;
+        else if (bar.fillAmount == 0) goingUp = true;
+        if (goingUp)
+        {
+            bar.fillAmount += barRate;
+        }
+        else
+        {
+            bar.fillAmount -= barRate;
+        }
     }
 
 
@@ -57,6 +76,7 @@ public class ClimbTreePuzzle : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(delayBeforeLeavingPuzzle);
         puzzleUI.SetActive(false);
+        InventoryManager.Instance.GainItem(currentPuzzle.Item);
         PuzzleSystem.Instance.ExitPuzzle();
     }
 }

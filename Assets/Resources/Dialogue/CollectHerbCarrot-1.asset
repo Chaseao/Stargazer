@@ -22,6 +22,6 @@ MonoBehaviour:
       Dialogue: <i> Starting the collection puzzle </i>
     Choices: []
     LeadsTo:
-    - BranchText: ClimbTree Carrot
+    - BranchText: CollectHerb Apple
       isPuzzle: 1
       Requirements: []
