@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: Basket
+  m_Name: CollectHerbCarrotEnd 1
   m_EditorClassIdentifier: 
   conversationData:
-    ID: Basket
+    ID: ClimbTree Carrot
     Conversant: N/A
-    Unlocks: HasBasket
+    Unlocks: N/A
     Dialogues:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 1
-      Dialogue: <i> Cool a basket! </i>
+      Dialogue: <i> Looks like I got all the carrots! </i>
     Choices: []
     LeadsTo:
-    - BranchText: ClimbTree Carrot
-      isPuzzle: 1
+    - BranchText: Exit
+      isPuzzle: 0
       Requirements: []

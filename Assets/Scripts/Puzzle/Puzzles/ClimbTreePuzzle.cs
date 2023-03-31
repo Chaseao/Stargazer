@@ -8,7 +8,7 @@ using static PuzzleHelper.PuzzleData;
 public class ClimbTreePuzzle : MonoBehaviour
 {
 
-    [SerializeField] private float delayBeforeLeavingPuzzle = 2f;
+    [SerializeField] private float delayBeforeLeavingPuzzle = 5f;
 
     [SerializeField] private GameObject puzzleUI;
 

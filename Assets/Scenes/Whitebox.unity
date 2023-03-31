@@ -763,7 +763,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeLeavingPuzzle: 2
   puzzleUI: {fileID: 1250159295}
-  item: {fileID: 0}
+  item: {fileID: 258816407}
+  bar: {fileID: 765586141}
+  barRate: 0.01
 --- !u!1 &268993785
 GameObject:
   m_ObjectHideFlags: 0
