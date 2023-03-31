@@ -10,6 +10,7 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
 
     public void GainItem(ItemData item)
     {
+        item.name = item.name.ToLowerInvariant();
         inventory.Add(item);
     }
 
@@ -20,6 +21,7 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
 
     public void DiscardItem(ItemData item)
     {
+        item.name = item.name.ToLower();
         Debug.Assert(inventory.Contains(item));
         inventory.Remove(item);
     }

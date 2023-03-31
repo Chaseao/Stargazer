@@ -116,7 +116,10 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
         if (choiceToPath.Count != 0)
         {
             var route = choiceToPath[choiceSelected];
-            //if (route.isItemID && route.consumesItem) InventoryManager.Instance.DiscardItem(route.itemName);
+            foreach (var requirment in route.Requirements)
+            {
+                if (requirment.isItemID && requirment.consumesItem) InventoryManager.Instance.DiscardItem(requirment.label);
+            }
             return choiceToPath[choiceSelected].BranchText;
         }
 
@@ -125,7 +128,10 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
             if(route.Requirements.Count == 0 || CheckIfMeetsRequirements(route))
             {
                 nextIsPuzzle = route.isPuzzle;
-                //if (route.isItemID && route.consumesItem) InventoryManager.Instance.DiscardItem(route.itemName);
+                foreach (var requirment in route.Requirements)
+                {
+                    if (requirment.isItemID && requirment.consumesItem) InventoryManager.Instance.DiscardItem(requirment.label);
+                }
                 return route.BranchText;
             }
         }
@@ -150,9 +156,9 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
         choiceToPath.Clear();
         for (int i = 0; i < conversation.Choices.Count; i++)
         {
-            if (CheckIfMeetsRequirements(conversation.Choices[i]))
+            if (CheckIfMeetsRequirements(conversation.LeadsTo[i]))
             {
-                choiceToPath.Add(conversation.Choices[i].BranchText, conversation.LeadsTo[i]);
+                choiceToPath.Add(conversation.Choices[i], conversation.LeadsTo[i]);
             }
         }
     }
@@ -167,14 +173,13 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
 
     private bool CheckIfMeetsRequirements(DialogueBranchData branchData)
     {
-        branchData.Requirements.ForEach(x => Debug.Log(x));
-        branchData.Requirements.Where(x => !dialogueUnlocks.Contains(x.ToLower())).ForEach(x => Debug.Log(x.ToString()));
+        branchData.Requirements.ForEach(x => Debug.Log(x.label));
         return branchData.Requirements.Find(IsInvalidRequirment()) == null;
     }
 
-    private Predicate<string> IsInvalidRequirment()
+    private Predicate<RequirementData> IsInvalidRequirment()
     {
-        return x => !dialogueUnlocks.Contains(x.ToLower());
+        return x => !(!x.isItemID && dialogueUnlocks.Contains(x.label.ToLower()) || (x.isItemID && InventoryManager.Instance.CheckForItem(x.label.ToLowerInvariant())));
     }
 
     private void OnContinueInput() => continueInputRecieved = true;

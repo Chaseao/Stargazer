@@ -17,13 +17,11 @@ MonoBehaviour:
     Conversant: green
     Unlocks: IsCured
     Dialogues:
-    - WickIsSpeaker: 0
+    - PlayerIsSpeaker: 0
       VoiceSpeaker: 1
       Dialogue: 'Green: Thank you so much for the carrots! I feel so much better.'
     Choices:
-    - BranchText: Yep :)
-      isPuzzle: 0
-      Requirements: []
+    - Your welcome!
     LeadsTo:
     - BranchText: Exit
       isPuzzle: 0

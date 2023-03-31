@@ -17,7 +17,7 @@ MonoBehaviour:
     Conversant: green
     Unlocks: N/A
     Dialogues:
-    - WickIsSpeaker: 0
+    - PlayerIsSpeaker: 0
       VoiceSpeaker: 1
       Dialogue: 'Green: Hello I''m a sick person. Thus why I''m so <i> green </i>!'
     Choices: []
@@ -25,7 +25,9 @@ MonoBehaviour:
     - BranchText: Person (Cured)
       isPuzzle: 0
       Requirements:
-      - IsCured
+      - label: IsCured
+        isItemID: 0
+        consumesItem: 0
     - BranchText: Person (Uncured)
       isPuzzle: 0
       Requirements: []

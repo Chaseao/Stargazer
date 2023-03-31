@@ -99,17 +99,8 @@ public static class JsonDialogueConverter
         while (!lines[0].StartsWith(LEADS_TO_MARKER))
         {
             var choiceOption = lines[0].Split('~').Select(x => x.Trim()).ToArray();
-            var branchData = new DialogueBranchData();
 
-            branchData.BranchText = choiceOption[0];
-            branchData.Requirements = new List<string>();
-
-            for(int i = 1; i < choiceOption.Length; i++)
-            {
-                branchData.Requirements.Add(choiceOption[i]);
-            }
-
-            conversation.Choices.Add(branchData);
+            conversation.Choices.Add(choiceOption[0]);
             lines.RemoveAt(0);
         }
 
@@ -125,18 +116,41 @@ public static class JsonDialogueConverter
             branchLines[0] = branchData.isPuzzle ? branchLines[0].Substring(1) : branchLines[0];
 
             branchData.BranchText = branchLines[0];
-            branchData.Requirements = new List<string>();
-
-            for (int i = 1; i < branchLines.Length; i++)
-            {
-                branchData.Requirements.Add(branchLines[i]);
-            }
+            branchData.Requirements = GenerateRequirmentsData(branchLines);
 
             conversation.LeadsTo.Add(branchData);
             lines.RemoveAt(0);
         }
 
         return conversation;
+    }
+
+    private static List<RequirementData> GenerateRequirmentsData(string[] branchLines)
+    {
+        var requirments = new List<RequirementData>();
+
+        for (int i = 1; i < branchLines.Length; i++)
+        {
+            var requirment = new RequirementData();
+            int offset = 0;
+
+            if (branchLines[i][0] == '*')
+            {
+                offset++;
+                requirment.isItemID = true;
+            }
+            if (branchLines[i][0] == '*')
+            {
+                offset++;
+                requirment.consumesItem = true;
+            }
+
+            requirment.label = branchLines[i][offset..].ToLowerInvariant();
+
+            requirments.Add(requirment);
+        }
+
+        return requirments;
     }
 
     private static bool AssertMarker(string text, string marker)

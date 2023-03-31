@@ -15,8 +15,22 @@ public class InventoryHelper
 
         public ItemData(string name, Sprite itemImage)
         {
-            this.name = name;
+            this.name = name.ToLower();
             this.itemImage = itemImage;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if(obj is ItemData item)
+            {
+                return name.ToLower() == item.name.ToLower();
+            }
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 

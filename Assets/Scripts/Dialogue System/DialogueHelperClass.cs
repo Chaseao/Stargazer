@@ -28,7 +28,7 @@ public static class DialogueHelperClass
         public string Conversant;
         public string Unlocks;
         public List<DialogueData> Dialogues = new List<DialogueData>();
-        public List<DialogueBranchData> Choices = new List<DialogueBranchData>();
+        public List<string> Choices = new List<string>();
         public List<DialogueBranchData> LeadsTo = new List<DialogueBranchData>();
     }
 
@@ -37,15 +37,14 @@ public static class DialogueHelperClass
     {
         public string BranchText;
         public bool isPuzzle;
-        public List<string> Requirements;
+        public List<RequirementData> Requirements;
     }
 
     [System.Serializable]
     public class RequirementData
     {
-        public string requirmentName;
+        public string label;
         public bool isItemID;
         [ShowIf("isItemID", true)] public bool consumesItem;
-        [ShowIf("isItemID", true)] public string itemName;
     }
 }

@@ -17,21 +17,19 @@ MonoBehaviour:
     Conversant: N/A
     Unlocks: N/A
     Dialogues:
-    - WickIsSpeaker: 0
+    - PlayerIsSpeaker: 0
       VoiceSpeaker: 1
       Dialogue: <i> Ooooh It's a carrot. Should I pick it? </i>
     Choices:
-    - BranchText: Pick the Carrot
-      isPuzzle: 1
-      Requirements:
-      - HasBasket
-    - BranchText: Nah
-      isPuzzle: 0
-      Requirements: []
+    - Pick carrot
+    - I need a basket
     LeadsTo:
     - BranchText: CollectHerbCarrot-1
       isPuzzle: 1
-      Requirements: []
+      Requirements:
+      - label: hasbasket
+        isItemID: 0
+        consumesItem: 0
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []
