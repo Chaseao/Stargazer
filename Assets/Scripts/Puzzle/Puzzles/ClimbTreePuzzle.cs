@@ -14,26 +14,39 @@ public class ClimbTreePuzzle : MonoBehaviour
 
     [SerializeField] private GameObject item;
 
+    [SerializeField] private GameObject player;
+
     [SerializeField] private Image bar;
 
     [SerializeField] private float barRate;
+
+    [SerializeField] private float climbRate;
+
+    [SerializeField] private int numOfClimbsNeeded;
 
     private PuzzleHelper.PuzzleData currentPuzzle;
 
     private bool goingUp;
 
+    private int numOfClimbs;
+
+    private bool inClimbPuzzle;
 
 
     private void Start()
     {
         bar.fillAmount = 0;
+        numOfClimbs = 0;
         goingUp= true;
+        inClimbPuzzle= false;
     }
 
 
     public void ClimbTree(PuzzleHelper.PuzzleData puzzle)
     {
         puzzleUI.SetActive(true);
+        inClimbPuzzle= true;
+        currentPuzzle= puzzle;
         item.GetComponent<Image>().sprite = puzzle.Item.itemImage;
     }
 
@@ -52,30 +65,65 @@ public class ClimbTreePuzzle : MonoBehaviour
         OnClick();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (bar.fillAmount == 1) goingUp = false;
-        else if (bar.fillAmount == 0) goingUp = true;
-        if (goingUp)
+        if(inClimbPuzzle)
         {
-            bar.fillAmount += barRate;
-        }
-        else
-        {
-            bar.fillAmount -= barRate;
+            if (bar.fillAmount == 1) goingUp = false;
+            else if (bar.fillAmount == 0) goingUp = true;
+            if (goingUp)
+            {
+                bar.fillAmount += barRate;
+            }
+            else
+            {
+                bar.fillAmount -= barRate;
+            }
+
+            if (numOfClimbs == numOfClimbsNeeded)
+            {
+                PuzzleSystem.Instance.inPuzzle = false;
+                inClimbPuzzle= false;
+                StartCoroutine(ResetPuzzle());
+            }
         }
     }
 
 
     private void OnClick()
     {
-        StartCoroutine(ResetPuzzle());
+        if(bar.fillAmount >= 0.85f)
+        {
+            MovePlayerUp();
+            bar.fillAmount = 0;
+        }
+        else if(numOfClimbs !=0)
+        {
+            MovePlayerDown();
+            bar.fillAmount = 0;
+        }
+    }
+
+    private void MovePlayerUp()
+    {
+        player.transform.Translate(new Vector3(0, climbRate, 0));
+        numOfClimbs++;
+    }
+
+    private void MovePlayerDown()
+    {
+        player.transform.Translate(new Vector3(0, -climbRate, 0));
+        numOfClimbs--;
     }
 
     private IEnumerator ResetPuzzle()
     {
+        numOfClimbs = 0;
         yield return new WaitForSecondsRealtime(delayBeforeLeavingPuzzle);
         puzzleUI.SetActive(false);
+        player.transform.Translate(new Vector3(0, -50, 0));
+        bar.fillAmount = 0;
+        goingUp = true;
         InventoryManager.Instance.GainItem(currentPuzzle.Item);
         PuzzleSystem.Instance.ExitPuzzle();
     }

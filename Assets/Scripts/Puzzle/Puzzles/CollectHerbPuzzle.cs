@@ -22,6 +22,8 @@ public class CollectHerbPuzzle : MonoBehaviour
 
     [SerializeField] private GameObject puzzleUI;
 
+    private bool inHerbPuzzle;
+
 
     [SerializeField] private Texture2D interactiveCursorTexture;
 
@@ -36,6 +38,7 @@ public class CollectHerbPuzzle : MonoBehaviour
         touchedHerbs = new Dictionary<GameObject, bool>();
         herbsList = new List<GameObject>();
         herbsList.AddRange(herbs);
+        inHerbPuzzle = false;
     }
 
 
@@ -43,6 +46,7 @@ public class CollectHerbPuzzle : MonoBehaviour
     {
         currentPuzzle = puzzle;
         puzzleUI.SetActive(true);
+        inHerbPuzzle = true;
         foreach(var herb in herbsInBasket) { herb.GetComponent<Image>().sprite = puzzle.Item.itemImage; }
         foreach (var herb in herbs)
         {
@@ -76,11 +80,15 @@ public class CollectHerbPuzzle : MonoBehaviour
 
     void Update()
     {
-        FindInteractableWithinDistanceThreshold();
-        if (PuzzleSystem.Instance.inPuzzle && allHerbsTouched(touchedHerbs))
+        if (inHerbPuzzle)
         {
-            PuzzleSystem.Instance.inPuzzle = false;
-            StartCoroutine(ResetPuzzle());
+            FindInteractableWithinDistanceThreshold();
+            if (allHerbsTouched(touchedHerbs))
+            {
+                PuzzleSystem.Instance.inPuzzle = false;
+                inHerbPuzzle = false;
+                StartCoroutine(ResetPuzzle());
+            }
         }
     }
 
