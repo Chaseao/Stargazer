@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1040369300490241875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1040369300490241873}
+  - component: {fileID: 1040369300490241872}
+  - component: {fileID: 1040369300490241878}
+  - component: {fileID: 1040369300490241879}
+  - component: {fileID: 1040369300490241876}
+  m_Layer: 0
+  m_Name: PuzzleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1040369300490241873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040369300490241875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.8502717, y: 5.0307255, z: -0.4935511}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1040369300490241872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040369300490241875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2937995b302f2e4986f259233a84b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inPuzzle: 0
+  puzzleUI: {fileID: 0}
+  collectHerbPuzzle: {fileID: 1040369300490241878}
+  climbTreePuzzle: {fileID: 1040369300490241879}
+  selectItemPuzzle: {fileID: 1040369300490241876}
+  itemList:
+  - itemName: Carrot
+    itemSprite: {fileID: 21300000, guid: bc0cedfcc701f3149b43e79fc95f0f07, type: 3}
+  - itemName: Apple
+    itemSprite: {fileID: 21300000, guid: d6bb94fc6adb36748992a265ae1494c8, type: 3}
+  - itemName: Person
+    itemSprite: {fileID: 0}
+--- !u!114 &1040369300490241878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040369300490241875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0976b64b114e6ba45a04d47278281f21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  herbs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  herbsInBasket:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  newSelectionTransform: {fileID: 0}
+  distanceThreshold: 60
+  delayBeforeLeavingPuzzle: 1
+  puzzleUI: {fileID: 0}
+  interactiveCursorTexture: {fileID: 2800000, guid: 4c7dddea8379f4c49926fd4c65710885, type: 3}
+--- !u!114 &1040369300490241879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040369300490241875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca920e678384bd4aafea529a49ccaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBeforeLeavingPuzzle: 3
+  puzzleUI: {fileID: 0}
+  item: {fileID: 0}
+  player: {fileID: 0}
+  bar: {fileID: 0}
+  barRate: 0.005
+  climbRate: 25
+  numOfClimbsNeeded: 5
+--- !u!114 &1040369300490241876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040369300490241875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3cb8e4e16e7de4992d7b2ae6c1bfbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  validSelections:
+  - person: Person
+    desiredItem: apple
+    dialogueOnSuccess: Person2
+    dialogueOnFailure: exit
+    dialogueOnCancel: exit
+  display: {fileID: 0}
+  slotHandler: {fileID: 0}
