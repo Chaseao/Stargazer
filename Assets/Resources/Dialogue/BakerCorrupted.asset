@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: BakerCorrupted
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: BakerCorrupted
+    Conversant: rye the baker
+    Unlocks: BI
+    Dialogues:
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: "I\u2019m floating\u2026is someone there?"
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: "I\u2019d be fine with floating like this forever. I do have bread
+        orders to complete though. Well, it doesn\u2019t matter now. I guess I\u2019ll
+        just stay in the stars forever."
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: "I feel dizzy\u2026like a cartoon with stars above their head\u2026hehe."
+    Choices:
+    - Exit.
+    LeadsTo:
+    - BranchText: Exit
+      isPuzzle: 0
+      Requirements: []

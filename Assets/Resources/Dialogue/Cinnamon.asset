@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: Cinnamon
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: Cinnamon
+    Conversant: "Pumpernickel the Baker\u2019s Assistant"
+    Unlocks: N/A
+    Dialogues:
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: "Oh! A robot\u2026 Loid: Hello, baker\u2019s assistant ;)"
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: "Hi\u2026 Loid: I need that cinnamon there. #\u2019w\u2019#"
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: What- Why would you need this now of all times?
+    Choices:
+    - "I will have someone lick it and tell me their thoughts for essential data\u2026and
+      also save Rye. ;)"
+    - I want to conduct extensive research on the cinnamon stick as a consumable
+      product +v+
+    - "Spicyyyyyyyyyyyy\u2026I want it :p"
+    - Never mind.
+    LeadsTo:
+    - BranchText: Gain Cinnamon
+      isPuzzle: 1
+      Requirements: []
+    - BranchText: Gain Cinnamon
+      isPuzzle: 1
+      Requirements: []
+    - BranchText: Gain Cinnamon
+      isPuzzle: 1
+      Requirements: []
+    - BranchText: Exit
+      isPuzzle: 0
+      Requirements: []
