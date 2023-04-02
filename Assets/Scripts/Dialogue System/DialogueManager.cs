@@ -55,7 +55,7 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
 
     public void StartDialogue(string dialogueId)
     {
-        if(dialogueId == null || dialogueId.Equals("Exit"))
+        if(dialogueId == null || dialogueId.ToLowerInvariant().Equals("exit"))
         {
             ExitDialogue();
             return;
@@ -113,30 +113,27 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
     private string HandleLeadsTo(List<DialogueBranchData> leadsTo)
     {
         nextIsPuzzle = false;
+        DialogueBranchData route = null;
         if (choiceToPath.Count != 0)
         {
-            var route = choiceToPath[choiceSelected];
-            foreach (var requirment in route.Requirements)
-            {
-                if (requirment.isItemID && requirment.consumesItem) InventoryManager.Instance.DiscardItem(requirment.label);
-            }
-            return choiceToPath[choiceSelected].BranchText;
+            route = choiceToPath[choiceSelected];
         }
 
-        foreach(var route in leadsTo)
+        foreach (var routeOption in leadsTo)
         {
-            if(route.Requirements.Count == 0 || CheckIfMeetsRequirements(route))
+            if(routeOption.Requirements.Count == 0 || CheckIfMeetsRequirements(routeOption))
             {
-                nextIsPuzzle = route.isPuzzle;
-                foreach (var requirment in route.Requirements)
-                {
-                    if (requirment.isItemID && requirment.consumesItem) InventoryManager.Instance.DiscardItem(requirment.label);
-                }
-                return route.BranchText;
+                route = routeOption;
+                break;
             }
         }
 
-        return null;
+        nextIsPuzzle = route.isPuzzle;
+        foreach (var requirment in route.Requirements)
+        {
+            if (requirment.isItemID && requirment.consumesItem) InventoryManager.Instance.DiscardItem(requirment.label);
+        }
+        return route.BranchText;
     }
 
     public void SelectChoice(string choice) => choiceSelected = choice;

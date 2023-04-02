@@ -25,7 +25,7 @@ MonoBehaviour:
     - I need a basket
     LeadsTo:
     - BranchText: CollectHerbCarrot-1
-      isPuzzle: 1
+      isPuzzle: 0
       Requirements:
       - label: hasbasket
         isItemID: 0

@@ -13,6 +13,7 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
     [SerializeField] private GameObject puzzleUI;
     [SerializeField] private CollectHerbPuzzle collectHerbPuzzle;
     [SerializeField] private ClimbTreePuzzle climbTreePuzzle;
+    [SerializeField] private SelectItemPuzzle selectItemPuzzle;
 
     [Serializable]
     public class itemImage
@@ -70,7 +71,7 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
                 ExitPuzzle();
                 break;
             case PuzzleData.Puzzle.Select:
-                print("Bring something up");
+                selectItemPuzzle.StartPuzzle(puzzle);
                 break;
             default:
                 print("Could not find puzzle type");

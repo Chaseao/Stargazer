@@ -18,6 +18,8 @@ public class Controller : SingletonMonoBehavior<Controller>
     public static Action OnSkip;
     public static Action OnResume;
 
+    public static Action OnCancel;
+
     private bool inGameplay = true;
     public bool InGameplay => inGameplay;
 
@@ -109,6 +111,12 @@ public class Controller : SingletonMonoBehavior<Controller>
     #endregion
 
     #region UIPuzzle Layout
-
+    public void Cancel(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            OnCancel?.Invoke();
+        }
+    }
     #endregion
 }

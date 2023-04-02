@@ -14,7 +14,9 @@ public class CraftingSlotHandler : SlotHandlerBase
     private CraftingSlotUIButton firstItem;
     private CraftingSlotUIButton secondItem;
 
-    protected override CraftButton CraftButton { get => craftButton; }
+    protected override UIButton ActivateButton { get => craftButton; }
+
+    protected override List<ItemData> Inventory => InventoryManager.Instance.Inventory;
 
     public override void Close()
     {
@@ -23,7 +25,7 @@ public class CraftingSlotHandler : SlotHandlerBase
         secondItem = null;
     }
 
-    protected override void CraftButton_OnClick(IButton obj)
+    protected override void ActivateButton_OnClick(IButton obj)
     {
         if(firstItem == null || secondItem == null) return;
 

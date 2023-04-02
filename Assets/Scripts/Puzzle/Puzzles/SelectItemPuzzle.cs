@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static PuzzleHelper;
 
 public class SelectItemPuzzle : SerializedMonoBehaviour
 {
     [SerializeField] List<SelectPuzzleData> validSelections;
     [SerializeField] GameObject display;
-    [SerializeField] CraftingSlotHandler slotHandler;
+    [SerializeField] SlotHandlerBase slotHandler;
 
     SelectPuzzleData currentPuzzleData;
 
@@ -16,11 +17,17 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
         HideScreen();
     }
 
+    public void StartPuzzle(PuzzleData puzzleData)
+    {
+        currentPuzzleData = validSelections.Find(x => x.person.ToLowerInvariant().Equals(puzzleData.Item.name.ToLowerInvariant()));
+        OpenScreen();
+    }
+
     [Button]
     public void OpenScreen()
     {
         ShowScreen();
-        Controller.OnResume += CancelScreen;
+        Controller.OnCancel += CancelScreen;
         slotHandler.Open();
     }
 
@@ -45,7 +52,7 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
     private void CloseScreen()
     {
         HideScreen();
-        Controller.OnResume -= CancelScreen;
+        Controller.OnCancel -= CancelScreen;
         slotHandler.Close();
     }
 
@@ -61,7 +68,7 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
 
     private void OnDestroy()
     {
-        Controller.OnResume -= CancelScreen;
+        Controller.OnCancel -= CancelScreen;
     }
 
     [System.Serializable]

@@ -24,12 +24,9 @@ MonoBehaviour:
     - Yep
     - Nope
     LeadsTo:
-    - BranchText: Person2
-      isPuzzle: 0
-      Requirements:
-      - label: apple
-        isItemID: 1
-        consumesItem: 1
+    - BranchText: Select Person
+      isPuzzle: 1
+      Requirements: []
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []

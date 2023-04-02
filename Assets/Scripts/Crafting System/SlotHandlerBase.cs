@@ -5,19 +5,19 @@ using UnityEngine;
 public abstract class SlotHandlerBase : MonoBehaviour
 {
     protected List<CraftingSlotUIButton> slots;
-    protected abstract CraftButton CraftButton { get; }
-    protected List<InventoryHelper.ItemData> Inventory { get; }
+    protected abstract UIButton ActivateButton { get; }
+    protected abstract List<InventoryHelper.ItemData> Inventory { get; }
 
     public virtual void Close()
     {
         ClearSlots();
-        CraftButton.OnClick -= CraftButton_OnClick;
+        ActivateButton.OnClick -= ActivateButton_OnClick;
     }
 
     public void Open()
     {
         SetUpSlots();
-        CraftButton.OnClick += CraftButton_OnClick;
+        ActivateButton.OnClick += ActivateButton_OnClick;
     }
 
     private void Awake()
@@ -40,7 +40,7 @@ public abstract class SlotHandlerBase : MonoBehaviour
         }
     }
 
-    protected abstract void CraftButton_OnClick(IButton obj);
+    protected abstract void ActivateButton_OnClick(IButton obj);
     protected abstract void Handle_Click(IButton button);
 
     private void SetUpSlots()
