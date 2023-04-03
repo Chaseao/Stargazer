@@ -38,4 +38,16 @@ public class PauseMenuManager : MonoBehaviour
         Controller.OnPause -= PauseGame;
         Controller.OnResume -= ResumeGame;
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void GoToMenu()
+    {
+        Controller.Instance.SwapToGameplay();
+        StartCoroutine(SceneTools.TransitionToScene(0));
+    }
+
 }

@@ -7,13 +7,23 @@ public class TitleScreenManager : MonoBehaviour
 {
     [SerializeField] ButtonGroup menuButtons;
     [SerializeField] AudioControls audioControls;
+    [SerializeField] int firstLevelIndex;
 
     private void Start()
     {
         Controller.Instance.SwapToUI();
         menuButtons.EnableButtons();
         audioControls.SetAudio(new int[] { 50 }, false) ;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+    }
+
+    public void StartGame()
+    {
+        Controller.Instance.SwapToGameplay();
+        StartCoroutine(SceneTools.TransitionToScene(firstLevelIndex));
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
