@@ -21,7 +21,7 @@ MonoBehaviour:
     - Get ginkgo.
     - Exit.
     LeadsTo:
-    - BranchText: TreePuzzle Ginkgo
+    - BranchText: ClimbTree Ginkgo
       isPuzzle: 1
       Requirements: []
     - BranchText: Exit

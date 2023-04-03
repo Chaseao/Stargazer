@@ -31,7 +31,7 @@ MonoBehaviour:
     - Fish for shoe!
     - Exit.
     LeadsTo:
-    - BranchText: RiverPuzzle Shoe
+    - BranchText: Water Shoe
       isPuzzle: 1
       Requirements: []
     - BranchText: Exit
