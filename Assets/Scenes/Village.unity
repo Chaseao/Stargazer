@@ -3102,7 +3102,7 @@ PrefabInstance:
       objectReference: {fileID: 6046080912197708782}
     - target: {fileID: 9093001722674344101, guid: 052708990a13a4442ba23ba46ff279b7, type: 3}
       propertyPath: distanceThreshold
-      value: 80
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 9093001722674344101, guid: 052708990a13a4442ba23ba46ff279b7, type: 3}
       propertyPath: interactablesManager
