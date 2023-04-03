@@ -99,7 +99,7 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
         if (nextIsPuzzle)
         {
             Debug.Log("STARTING PUZZLE: " + nextDialogue);
-            // YIELD RETURN START PUZZLE
+            ExitDialogue();
             PuzzleSystem.Instance.StartPuzzle(nextDialogue);
         }
         else
@@ -196,18 +196,18 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
 
         yield return TypewriterDialogue(name, dialogue.Dialogue, dialogue.PlayerIsSpeaker);
 
-        Controller.OnSelect += OnContinueInput;
+        Controller.OnNextDialogue += OnContinueInput;
 
         yield return new WaitUntil(() => continueInputRecieved);
 
-        Controller.OnSelect -= OnContinueInput;
+        Controller.OnNextDialogue -= OnContinueInput;
     }
 
     private IEnumerator TypewriterDialogue(string name, string line, bool isWickSpeaker)
     {
         currentDialogueSpeed = dialogueSpeed;
         string loadedText = name;
-        Controller.OnSelect += SpeedUpText;
+        Controller.OnNextDialogue += SpeedUpText;
         bool atSpecialCharacter = false;
         foreach(char letter in line)
         {
@@ -218,7 +218,7 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
             OnTextUpdated?.Invoke(loadedText, isWickSpeaker);
             yield return new WaitForSeconds(1 / currentDialogueSpeed);
         }
-        Controller.OnSelect -= SpeedUpText;
+        Controller.OnNextDialogue -= SpeedUpText;
     }
 
     private void SpeedUpText() => currentDialogueSpeed = currentDialogueSpeed == dialogueFastSpeed ? currentDialogueSpeed = dialogueFastSpeed * 10 : dialogueFastSpeed;

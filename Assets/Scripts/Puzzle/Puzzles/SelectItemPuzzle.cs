@@ -9,6 +9,7 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
     [SerializeField] List<SelectPuzzleData> validSelections;
     [SerializeField] GameObject display;
     [SerializeField] SlotHandlerBase slotHandler;
+    [SerializeField] UIButton cancelButton;
 
     SelectPuzzleData currentPuzzleData;
 
@@ -28,7 +29,13 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
     {
         ShowScreen();
         Controller.OnCancel += CancelScreen;
+        cancelButton.OnClick += Button_OnClick;
         slotHandler.Open();
+    }
+
+    private void Button_OnClick(IButton obj)
+    {
+        CancelScreen();
     }
 
     [Button]
@@ -53,6 +60,7 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
     {
         HideScreen();
         Controller.OnCancel -= CancelScreen;
+        cancelButton.OnClick -= Button_OnClick;
         slotHandler.Close();
     }
 

@@ -5,6 +5,7 @@ public class CraftingSystem : SingletonMonoBehavior<CraftingSystem>
 {
     [SerializeField] Canvas display;
     [SerializeField] CraftingSlotHandler slotHandler;
+    [SerializeField] UIButton closeButton;
 
     private void Start()
     {
@@ -17,7 +18,13 @@ public class CraftingSystem : SingletonMonoBehavior<CraftingSystem>
         ShowScreen();
         Controller.Instance.SwapToUI();
         Controller.OnResume += CloseScreen;
+        closeButton.OnClick += CloseScreen;
         slotHandler.Open();
+    }
+
+    public void CloseScreen(IButton _)
+    {
+        CloseScreen();
     }
 
     [Button]
@@ -26,6 +33,7 @@ public class CraftingSystem : SingletonMonoBehavior<CraftingSystem>
         HideScreen();
         Controller.Instance.SwapToGameplay();
         Controller.OnResume -= CloseScreen;
+        closeButton.OnClick -= CloseScreen;
         slotHandler.Close();
     }
 
