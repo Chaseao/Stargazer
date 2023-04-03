@@ -404,17 +404,6 @@
                 },
                 {
                     "name": "",
-                    "id": "6a89920b-5d9e-49fb-9098-feda3e57fad1",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Select",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "a95963a2-0a8c-4c72-b010-cb1ee89cafe3",
                     "path": "<Keyboard>/backspace",
                     "interactions": "",

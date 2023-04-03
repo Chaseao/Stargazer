@@ -47,6 +47,19 @@ public class DialogueUIController : SerializedMonoBehaviour
         choicesDisplay.SelectChoice(currentChoice);
     }
 
+    private void OnChoiceClicked(int index)
+    {
+        if (index == currentChoice)
+        {
+            SelectChoice();
+        }
+        else
+        {
+            currentChoice = index;
+            choicesDisplay.SelectChoice(index);
+        }
+    }
+
     private void SelectChoice()
     {
         DialogueManager.Instance.SelectChoice(choices[currentChoice]);
@@ -54,7 +67,7 @@ public class DialogueUIController : SerializedMonoBehaviour
 
     private void OnChoiceMenuStart(List<string> validChoices)
     {
-        choicesDisplay.Display(validChoices);
+        choicesDisplay.Display(validChoices, OnChoiceClicked);
         choices = validChoices;
         totalChoices = validChoices.Count;
         currentChoice = 0;
