@@ -69,6 +69,7 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
                 break;
             case PuzzleData.Puzzle.Gain:
                 InventoryManager.Instance.GainItem(puzzle.Item);
+                SwapNextDialogueID("Exit");
                 ExitPuzzle();
                 break;
             case PuzzleData.Puzzle.Select:
@@ -100,7 +101,14 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
     {
         inPuzzle = false;
         puzzleUI.SetActive(false);
-        Controller.Instance.SwapToUI();
-        DialogueManager.Instance.StartDialogue(dialogueID);
+        if (DialogueManager.Instance.ValidateID(dialogueID))
+        {
+            Controller.Instance.SwapToUI();
+            DialogueManager.Instance.StartDialogue(dialogueID);
+        }
+        else
+        {
+            Controller.Instance.SwapToGameplay();
+        }
     }
 }

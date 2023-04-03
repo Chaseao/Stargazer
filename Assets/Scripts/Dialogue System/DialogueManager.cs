@@ -29,6 +29,7 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
     bool continueInputRecieved;
     string choiceSelected;
     public bool InDialogue => inDialogue;
+    public bool ValidateID(string id) => conversationGroup.Find(data => data.Data.ID.ToLower().Equals(id.ToLower()));
 
     private void Start()
     {
