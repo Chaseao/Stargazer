@@ -9,6 +9,8 @@ public class RiverPuzzle : MonoBehaviour
     [SerializeField] WaterMovement waterTwo;
     [SerializeField] GameObject puzzleUI;
     [SerializeField] WaterHazards hazards;
+    [SerializeField] private AudioSource puzzleMusic;
+    [SerializeField] private AudioSource backgroundMusic;
 
     [Header("CustomizationFields")]
     [SerializeField] float waterSpeed = 5;
@@ -27,6 +29,8 @@ public class RiverPuzzle : MonoBehaviour
         target.SetSpeed(waterSpeed);
         waterOne.SetSpeed(waterSpeed);
         waterTwo.SetSpeed(waterSpeed);
+        puzzleMusic.Play();
+        backgroundMusic.Stop();
 
         SubscribeToEvents();
         TogglePuzzleDisplay(true);
@@ -62,6 +66,8 @@ public class RiverPuzzle : MonoBehaviour
     {
         UnsubscribeToEvents();
         TogglePuzzleDisplay(false);
+        puzzleMusic.Stop();
+        backgroundMusic.Play();
         PuzzleSystem.Instance.ExitPuzzle();
     }
 

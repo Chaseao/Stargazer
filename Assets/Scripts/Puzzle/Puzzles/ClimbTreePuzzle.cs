@@ -24,6 +24,10 @@ public class ClimbTreePuzzle : MonoBehaviour
 
     [SerializeField] private int numOfClimbsNeeded;
 
+    [SerializeField] private AudioSource puzzleMusic;
+
+    [SerializeField] private AudioSource backgroundMusic;
+
     private PuzzleHelper.PuzzleData currentPuzzle;
 
     private bool goingUp;
@@ -45,6 +49,8 @@ public class ClimbTreePuzzle : MonoBehaviour
     public void ClimbTree(PuzzleHelper.PuzzleData puzzle)
     {
         puzzleUI.SetActive(true);
+        puzzleMusic.Play();
+        backgroundMusic.Stop();
         inClimbPuzzle= true;
         currentPuzzle= puzzle;
         item.GetComponent<Image>().sprite = puzzle.Item.itemImage;
@@ -121,6 +127,8 @@ public class ClimbTreePuzzle : MonoBehaviour
         numOfClimbs = 0;
         yield return new WaitForSecondsRealtime(delayBeforeLeavingPuzzle);
         puzzleUI.SetActive(false);
+        puzzleMusic.Stop();
+        backgroundMusic.Play();
         player.transform.Translate(new Vector3(0, -50, 0));
         bar.fillAmount = 0;
         goingUp = true;
