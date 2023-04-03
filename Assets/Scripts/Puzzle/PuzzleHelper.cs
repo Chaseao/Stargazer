@@ -13,7 +13,8 @@ public class PuzzleHelper
             CollectHerb,
             ClimbTree,
             Gain,
-            Select
+            Select,
+            Water
         }
 
         public Puzzle Type;
@@ -37,6 +38,9 @@ public class PuzzleHelper
                     break;
                 case "Select":
                     Type = Puzzle.Select;
+                    break;
+                case "Water":
+                    Type = Puzzle.Water;
                     break;
                 default:
                     Debug.Log("ERROR: Could not find Puzzle Type");

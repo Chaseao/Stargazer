@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1040369300490241878}
   - component: {fileID: 1040369300490241879}
   - component: {fileID: 1040369300490241876}
+  - component: {fileID: 8879073101846571685}
   m_Layer: 0
   m_Name: PuzzleManager
   m_TagString: Untagged
@@ -135,3 +136,21 @@ MonoBehaviour:
     dialogueOnCancel: exit
   display: {fileID: 0}
   slotHandler: {fileID: 0}
+  cancelButton: {fileID: 0}
+--- !u!114 &8879073101846571685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040369300490241875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc52901e55fdec4993cc32166e89248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  waterOne: {fileID: 0}
+  waterTwo: {fileID: 0}
+  puzzleUI: {fileID: 0}
+  waterSpeed: 5
