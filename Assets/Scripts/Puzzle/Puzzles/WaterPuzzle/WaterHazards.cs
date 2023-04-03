@@ -19,7 +19,8 @@ public class WaterHazards : MonoBehaviour
     public void ClickHazard()
     {
         OnHazardClicked?.Invoke();
-        StartCoroutine(ActivateHazardBlink());
+        StopCoroutine(nameof(ActivateHazardBlink));
+        StartCoroutine(nameof(ActivateHazardBlink));
     }
 
     private IEnumerator ActivateHazardBlink()
