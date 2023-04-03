@@ -21,6 +21,7 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
     public void StartPuzzle(PuzzleData puzzleData)
     {
         currentPuzzleData = validSelections.Find(x => x.person.ToLowerInvariant().Equals(puzzleData.Item.name.ToLowerInvariant()));
+        Debug.Assert(currentPuzzleData.dialogueOnCancel != null, "Person that you talked to was not found in Select item puzzle");
         OpenScreen();
     }
 
