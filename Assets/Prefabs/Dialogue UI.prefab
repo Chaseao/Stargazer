@@ -520,7 +520,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &7122257855451432445
 MonoBehaviour:
@@ -574,6 +574,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55c3ff65c1a04f45baba3819189e8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
   leftPortrait: {fileID: 3710261878109728556}
   rightPortrait: {fileID: 6056787326837133201}
   textBoxDisplay: {fileID: 7140504226524708977}
