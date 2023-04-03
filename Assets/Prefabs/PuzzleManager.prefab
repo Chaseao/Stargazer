@@ -53,6 +53,7 @@ MonoBehaviour:
   collectHerbPuzzle: {fileID: 1040369300490241878}
   climbTreePuzzle: {fileID: 1040369300490241879}
   selectItemPuzzle: {fileID: 1040369300490241876}
+  riverPuzzle: {fileID: 8879073101846571685}
   itemList:
   - itemName: Carrot
     itemSprite: {fileID: 21300000, guid: bc0cedfcc701f3149b43e79fc95f0f07, type: 3}
@@ -153,4 +154,5 @@ MonoBehaviour:
   waterOne: {fileID: 0}
   waterTwo: {fileID: 0}
   puzzleUI: {fileID: 0}
-  waterSpeed: 5
+  hazards: {fileID: 0}
+  waterSpeed: 400

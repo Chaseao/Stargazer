@@ -22,6 +22,6 @@ MonoBehaviour:
       Dialogue: <i> Cool a basket! </i>
     Choices: []
     LeadsTo:
-    - BranchText: ClimbTree Carrot
+    - BranchText: Water Apple
       isPuzzle: 1
       Requirements: []
