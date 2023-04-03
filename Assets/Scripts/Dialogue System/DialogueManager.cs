@@ -87,9 +87,12 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
     {
         OnDialogueStarted?.Invoke(data);
 
-        foreach (var dialogue in data.Dialogues)
+        if (data.Dialogues.Count >= 1 && !data.Dialogues[0].Dialogue.IsNullOrWhitespace())
         {
-            yield return ProcessDialogue(dialogue, data.Conversant);
+            foreach (var dialogue in data.Dialogues)
+            {
+                yield return ProcessDialogue(dialogue, data.Conversant);
+            }
         }
 
         HandleUnlock(data.Unlocks);
@@ -118,13 +121,15 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
         {
             route = choiceToPath[choiceSelected];
         }
-
-        foreach (var routeOption in leadsTo)
+        else
         {
-            if(routeOption.Requirements.Count == 0 || CheckIfMeetsRequirements(routeOption))
+            foreach (var routeOption in leadsTo)
             {
-                route = routeOption;
-                break;
+                if (routeOption.Requirements.Count == 0 || CheckIfMeetsRequirements(routeOption))
+                {
+                    route = routeOption;
+                    break;
+                }
             }
         }
 

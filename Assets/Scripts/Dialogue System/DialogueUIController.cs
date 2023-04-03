@@ -62,6 +62,7 @@ public class DialogueUIController : SerializedMonoBehaviour
 
     private void SelectChoice()
     {
+        Debug.Log("Selecting: " + choices[currentChoice]);
         DialogueManager.Instance.SelectChoice(choices[currentChoice]);
     }
 
