@@ -20,7 +20,10 @@ MonoBehaviour:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
       Dialogue: "I feel dizzy\u2026I have so many orders of bread to complete\u2026but
-        I want to stay. Loid: It is probable that I can be of assistance. OvO"
+        I want to stay. "
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: It is probable that I can be of assistance. OvO
     Choices:
     - Open inventory.
     - Exit.

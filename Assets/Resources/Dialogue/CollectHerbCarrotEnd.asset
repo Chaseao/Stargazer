@@ -17,9 +17,9 @@ MonoBehaviour:
     Conversant: N/A
     Unlocks: N/A
     Dialogues:
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 1
-      Dialogue: <i> Looks like I got all the carrots! </i>
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: <i> Looks like I got all the apples! </i>
     Choices: []
     LeadsTo:
     - BranchText: Exit

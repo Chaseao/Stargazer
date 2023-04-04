@@ -17,19 +17,17 @@ MonoBehaviour:
     Conversant: N/A
     Unlocks: N/A
     Dialogues:
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 1
-      Dialogue: <i> Ooooh It's a carrot. Should I pick it? </i>
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: <i> Ooooh it's a bush with some apples. I thought they grew on tree
+        though? Hmmm Should I pick it? </i>
     Choices:
-    - Pick carrot
-    - I need a basket
+    - Pick the apples
+    - Nah
     LeadsTo:
-    - BranchText: CollectHerbCarrot-1
-      isPuzzle: 0
-      Requirements:
-      - label: hasbasket
-        isItemID: 0
-        consumesItem: 0
+    - BranchText: CollectHerb Apple
+      isPuzzle: 1
+      Requirements: []
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []
