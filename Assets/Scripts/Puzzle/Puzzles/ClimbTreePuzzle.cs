@@ -108,6 +108,10 @@ public class ClimbTreePuzzle : MonoBehaviour
             MovePlayerDown();
             bar.fillAmount = 0;
         }
+        else
+        {
+            bar.fillAmount = 0;
+        }
     }
 
     private void MovePlayerUp()
