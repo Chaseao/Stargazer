@@ -10,6 +10,7 @@ public class CraftingSlotHandler : SlotHandlerBase
     [SerializeField] ResultsSlot results;
     [SerializeField] CraftButton craftButton;
     [SerializeField] CraftingResultsTable resultsTable;
+    [SerializeField] Sprite failedSprite;
 
     private CraftingSlotUIButton firstItem;
     private CraftingSlotUIButton secondItem;
@@ -35,6 +36,7 @@ public class CraftingSlotHandler : SlotHandlerBase
         if (result == null)
         {
             Debug.Log("Failed to craft");
+            results.SetSprite(failedSprite);
             return;
         }
 

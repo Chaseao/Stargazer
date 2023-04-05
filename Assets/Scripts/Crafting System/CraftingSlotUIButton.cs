@@ -28,9 +28,10 @@ public class CraftingSlotUIButton : UIButton
 
     public void SetItem(ItemData item)
     {
-        if (item == null) return;
+        Debug.Log("Updated item");
         this.item = item;
-        image.sprite = item.itemImage;
+        image.sprite = item?.itemImage;
+        image.enabled = image.sprite != null;
     }
 
     public override void Use()

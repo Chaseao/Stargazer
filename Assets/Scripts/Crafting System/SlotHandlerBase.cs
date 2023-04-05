@@ -23,12 +23,9 @@ public abstract class SlotHandlerBase : MonoBehaviour
     private void Awake()
     {
         slots = transform.GetComponentsInChildren<CraftingSlotUIButton>().ToList();
-    }
-
-    private void Start()
-    {
         Close();
     }
+
 
     private void ClearSlots()
     {

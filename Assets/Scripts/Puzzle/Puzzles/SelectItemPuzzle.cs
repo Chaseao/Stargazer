@@ -15,6 +15,7 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
 
     private void Start()
     {
+        ShowScreen();
         HideScreen();
     }
 
@@ -25,7 +26,6 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
         OpenScreen();
     }
 
-    [Button]
     public void OpenScreen()
     {
         ShowScreen();
@@ -39,7 +39,6 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
         CancelScreen();
     }
 
-    [Button]
     public void CancelScreen()
     {
         CloseScreen();
