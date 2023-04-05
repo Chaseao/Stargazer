@@ -18,6 +18,7 @@ public class CraftingSlotUIButton : UIButton
     private void Awake()
     {
         frameStart = frame.color;
+        image.sprite = null;
     }
 
     public void ToggleFrame(bool selected)
@@ -27,8 +28,9 @@ public class CraftingSlotUIButton : UIButton
 
     public void SetItem(ItemData item)
     {
+        if (item == null) return;
         this.item = item;
-        image.sprite = item?.itemImage;
+        image.sprite = item.itemImage;
     }
 
     public override void Use()

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: BakerCorrupted
-    Conversant: rye the baker
+    Conversant: Rye the Baker
     Unlocks: BI
     Dialogues:
     - PlayerIsSpeaker: 0

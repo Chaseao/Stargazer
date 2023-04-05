@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Baker-TopNode
-    Conversant: rye the baker
+    Conversant: Rye the Baker
     Unlocks: N/A
     Dialogues: []
     Choices:
@@ -23,7 +23,7 @@ MonoBehaviour:
     - BranchText: BakerInventory
       isPuzzle: 0
       Requirements:
-      - label: BI
+      - label: bi
         isItemID: 0
         consumesItem: 0
     - BranchText: BakerCorrupted

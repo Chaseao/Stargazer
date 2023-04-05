@@ -19,10 +19,16 @@ MonoBehaviour:
     Dialogues:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
-      Dialogue: "Oh! A robot\u2026 Loid: Hello, baker\u2019s assistant ;)"
+      Dialogue: "Oh! A robot\u2026"
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: "Hello, baker\u2019s assistant ;)"
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
-      Dialogue: "Hi\u2026 Loid: I need that cinnamon there. #\u2019w\u2019#"
+      Dialogue: "Hi\u2026"
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: "I need that cinnamon there. #\u2019w\u2019#"
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
       Dialogue: What- Why would you need this now of all times?

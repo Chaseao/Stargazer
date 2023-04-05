@@ -10,28 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: BakerFail
+  m_Name: BakerFailed
   m_EditorClassIdentifier: 
   conversationData:
-    ID: BakerFail
+    ID: BakerFailed
     Conversant: Rye the Baker
     Unlocks: N/A
     Dialogues:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
-      Dialogue: "The stars\u2026I-I- I\u2019m being consumed."
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: The elixir has failed :O
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: "I couldn\u2019t save Rye! (>_<)"
+      Dialogue: "I\u2019m so dizzy."
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
-      Dialogue: "COUGH\u2026CHOKE\u2026WHEEZE\u2026I\u2019m floating\u2026"
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: :,(
+      Dialogue: "I am lost \u2018til the end of time."
     Choices:
     - Exit.
     LeadsTo:
