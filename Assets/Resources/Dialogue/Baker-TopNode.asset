@@ -20,6 +20,12 @@ MonoBehaviour:
     Choices:
     - Exit.
     LeadsTo:
+    - BranchText: BakerFailed
+      isPuzzle: 0
+      Requirements:
+      - label: fail
+        isItemID: 0
+        consumesItem: 0
     - BranchText: BakerInventory
       isPuzzle: 0
       Requirements:

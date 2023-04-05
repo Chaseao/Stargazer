@@ -15,7 +15,7 @@ MonoBehaviour:
   conversationData:
     ID: BakerFail
     Conversant: Rye the Baker
-    Unlocks: N/A
+    Unlocks: FAIL
     Dialogues:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
