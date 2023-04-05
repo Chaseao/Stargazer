@@ -3047,8 +3047,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134281052}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.86, y: 0.85, z: -0.5}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: 5.21, y: 0.71, z: -0.5}
+  m_LocalScale: {x: 4.625775, y: 5.070365, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6986535047256947145}
@@ -3108,7 +3108,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6caae36f850aabd499001655867cc3e6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 0.832482, g: 0.8396226, b: 0.21703447, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3116,11 +3116,11 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1134281056
-CircleCollider2D:
+--- !u!70 &1134281056
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3133,8 +3133,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0
 --- !u!1001 &1137432145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4135,7 +4135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1445613642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.290253, y: 6.6260295, z: -0.5}
+  m_LocalPosition: {x: 14.290253, y: 6.6260295, z: -1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5111,8 +5111,8 @@ Transform:
   m_Father: {fileID: 654624717}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &1705535180
-EdgeCollider2D:
+--- !u!61 &1705535180
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5124,27 +5124,19 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 5.3206663, y: -4.6160526}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.56565285, y: 0.43953323}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: 7.170721, y: -4.242457}
-  - {x: 7.0850134, y: -3.556807}
-  - {x: 7.3079424, y: -3.1285548}
-  - {x: 7.60303, y: -3.4592133}
-  - {x: 7.8615704, y: -3.3366544}
-  - {x: 8.236105, y: -3.5038}
-  - {x: 8.197638, y: -3.756418}
-  - {x: 8.514491, y: -3.7083125}
-  - {x: 8.363893, y: -4.0464783}
-  - {x: 7.9464073, y: -4.0213623}
-  - {x: 7.5814743, y: -4.217926}
-  - {x: 7.4273815, y: -4.0886006}
-  - {x: 7.230126, y: -4.3985534}
-  - {x: 7.169405, y: -4.140393}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1001 &1743709253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5922,7 +5914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[0].desiredItem
-      value: antidoteD
+      value: antidote_d
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[0].dialogueOnFailure
@@ -6535,7 +6527,7 @@ MonoBehaviour:
       Data: 3|InventoryHelper+ItemData, Assembly-CSharp
     - Name: name
       Entry: 1
-      Data: antidoteD
+      Data: antidote_d
     - Name: itemImage
       Entry: 10
       Data: 0
@@ -6565,7 +6557,7 @@ MonoBehaviour:
       Data: 5|InventoryHelper+ItemData, Assembly-CSharp
     - Name: name
       Entry: 1
-      Data: antidoteA
+      Data: antidote_a
     - Name: itemImage
       Entry: 10
       Data: 0
@@ -6595,7 +6587,7 @@ MonoBehaviour:
       Data: 7|InventoryHelper+ItemData, Assembly-CSharp
     - Name: name
       Entry: 1
-      Data: antidoteC
+      Data: antidote_c
     - Name: itemImage
       Entry: 10
       Data: 0
@@ -6625,7 +6617,7 @@ MonoBehaviour:
       Data: 9|InventoryHelper+ItemData, Assembly-CSharp
     - Name: name
       Entry: 1
-      Data: antidoteB
+      Data: antidote_b
     - Name: itemImage
       Entry: 10
       Data: 0
@@ -6655,7 +6647,7 @@ MonoBehaviour:
       Data: 11|InventoryHelper+ItemData, Assembly-CSharp
     - Name: name
       Entry: 1
-      Data: antidoteE
+      Data: antidote_e
     - Name: itemImage
       Entry: 10
       Data: 0
@@ -6685,7 +6677,7 @@ MonoBehaviour:
       Data: 13|InventoryHelper+ItemData, Assembly-CSharp
     - Name: name
       Entry: 1
-      Data: antidoteF
+      Data: antidote_f
     - Name: itemImage
       Entry: 10
       Data: 0
@@ -14386,7 +14378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -209.2, y: 8}
+  m_AnchoredPosition: {x: -269.9, y: 1.4}
   m_SizeDelta: {x: 41.3338, y: 53.9065}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5099415844312408252
@@ -15784,7 +15776,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -222.79999, y: -116.5}
+  m_AnchoredPosition: {x: -263.5, y: -116.5}
   m_SizeDelta: {x: 41.3338, y: 53.9065}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5099415845080699310
