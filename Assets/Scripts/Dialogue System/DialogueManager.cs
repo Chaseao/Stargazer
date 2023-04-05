@@ -176,7 +176,6 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
 
     private bool CheckIfMeetsRequirements(DialogueBranchData branchData)
     {
-        branchData.Requirements.ForEach(x => Debug.Log(x.label));
         return branchData.Requirements.Find(IsInvalidRequirment()) == null;
     }
 

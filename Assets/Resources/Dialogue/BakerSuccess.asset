@@ -15,7 +15,7 @@ MonoBehaviour:
   conversationData:
     ID: BakerSuccess
     Conversant: Rye the Baker
-    Unlocks: SavedBaker
+    Unlocks: SUCCESS
     Dialogues:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0

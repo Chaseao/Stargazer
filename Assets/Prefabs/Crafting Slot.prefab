@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 7936892828566970598}
   - component: {fileID: 4175283594903982177}
   - component: {fileID: 1918699913461471692}
+  - component: {fileID: 2346584204882211729}
   m_Layer: 0
   m_Name: Crafting Slot
   m_TagString: Untagged
@@ -360,4 +361,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 8167946176833071580}
   frame: {fileID: 8873835407300510736}
+  animator: {fileID: 2346584204882211729}
   frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+--- !u!95 &2346584204882211729
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9013504439085263478}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 041c75948fdb6e3439e7b90a9a0f5abe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

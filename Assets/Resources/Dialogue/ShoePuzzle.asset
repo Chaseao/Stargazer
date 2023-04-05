@@ -10,26 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: Flour
+  m_Name: ShoePuzzle
   m_EditorClassIdentifier: 
   conversationData:
-    ID: Flour
+    ID: ShoePuzzle
     Conversant: N/A
-    Unlocks: N/A
+    Unlocks: BI
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: "The baker\u2019s wife has flour. Nom nom. :3 I should look for survivors.
-        :>"
+      Dialogue: A rapidly flowing river presents quite a danger for humans. Especially
+        those that are not proficient in floating or swimming.
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: "What is that\u2026?"
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: A shoe! A shoe is floating in the water.
     Choices:
+    - Fish for shoe!
     - Exit.
     LeadsTo:
-    - BranchText: FlourPuzzle
-      isPuzzle: 0
-      Requirements:
-      - label: puzzles
-        isItemID: 0
-        consumesItem: 0
+    - BranchText: Water Shoe
+      isPuzzle: 1
+      Requirements: []
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []

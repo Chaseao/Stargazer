@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: FlourPuzzle
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: FlourPuzzle
+    Conversant: "Poppy the Baker\u2019s Wife"
+    Unlocks: BI
+    Dialogues:
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: Apparently, this substance allows you to bake breads of all kinds.
+        :)
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: "I-It\u2019s flour\u2026Your voice sounds familiar."
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: "Fascinating\u2026 :0"
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: LOID?! Is that you???
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: It is. Newly updated and operational. #*v*#
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: What-What hap-
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: Does Rye use this flour often? ;3
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: "\u2026"
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: Yes. To cook her orders, of course. Orders you have made yourself
+        in the past.
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: My data has no reference to an order for bread. :(
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: I would like to take this flour, Poppy. ;)
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: Why??
+    Choices:
+    - "Mmmmmm it\u2019s a good snack for the road :3"
+    - It is so aesthetic. I cannot digest things, so I will merely enjoy the look
+      of such an ingredient X(
+    - I must save your wife *o*
+    - Never mind.
+    LeadsTo:
+    - BranchText: Gain Flour
+      isPuzzle: 1
+      Requirements: []
+    - BranchText: Gain Flour
+      isPuzzle: 1
+      Requirements: []
+    - BranchText: Gain Flour
+      isPuzzle: 1
+      Requirements: []
+    - BranchText: Exit
+      isPuzzle: 0
+      Requirements: []

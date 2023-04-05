@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,8 @@ using static InventoryHelper;
 
 public class InventoryManager : SingletonMonoBehavior<InventoryManager>
 {
+    public static event Action<ItemData> OnItemGained;
+
     [SerializeField] List<ItemData> inventory = new List<ItemData>();
     public List<ItemData> Inventory => inventory;
 
@@ -12,6 +15,7 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
     {
         item.name = item.name.ToLowerInvariant();
         inventory.Add(item);
+        OnItemGained?.Invoke(item);
     }
 
     public void DiscardItem(string item)

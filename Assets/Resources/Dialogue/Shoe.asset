@@ -19,21 +19,16 @@ MonoBehaviour:
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: A rapidly flowing river presents quite a danger for humans. Especially
-        those that are not proficient in floating or swimming.
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: "What is that\u2026?"
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: A shoe! A shoe is floating in the water.
+      Dialogue: Is there a shoe in that river? O_O I should look for survivors. :>
     Choices:
-    - Fish for shoe!
     - Exit.
     LeadsTo:
-    - BranchText: Water Shoe
-      isPuzzle: 1
-      Requirements: []
+    - BranchText: ShoePuzzle
+      isPuzzle: 0
+      Requirements:
+      - label: puzzles
+        isItemID: 0
+        consumesItem: 0
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []

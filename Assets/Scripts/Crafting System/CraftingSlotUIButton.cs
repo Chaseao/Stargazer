@@ -7,6 +7,7 @@ public class CraftingSlotUIButton : UIButton
 {
     [SerializeField] Image image;
     [SerializeField] Image frame;
+    [SerializeField] Animator animator;
     [SerializeField] Color frameSelected;
 
     Color frameStart;
@@ -24,11 +25,11 @@ public class CraftingSlotUIButton : UIButton
     public void ToggleFrame(bool selected)
     {
         frame.color = selected ? frameSelected : frameStart;
+        animator.enabled = selected;
     }
 
     public void SetItem(ItemData item)
     {
-        Debug.Log("Updated item");
         this.item = item;
         image.sprite = item?.itemImage;
         image.enabled = image.sprite != null;
@@ -37,7 +38,5 @@ public class CraftingSlotUIButton : UIButton
     public override void Use()
     {
         if(item == null) return;
-
-        Debug.Log("Selected: " + item.name);
     }
 }

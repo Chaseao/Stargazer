@@ -14,41 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Cinnamon
-    Conversant: "Pumpernickel the Baker\u2019s Assistant"
+    Conversant: N/A
     Unlocks: N/A
     Dialogues:
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 0
-      Dialogue: "Oh! A robot\u2026"
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: "Hello, baker\u2019s assistant ;)"
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 0
-      Dialogue: "Hi\u2026"
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: "I need that cinnamon there. #\u2019w\u2019#"
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 0
-      Dialogue: What- Why would you need this now of all times?
+      Dialogue: "The baker\u2019s assistant has cinnamon. Spicy :p I should look
+        for survivors. :>"
     Choices:
-    - "I will have someone lick it and tell me their thoughts for essential data\u2026and
-      also save Rye. ;)"
-    - I want to conduct extensive research on the cinnamon stick as a consumable
-      product +v+
-    - "Spicyyyyyyyyyyyy\u2026I want it :p"
-    - Never mind.
+    - Exit.
     LeadsTo:
-    - BranchText: Gain Cinnamon
-      isPuzzle: 1
-      Requirements: []
-    - BranchText: Gain Cinnamon
-      isPuzzle: 1
-      Requirements: []
-    - BranchText: Gain Cinnamon
-      isPuzzle: 1
-      Requirements: []
+    - BranchText: CinnamonPuzzle
+      isPuzzle: 0
+      Requirements:
+      - label: puzzles
+        isItemID: 0
+        consumesItem: 0
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []

@@ -19,19 +19,16 @@ MonoBehaviour:
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: Ginkgo is good for dizziness :D
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: "Luckily, as a second generation, automated, 64-bit processing, self-portable,
-        solar-operated, high-speed, Linux(TM) robot, with machine learning, L0-1D
-        can\u2019t be dizzy. It is not in my programming. (~v~)"
+      Dialogue: "It\u2019s a Ginkgo tree. I should look for survivors. :>"
     Choices:
-    - Get ginkgo.
     - Exit.
     LeadsTo:
-    - BranchText: ClimbTree Ginkgo
-      isPuzzle: 1
-      Requirements: []
+    - BranchText: GinkgoPuzzle
+      isPuzzle: 0
+      Requirements:
+      - label: puzzles
+        isItemID: 0
+        consumesItem: 0
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []

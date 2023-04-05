@@ -36,6 +36,7 @@ public class CraftingSlotHandler : SlotHandlerBase
         if (result == null)
         {
             Debug.Log("Failed to craft");
+            NotificationHandler.CreateNotification("Invalid Recipe", failedSprite);
             results.SetSprite(failedSprite);
             return;
         }
