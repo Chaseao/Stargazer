@@ -28,8 +28,7 @@ MonoBehaviour:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
       Dialogue: "I feel dizzy\u2026like a cartoon with stars above their head\u2026hehe."
-    Choices:
-    - Exit.
+    Choices: []
     LeadsTo:
     - BranchText: Exit
       isPuzzle: 0

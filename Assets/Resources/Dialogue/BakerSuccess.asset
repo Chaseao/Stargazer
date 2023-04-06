@@ -50,8 +50,7 @@ MonoBehaviour:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
       Dialogue: I am at your service. (^w^)
-    Choices:
-    - Exit.
+    Choices: []
     LeadsTo:
     - BranchText: Exit
       isPuzzle: 0

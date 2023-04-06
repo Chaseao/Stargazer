@@ -15,10 +15,16 @@ public class NotificationPopup : MonoBehaviour
 
     private void SetNotification(Notification notification)
     {
-        image.sprite = notification.Image;
-        image.enabled = image.sprite != null;
+        if (image != null)
+        {
+            image.sprite = notification.Image;
+            image.enabled = image.sprite != null;
+        }
 
-        textField.text = notification.Message;
+        if (textField != null)
+        {
+            textField.text = notification.Message;
+        }
     }
 
     public void DestroyPopup()

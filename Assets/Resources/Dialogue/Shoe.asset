@@ -20,8 +20,7 @@ MonoBehaviour:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
       Dialogue: Is there a shoe in that river? O_O I should look for survivors. :>
-    Choices:
-    - Exit.
+    Choices: []
     LeadsTo:
     - BranchText: ShoePuzzle
       isPuzzle: 0

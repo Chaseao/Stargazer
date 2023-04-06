@@ -17,8 +17,7 @@ MonoBehaviour:
     Conversant: Rye the Baker
     Unlocks: N/A
     Dialogues: []
-    Choices:
-    - Exit.
+    Choices: []
     LeadsTo:
     - BranchText: BakerSucceeded
       isPuzzle: 0

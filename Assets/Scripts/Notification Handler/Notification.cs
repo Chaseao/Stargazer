@@ -19,4 +19,10 @@ public struct Notification
         this.image = image;
         this.message = message;
     }
+
+    public Notification(ObjectiveData objective)
+    {
+        this.image = null;
+        this.message = objective.Title;
+    }
 }

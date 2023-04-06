@@ -21,8 +21,7 @@ MonoBehaviour:
       VoiceSpeaker: 0
       Dialogue: "The baker\u2019s wife has flour. Nom nom. :3 I should look for survivors.
         :>"
-    Choices:
-    - Exit.
+    Choices: []
     LeadsTo:
     - BranchText: FlourPuzzle
       isPuzzle: 0

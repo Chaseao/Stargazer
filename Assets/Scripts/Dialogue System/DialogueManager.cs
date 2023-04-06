@@ -30,6 +30,7 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
     string choiceSelected;
     public bool InDialogue => inDialogue;
     public bool ValidateID(string id) => conversationGroup.Find(data => data.Data.ID.ToLower().Equals(id.ToLower()));
+    public List<string> DialogueUnlocks => dialogueUnlocks;
 
     private void Start()
     {

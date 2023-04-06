@@ -21,8 +21,7 @@ MonoBehaviour:
       VoiceSpeaker: 0
       Dialogue: "The baker\u2019s assistant has cinnamon. Spicy :p I should look
         for survivors. :>"
-    Choices:
-    - Exit.
+    Choices: []
     LeadsTo:
     - BranchText: CinnamonPuzzle
       isPuzzle: 0

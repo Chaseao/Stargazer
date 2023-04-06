@@ -31,9 +31,8 @@ MonoBehaviour:
       Dialogue: "COUGH\u2026CHOKE\u2026WHEEZE\u2026I\u2019m floating\u2026"
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: :,(
-    Choices:
-    - Exit.
+      Dialogue: ;3;
+    Choices: []
     LeadsTo:
     - BranchText: Exit
       isPuzzle: 0

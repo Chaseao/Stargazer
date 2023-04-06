@@ -29,7 +29,7 @@ MonoBehaviour:
       Dialogue: A shoe! A shoe is floating in the water.
     Choices:
     - Fish for shoe!
-    - Exit.
+    - Never mind.
     LeadsTo:
     - BranchText: Water Shoe
       isPuzzle: 1

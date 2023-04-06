@@ -27,7 +27,7 @@ MonoBehaviour:
         can\u2019t be dizzy. It is not in my programming. (~v~)"
     Choices:
     - Get ginkgo.
-    - Exit.
+    - Never mind.
     LeadsTo:
     - BranchText: ClimbTree Ginkgo
       isPuzzle: 1
