@@ -11367,6 +11367,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 502012706}
     - target: {fileID: 8879073101846571685, guid: ff4902ce83793de41b741918efacfff8, type: 3}
+      propertyPath: cursorOption
+      value: 
+      objectReference: {fileID: 11400000, guid: 7351b08e1dd002c48adf9de5861173f7, type: 2}
+    - target: {fileID: 8879073101846571685, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: backgroundMusic
       value: 
       objectReference: {fileID: 1658671654}
@@ -14884,6 +14888,7 @@ GameObject:
   - component: {fileID: 4622359068047828596}
   - component: {fileID: 3557138537699958592}
   - component: {fileID: 5099415844229765393}
+  - component: {fileID: 5099415844229765394}
   m_Layer: 5
   m_Name: Target
   m_TagString: Untagged
@@ -14992,6 +14997,7 @@ GameObject:
   - component: {fileID: 2589416382988997941}
   - component: {fileID: 1782318596}
   - component: {fileID: 1784060609774792306}
+  - component: {fileID: 2908424892767548513}
   m_Layer: 0
   m_Name: Hazards
   m_TagString: Untagged
@@ -14999,6 +15005,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2908424892767548513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2908424892767548512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c78d94f4127774587739150a5172d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorOption: {fileID: 11400000, guid: 7351b08e1dd002c48adf9de5861173f7, type: 2}
 --- !u!1 &2921841963535850260
 GameObject:
   m_ObjectHideFlags: 0
@@ -17432,6 +17451,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5099415844229765394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2794362924953006336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c78d94f4127774587739150a5172d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorOption: {fileID: 11400000, guid: 7351b08e1dd002c48adf9de5861173f7, type: 2}
 --- !u!222 &5099415844312408241
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19332,7 +19364,7 @@ MonoBehaviour:
   image: {fileID: 2374665275066777147}
   frame: {fileID: 3064960063388259319}
   animator: {fileID: 8160068834882069622}
-  frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  frameSelected: {r: 0.8784314, g: 0.49411765, b: 0.56078434, a: 1}
 --- !u!224 &5486597002786569733
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21197,7 +21229,7 @@ MonoBehaviour:
   image: {fileID: 3673968874377109427}
   frame: {fileID: 4071503334066729599}
   animator: {fileID: 7149021419756062206}
-  frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  frameSelected: {r: 0.8784314, g: 0.49411765, b: 0.56078434, a: 1}
 --- !u!114 &6464115730182125836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21213,7 +21245,7 @@ MonoBehaviour:
   image: {fileID: 3625379697246963996}
   frame: {fileID: 4049723616627713232}
   animator: {fileID: 7171152838075044689}
-  frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  frameSelected: {r: 0.8784314, g: 0.49411765, b: 0.56078434, a: 1}
 --- !u!224 &6583133607284503447
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21917,7 +21949,7 @@ MonoBehaviour:
   image: {fileID: 524644748319712290}
   frame: {fileID: 953500960323635694}
   animator: {fileID: 6236653965655686767}
-  frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  frameSelected: {r: 0.8784314, g: 0.49411765, b: 0.56078434, a: 1}
 --- !u!114 &7835455468886162973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21933,7 +21965,7 @@ MonoBehaviour:
   image: {fileID: 524644748012375565}
   frame: {fileID: 953500961098572737}
   animator: {fileID: 6236653966422414400}
-  frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  frameSelected: {r: 0.8784314, g: 0.49411765, b: 0.56078434, a: 1}
 --- !u!114 &7835455468887521876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21949,7 +21981,7 @@ MonoBehaviour:
   image: {fileID: 524644748015307332}
   frame: {fileID: 953500961101408136}
   animator: {fileID: 6236653966421446665}
-  frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  frameSelected: {r: 0.8784314, g: 0.49411765, b: 0.56078434, a: 1}
 --- !u!114 &7835455469313364541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21965,7 +21997,7 @@ MonoBehaviour:
   image: {fileID: 524644747617509933}
   frame: {fileID: 953500960688132065}
   animator: {fileID: 6236653965995079776}
-  frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  frameSelected: {r: 0.8784314, g: 0.49411765, b: 0.56078434, a: 1}
 --- !u!114 &7835455469345611383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21981,7 +22013,7 @@ MonoBehaviour:
   image: {fileID: 524644747590512231}
   frame: {fileID: 953500960651690923}
   animator: {fileID: 6236653965963359274}
-  frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  frameSelected: {r: 0.8784314, g: 0.49411765, b: 0.56078434, a: 1}
 --- !u!114 &7835455469439335082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21997,7 +22029,7 @@ MonoBehaviour:
   image: {fileID: 524644747491805882}
   frame: {fileID: 953500959471658870}
   animator: {fileID: 6236653966942851319}
-  frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  frameSelected: {r: 0.8784314, g: 0.49411765, b: 0.56078434, a: 1}
 --- !u!114 &7835455469459268709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22013,7 +22045,7 @@ MonoBehaviour:
   image: {fileID: 524644747438347381}
   frame: {fileID: 953500959460112825}
   animator: {fileID: 6236653966922911288}
-  frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  frameSelected: {r: 0.8784314, g: 0.49411765, b: 0.56078434, a: 1}
 --- !u!114 &7835455470234941105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22029,7 +22061,7 @@ MonoBehaviour:
   image: {fileID: 524644746667886241}
   frame: {fileID: 953500959762377581}
   animator: {fileID: 6236653967221513452}
-  frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  frameSelected: {r: 0.8784314, g: 0.49411765, b: 0.56078434, a: 1}
 --- !u!114 &7835455470239513738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22045,7 +22077,7 @@ MonoBehaviour:
   image: {fileID: 524644746691398810}
   frame: {fileID: 953500959736832342}
   animator: {fileID: 6236653967216875223}
-  frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  frameSelected: {r: 0.8784314, g: 0.49411765, b: 0.56078434, a: 1}
 --- !u!114 &7835455470263771795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22061,7 +22093,7 @@ MonoBehaviour:
   image: {fileID: 524644746638004867}
   frame: {fileID: 953500959725158223}
   animator: {fileID: 6236653967192672462}
-  frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  frameSelected: {r: 0.8784314, g: 0.49411765, b: 0.56078434, a: 1}
 --- !u!114 &7835455470368062288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22077,7 +22109,7 @@ MonoBehaviour:
   image: {fileID: 524644746534669120}
   frame: {fileID: 953500959629256332}
   animator: {fileID: 6236653967088521485}
-  frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  frameSelected: {r: 0.8784314, g: 0.49411765, b: 0.56078434, a: 1}
 --- !u!114 &7835455470382541499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22093,7 +22125,7 @@ MonoBehaviour:
   image: {fileID: 524644746549680811}
   frame: {fileID: 953500959610582887}
   animator: {fileID: 6236653967073378534}
-  frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  frameSelected: {r: 0.8784314, g: 0.49411765, b: 0.56078434, a: 1}
 --- !u!224 &7879778798706672629
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22390,7 +22422,7 @@ MonoBehaviour:
   image: {fileID: 359701979073015761}
   frame: {fileID: 1045264504758043165}
   animator: {fileID: 6140386685126981020}
-  frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  frameSelected: {r: 0.8784314, g: 0.49411765, b: 0.56078434, a: 1}
 --- !u!224 &8028716071775384159
 RectTransform:
   m_ObjectHideFlags: 0

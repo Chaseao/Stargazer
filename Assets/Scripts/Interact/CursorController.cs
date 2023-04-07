@@ -15,6 +15,9 @@ public class CursorController : MonoBehaviour
 
     [SerializeField] private Texture2D interactiveCursorTexture;
 
+    private static Texture2D interactiveCursor;
+    public static Texture2D InteractiveCursor => interactiveCursor;
+
     private Cursor cursor;
 
     private bool cursorIsInteractive = false;
@@ -27,6 +30,7 @@ public class CursorController : MonoBehaviour
     {
         Controller.OnPosition += Position;
         Controller.OnClick += Click;
+        interactiveCursor = interactiveCursorTexture;
     }
 
     private void OnDisable()

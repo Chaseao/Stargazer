@@ -11,6 +11,7 @@ public class RiverPuzzle : MonoBehaviour
     [SerializeField] WaterHazards hazards;
     [SerializeField] private AudioSource puzzleMusic;
     [SerializeField] private AudioSource backgroundMusic;
+    [SerializeField] CursorOption cursorOption;
 
     [Header("CustomizationFields")]
     [SerializeField] float waterSpeed = 5;
@@ -34,6 +35,7 @@ public class RiverPuzzle : MonoBehaviour
 
         SubscribeToEvents();
         TogglePuzzleDisplay(true);
+        cursorOption.DefaultCursorTexture();
     }
 
     private void SubscribeToEvents()

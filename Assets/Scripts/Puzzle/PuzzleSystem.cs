@@ -99,6 +99,7 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
 
     public void ExitPuzzle()
     {
+        Cursor.SetCursor(default, default, default);
         inPuzzle = false;
         puzzleUI.SetActive(false);
         if (DialogueManager.Instance.ValidateID(dialogueID))
