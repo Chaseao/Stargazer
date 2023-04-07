@@ -1,14 +1,30 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
 
 public class PauseMenuManager : MonoBehaviour
 {
     [SerializeField] Canvas canvas;
     [SerializeField] ButtonGroup buttons;
+    [SerializeField] TextMeshProUGUI textField;
+    
 
     private void Start()
     {
         DisableMenu();
         Controller.OnPause += PauseGame;
+        ObjectiveHandler.OnObjectivesUpdated += UpdateObjectiveList;
+        textField.text = "";
+    }
+
+    private void UpdateObjectiveList(List<Objective> obj)
+    {
+        textField.text = "";
+        foreach(var objective in obj)
+        {
+            textField.text += " - " + objective.ObjectiveData.Title + "\n";
+        }
     }
 
     public void ResumeGame()

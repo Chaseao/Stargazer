@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -5,6 +6,8 @@ using UnityEngine;
 
 public class ObjectiveHandler : MonoBehaviour
 {
+    public static event Action<List<Objective>> OnObjectivesUpdated;
+
     [SerializeField] NotificationPopup objectivePrefab;
 
     List<Objective> unstartedObjectives = new List<Objective>();
@@ -39,6 +42,8 @@ public class ObjectiveHandler : MonoBehaviour
                 currentObjectives.RemoveAt(i);
             }
         }
+
+        OnObjectivesUpdated?.Invoke(currentObjectives);
     }
 
     private void DisplayNewObjective(ObjectiveData data)
