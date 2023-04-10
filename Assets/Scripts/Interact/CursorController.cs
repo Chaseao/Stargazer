@@ -6,7 +6,6 @@ using System;
 
 public class CursorController : MonoBehaviour
 {
-    [SerializeField] private InteractablesManager interactablesManager;
 
     [SerializeField] private Transform newSelectionTransform;
     private Transform currentSelectionTransform;
@@ -14,9 +13,6 @@ public class CursorController : MonoBehaviour
     [SerializeField] private float distanceThreshold;
 
     [SerializeField] private Texture2D interactiveCursorTexture;
-
-    private static Texture2D interactiveCursor;
-    public static Texture2D InteractiveCursor => interactiveCursor;
 
     private Cursor cursor;
 
@@ -26,11 +22,14 @@ public class CursorController : MonoBehaviour
 
     [SerializeField] private AudioSource interactSound;
 
+    [SerializeField] private List<Transform> interactables;
+
+    [SerializeField] private Camera mainCamera;
+
     private void OnEnable()
     {
         Controller.OnPosition += Position;
         Controller.OnClick += Click;
-        interactiveCursor = interactiveCursorTexture;
     }
 
     private void OnDisable()
@@ -46,21 +45,22 @@ public class CursorController : MonoBehaviour
 
     private void FindInteractableWithinDistanceThreshold()
     {
-        newSelectionTransform =null;
+        newSelectionTransform = null;
 
-        for(int itemIndex=0; itemIndex<interactablesManager.Interactables.Count; itemIndex++)
+        for (int itemIndex = 0; itemIndex < interactables.Count; itemIndex++)
         {
-            Vector2 fromMouseToInteractableOffset = interactablesManager.Interactables[itemIndex].position - new Vector3(inputPositionVector.x, inputPositionVector.y, 0f);
-            if(fromMouseToInteractableOffset.sqrMagnitude < distanceThreshold * distanceThreshold) 
+
+            Vector2 fromMouseToInteractableOffset = mainCamera.WorldToScreenPoint(interactables[itemIndex].position) - new Vector3(inputPositionVector.x, inputPositionVector.y, 0f);
+            if (fromMouseToInteractableOffset.sqrMagnitude < distanceThreshold * distanceThreshold)
             {
                 //Found an interable exit out of loop
-                newSelectionTransform = interactablesManager.Interactables[itemIndex].transform;
+                newSelectionTransform = interactables[itemIndex];
                 if (!cursorIsInteractive) InteractiveCursorTexture();
                 break;
-            }        
+            }
         }
 
-        if(currentSelectionTransform != newSelectionTransform)
+        if (currentSelectionTransform != newSelectionTransform)
         {
             //Make CursorDefault no interactable found
             currentSelectionTransform = newSelectionTransform;
@@ -83,10 +83,10 @@ public class CursorController : MonoBehaviour
 
     private void OnClickInteractable()
     {
-        if(newSelectionTransform != null)
+        if (newSelectionTransform != null)
         {
             IInteractable interactable = newSelectionTransform.gameObject.GetComponent<IInteractable>();
-            if(interactable != null)
+            if (interactable != null)
             {
                 if (interactable.ExecuteDialogue()) interactSound.Play();
                 interactable.OpenDoor();
@@ -108,3 +108,4 @@ public class CursorController : MonoBehaviour
         Cursor.SetCursor(default, default, default);
     }
 }
+
