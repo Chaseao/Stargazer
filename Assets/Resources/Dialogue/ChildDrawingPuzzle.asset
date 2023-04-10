@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: ChildDrawingPuzzle
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: ChildDrawingPuzzle
+    Conversant: "Indigo the Flower Farmer\u2019s Youngest"
+    Unlocks: FI
+    Dialogues:
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: A robot! SO CUTE!
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: I will add that adjective to my registry of those pertaining to L0-1D.
+        :D
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: What?
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: :D
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: Are you going to save us?
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: Hopefully! :D
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: "\u2026"
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: I need to take your drawing to attempt it though. (^v^)
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: What? Why??
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: Special recipe to maybe possibly no promises save your parent. :3
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: "O-okay, so\u2026what about my drawing?"
+    Choices:
+    - Please give it to L0-1D-y so I can take it to mummy. \(*w*)/
+    - "Mmm it\u2019s so beautiful. I will be taking it now. ;)"
+    - Can I commission you for one? OvO
+    - Never mind.
+    LeadsTo:
+    - BranchText: Gain ChildDrawing
+      isPuzzle: 1
+      Requirements: []
+    - BranchText: Gain ChildDrawing
+      isPuzzle: 1
+      Requirements: []
+    - BranchText: Gain ChildDrawing
+      isPuzzle: 1
+      Requirements: []
+    - BranchText: Exit
+      isPuzzle: 0
+      Requirements: []

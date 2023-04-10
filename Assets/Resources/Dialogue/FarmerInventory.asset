@@ -10,18 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: Water Shoe
+  m_Name: FarmerInventory
   m_EditorClassIdentifier: 
   conversationData:
-    ID: Water Shoe
-    Conversant: N/A
-    Unlocks: SCOLLECTED
+    ID: FarmerInventory
+    Conversant: Primrose the Flower Farmer
+    Unlocks: N/A
     Dialogues:
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: This anxiety is so overwhelming. I miss my children.
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: A got a lil shoe friend. I think the baker was missing one. :3
-    Choices: []
+      Dialogue: It is probable that I can be of assistance. OvO
+    Choices:
+    - Open inventory.
+    - Exit.
     LeadsTo:
+    - BranchText: Select Farmer
+      isPuzzle: 1
+      Requirements: []
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []

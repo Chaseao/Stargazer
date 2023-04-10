@@ -15,7 +15,7 @@ MonoBehaviour:
   conversationData:
     ID: BakerCorrupted
     Conversant: Rye the Baker
-    Unlocks: PUZZLES
+    Unlocks: BPUZZLES
     Dialogues:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0

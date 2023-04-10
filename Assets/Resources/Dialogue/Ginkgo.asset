@@ -16,18 +16,24 @@ MonoBehaviour:
     ID: Ginkgo
     Conversant: N/A
     Unlocks: N/A
-    Dialogues:
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: "It\u2019s a Ginkgo tree. I should look for survivors. :>"
+    Dialogues: []
     Choices: []
     LeadsTo:
+    - BranchText: GinkgoCollected
+      isPuzzle: 0
+      Requirements:
+      - label: gcollected
+        isItemID: 0
+        consumesItem: 0
     - BranchText: GinkgoPuzzle
       isPuzzle: 0
       Requirements:
-      - label: puzzles
+      - label: bpuzzles
         isItemID: 0
         consumesItem: 0
+    - BranchText: GinkgoIntro
+      isPuzzle: 0
+      Requirements: []
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []

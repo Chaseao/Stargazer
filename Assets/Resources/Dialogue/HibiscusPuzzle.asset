@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: HibiscusPuzzle
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: HibiscusPuzzle
+    Conversant: "Lily the Flower Farmer\u2019s Oldest"
+    Unlocks: FI
+    Dialogues:
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: Hibiscus supports heart health in humans :D
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: "I am a robot, so I don\u2019t have a heart\u2026DRAMATIC SIGH. ^0^"
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: "\u2026okay? W-who are you?"
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: L0-1D! Pronounced L0-1D! :O
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: You sound like Loid.
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: Exactly. :)
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: "\u2026"
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: 0v0
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: Sorry, do you need something?
+    Choices:
+    - Gimme that flower, little munchkin. :3
+    - "INTENSE SNIFF\u2026need smelly flower. (owo)"
+    - "Your parental figure needs that flower to survive the stars\u2019 wrath. 0_0"
+    - Never mind.
+    LeadsTo:
+    - BranchText: Gain Hibiscus
+      isPuzzle: 1
+      Requirements: []
+    - BranchText: Gain Hibiscus
+      isPuzzle: 1
+      Requirements: []
+    - BranchText: Gain Hibiscus
+      isPuzzle: 1
+      Requirements: []
+    - BranchText: Exit
+      isPuzzle: 0
+      Requirements: []

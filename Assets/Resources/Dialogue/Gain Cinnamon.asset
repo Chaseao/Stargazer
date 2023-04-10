@@ -15,7 +15,7 @@ MonoBehaviour:
   conversationData:
     ID: Gain Cinnamon
     Conversant: N/A
-    Unlocks: N/A
+    Unlocks: CCOLLECTED
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0

@@ -10,28 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: BakerFail
+  m_Name: FarmerCorrupted
   m_EditorClassIdentifier: 
   conversationData:
-    ID: BakerFail
-    Conversant: Rye the Baker
-    Unlocks: BFAIL
+    ID: FarmerCorrupted
+    Conversant: Primrose the Flower Farmer
+    Unlocks: FPUZZLES
     Dialogues:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
-      Dialogue: "The stars\u2026I-I- I\u2019m being consumed."
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: The elixir has failed :O
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: "I couldn\u2019t save Rye! (>_<)"
+      Dialogue: "My children\u2026where are my children?"
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
-      Dialogue: "COUGH\u2026CHOKE\u2026WHEEZE\u2026I\u2019m floating\u2026"
-    - PlayerIsSpeaker: 1
+      Dialogue: I do have children, right? I want to see them again.
+    - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
-      Dialogue: ;3;
+      Dialogue: "I\u2019m so anxious. Where are my kids? Where am I? I only see stars\u2026so
+        many stars. Do my children also see stars? Will I find them in this mess
+        in my head, or are they somewhere else missing me?"
     Choices: []
     LeadsTo:
     - BranchText: Exit

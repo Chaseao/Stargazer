@@ -16,19 +16,24 @@ MonoBehaviour:
     ID: Flour
     Conversant: N/A
     Unlocks: N/A
-    Dialogues:
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: "The baker\u2019s wife has flour. Nom nom. :3 I should look for survivors.
-        :>"
+    Dialogues: []
     Choices: []
     LeadsTo:
+    - BranchText: FlourCollected
+      isPuzzle: 0
+      Requirements:
+      - label: fcollected
+        isItemID: 0
+        consumesItem: 0
     - BranchText: FlourPuzzle
       isPuzzle: 0
       Requirements:
-      - label: puzzles
+      - label: bpuzzles
         isItemID: 0
         consumesItem: 0
+    - BranchText: FlourIntro
+      isPuzzle: 0
+      Requirements: []
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []

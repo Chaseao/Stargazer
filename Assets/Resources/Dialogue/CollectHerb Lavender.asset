@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: Water Shoe
+  m_Name: CollectHerb Lavender
   m_EditorClassIdentifier: 
   conversationData:
-    ID: Water Shoe
+    ID: CollectHerb Lavender
     Conversant: N/A
-    Unlocks: SCOLLECTED
+    Unlocks: LCOLLECTED
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: A got a lil shoe friend. I think the baker was missing one. :3
+      Dialogue: A got a lil lavender friend to help my spiraling brain from thinking
+        about the inevitable misfortunes of the world and all the sadness I have
+        built up inside. :3
     Choices: []
     LeadsTo:
     - BranchText: Exit

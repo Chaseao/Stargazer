@@ -10,30 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: BakerFail
+  m_Name: LavenderPuzzle
   m_EditorClassIdentifier: 
   conversationData:
-    ID: BakerFail
-    Conversant: Rye the Baker
-    Unlocks: BFAIL
+    ID: LavenderPuzzle
+    Conversant: N/A
+    Unlocks: FI
     Dialogues:
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 0
-      Dialogue: "The stars\u2026I-I- I\u2019m being consumed."
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: The elixir has failed :O
+      Dialogue: Lavender is good for anxiety and depression :D
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: "I couldn\u2019t save Rye! (>_<)"
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 0
-      Dialogue: "COUGH\u2026CHOKE\u2026WHEEZE\u2026I\u2019m floating\u2026"
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: ;3;
-    Choices: []
+      Dialogue: "I, myself, struggle with depression. The patriarchy is so draining,
+        we\u2019re slowly poisoning all aspects of the environment, capitalism creates
+        a harmful grind in every soul, and my dad doesn\u2019t understand me\u2026
+        0_0"
+    Choices:
+    - Get lavender.
+    - Never mind.
     LeadsTo:
+    - BranchText: CollectHerb Lavender
+      isPuzzle: 1
+      Requirements: []
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []

@@ -10,18 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: Water Shoe
+  m_Name: SunhatPuzzle
   m_EditorClassIdentifier: 
   conversationData:
-    ID: Water Shoe
+    ID: SunhatPuzzle
     Conversant: N/A
-    Unlocks: SCOLLECTED
+    Unlocks: FI
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: A got a lil shoe friend. I think the baker was missing one. :3
-    Choices: []
+      Dialogue: This sunhat would be good to use while you garden or farm. :>
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: If the sun is too bright, my circuits might get too hot, and I could
+        disappear from the world forever as a result of my failing system, so this
+        could come in handy for me. ;v;
+    Choices:
+    - Get sunhat.
+    - Never mind.
     LeadsTo:
+    - BranchText: Dig Sunhat
+      isPuzzle: 1
+      Requirements: []
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []

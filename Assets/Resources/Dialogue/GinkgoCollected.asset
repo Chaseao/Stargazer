@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: Water Shoe
+  m_Name: GinkgoCollected
   m_EditorClassIdentifier: 
   conversationData:
-    ID: Water Shoe
+    ID: GinkgoCollected
     Conversant: N/A
-    Unlocks: SCOLLECTED
+    Unlocks: N/A
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: A got a lil shoe friend. I think the baker was missing one. :3
+      Dialogue: "I have collected ginkgo! It\u2019s good for dizziness. \\(^o^)/"
     Choices: []
     LeadsTo:
     - BranchText: Exit

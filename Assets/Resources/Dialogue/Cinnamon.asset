@@ -16,19 +16,24 @@ MonoBehaviour:
     ID: Cinnamon
     Conversant: N/A
     Unlocks: N/A
-    Dialogues:
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: "The baker\u2019s assistant has cinnamon. Spicy :p I should look
-        for survivors. :>"
+    Dialogues: []
     Choices: []
     LeadsTo:
+    - BranchText: CinnamonCollected
+      isPuzzle: 0
+      Requirements:
+      - label: ccollected
+        isItemID: 0
+        consumesItem: 0
     - BranchText: CinnamonPuzzle
       isPuzzle: 0
       Requirements:
-      - label: puzzles
+      - label: bpuzzles
         isItemID: 0
         consumesItem: 0
+    - BranchText: CinnamonIntro
+      isPuzzle: 0
+      Requirements: []
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []

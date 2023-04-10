@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Baker-TopNode
-    Conversant: Rye the Baker
+    Conversant: N/A
     Unlocks: N/A
     Dialogues: []
     Choices: []
@@ -22,13 +22,13 @@ MonoBehaviour:
     - BranchText: BakerSucceeded
       isPuzzle: 0
       Requirements:
-      - label: success
+      - label: bsuccess
         isItemID: 0
         consumesItem: 0
     - BranchText: BakerFailed
       isPuzzle: 0
       Requirements:
-      - label: fail
+      - label: bfail
         isItemID: 0
         consumesItem: 0
     - BranchText: BakerInventory
