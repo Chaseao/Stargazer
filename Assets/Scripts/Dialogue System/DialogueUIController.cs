@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static DialogueHelperClass;
 
-public class DialogueUIController : SerializedMonoBehaviour
+public class DialogueUIController : MonoBehaviour
 {
     [SerializeField] PortraitDisplay leftPortrait, rightPortrait;
     [SerializeField] TextBoxDisplay textBoxDisplay;
@@ -25,6 +25,10 @@ public class DialogueUIController : SerializedMonoBehaviour
 
     private void HideUI()
     {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
         leftPortrait.Hide();
         rightPortrait.Hide();
         textBoxDisplay.Hide();
@@ -34,6 +38,11 @@ public class DialogueUIController : SerializedMonoBehaviour
 
     private void DisplayUI(ConversationData conversation)
     {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(true);
+        }
+
         leftPortrait.Display(conversation.Conversant);
         rightPortrait.Display("wick");
         textBoxDisplay.Display();

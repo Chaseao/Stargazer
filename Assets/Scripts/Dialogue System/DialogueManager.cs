@@ -197,7 +197,7 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
 
         if (!dialogue.VoiceSpeaker)
         {
-            name = (dialogue.PlayerIsSpeaker ? PLAYER_MARKER : conversant) + ": ";
+            name =  "<u>" + (dialogue.PlayerIsSpeaker ? PLAYER_MARKER : (conversant + ": ")) + "</u>\n";
         }
 
         yield return TypewriterDialogue(name, dialogue.Dialogue, dialogue.PlayerIsSpeaker);
