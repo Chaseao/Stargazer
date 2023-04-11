@@ -39,7 +39,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 10
+      Data: 11
     - Name: 
       Entry: 7
       Data: 
@@ -154,6 +154,18 @@ MonoBehaviour:
     - Name: $k
       Entry: 1
       Data: ChildDrawing
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: l0-1d
     - Name: $v
       Entry: 6
       Data: 

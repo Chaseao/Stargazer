@@ -15,6 +15,7 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
     [SerializeField] private ClimbTreePuzzle climbTreePuzzle;
     [SerializeField] private SelectItemPuzzle selectItemPuzzle;
     [SerializeField] private RiverPuzzle riverPuzzle;
+    [SerializeField] private DigPuzzle digPuzzle;
 
     [Serializable]
     public class itemImage
@@ -77,6 +78,9 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
                 break;
             case PuzzleData.Puzzle.Water:
                 riverPuzzle.StartPuzzle(puzzle);
+                break;
+            case PuzzleData.Puzzle.Dig:
+                digPuzzle.StartPuzzle(puzzle);
                 break;
             default:
                 print("Could not find puzzle type");

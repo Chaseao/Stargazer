@@ -44,7 +44,7 @@ public class DialogueUIController : MonoBehaviour
         }
 
         leftPortrait.Display(conversation.Conversant);
-        rightPortrait.Display("wick");
+        rightPortrait.Display("l0-1d");
         textBoxDisplay.Display();
         DialogueManager.OnTextUpdated += textBoxDisplay.UpdateDialogueText;
     }

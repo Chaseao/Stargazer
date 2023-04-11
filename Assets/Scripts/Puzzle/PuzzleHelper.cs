@@ -14,7 +14,8 @@ public class PuzzleHelper
             ClimbTree,
             Gain,
             Select,
-            Water
+            Water,
+            Dig
         }
 
         public Puzzle Type;
@@ -41,6 +42,9 @@ public class PuzzleHelper
                     break;
                 case "Water":
                     Type = Puzzle.Water;
+                    break;
+                case "Dig":
+                    Type = Puzzle.Dig;
                     break;
                 default:
                     Debug.Log("ERROR: Could not find Puzzle Type");
