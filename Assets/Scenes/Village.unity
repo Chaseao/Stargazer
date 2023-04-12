@@ -15566,7 +15566,7 @@ PrefabInstance:
       objectReference: {fileID: 5099415843332404116}
     - target: {fileID: 1040369300490241879, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: climbRate
-      value: 75
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241879, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: puzzleMusic
@@ -15576,6 +15576,10 @@ PrefabInstance:
       propertyPath: backgroundMusic
       value: 
       objectReference: {fileID: 1658671654}
+    - target: {fileID: 1040369300490241879, guid: ff4902ce83793de41b741918efacfff8, type: 3}
+      propertyPath: numOfClimbsNeeded
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8223902375524877837, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: bar
       value: 
@@ -15660,6 +15664,10 @@ PrefabInstance:
       propertyPath: waterTwo
       value: 
       objectReference: {fileID: 8297500685563872685}
+    - target: {fileID: 8879073101846571685, guid: ff4902ce83793de41b741918efacfff8, type: 3}
+      propertyPath: waterSpeed
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 8879073101846571685, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: puzzleMusic
       value: 
