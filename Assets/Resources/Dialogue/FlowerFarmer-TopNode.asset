@@ -16,6 +16,7 @@ MonoBehaviour:
     ID: FlowerFarmer-TopNode
     Conversant: N/A
     Unlocks: N/A
+    Sound: N/A
     Dialogues: []
     Choices: []
     LeadsTo:

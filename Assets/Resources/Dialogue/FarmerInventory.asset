@@ -16,6 +16,7 @@ MonoBehaviour:
     ID: FarmerInventory
     Conversant: Primrose the Flower Farmer
     Unlocks: N/A
+    Sound: N/A
     Dialogues:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0

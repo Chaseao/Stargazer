@@ -10,10 +10,7 @@ public static class JsonDialogueConverter
 { 
     public static string ConvertToJson(ConversationData conversation)
     {
-        string jsonFile = JsonUtility.ToJson(conversation, true);
-        string conversationID = conversation.ID;
-        //System.IO.File.WriteAllText(Application.dataPath + $"/Dialogue/{conversationID}.json", jsonFile);
-        return jsonFile;
+        return JsonUtility.ToJson(conversation, true);
     }
 
     public static void ConvertToJson(string text)
@@ -63,6 +60,10 @@ public static class JsonDialogueConverter
 
         AssertMarker(lines[0], UNLOCKS_MARKER);
         conversation.Unlocks = lines[0].Substring(UNLOCKS_MARKER.Length);
+        lines.RemoveAt(0);
+
+        AssertMarker(lines[0], SOUND_MARKER);
+        conversation.Sound = lines[0].Substring(SOUND_MARKER.Length).Trim();
         lines.RemoveAt(0);
 
         AssertMarker(lines[0], DIALOGUE_MARKER);

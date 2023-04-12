@@ -16,6 +16,7 @@ MonoBehaviour:
     ID: Intro
     Conversant: N/A
     Unlocks: N/A
+    Sound: N/A
     Dialogues:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 1

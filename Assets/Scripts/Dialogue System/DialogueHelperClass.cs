@@ -12,6 +12,8 @@ public static class DialogueHelperClass
     public static readonly string VOICE_MARKER = "Voice: ";
     public static readonly string CHOICES_MARKER = "Choices:";
     public static readonly string LEADS_TO_MARKER = "Leads to:";
+    public static readonly string SOUND_MARKER = "Music:";
+    public static readonly string EMPTY_MARKER = "N/A";
 
     [System.Serializable]
     public class DialogueData
@@ -27,6 +29,7 @@ public static class DialogueHelperClass
         public string ID;
         public string Conversant;
         public string Unlocks;
+        public string Sound;
         public List<DialogueData> Dialogues = new List<DialogueData>();
         public List<string> Choices = new List<string>();
         public List<DialogueBranchData> LeadsTo = new List<DialogueBranchData>();

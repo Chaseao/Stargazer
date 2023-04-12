@@ -16,6 +16,7 @@ MonoBehaviour:
     ID: FlourPuzzle
     Conversant: "Poppy the Baker\u2019s Wife"
     Unlocks: BI
+    Sound: N/A
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0

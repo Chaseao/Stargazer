@@ -16,6 +16,7 @@ MonoBehaviour:
     ID: CollectHerb Lavender
     Conversant: N/A
     Unlocks: LCOLLECTED
+    Sound: N/A
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0

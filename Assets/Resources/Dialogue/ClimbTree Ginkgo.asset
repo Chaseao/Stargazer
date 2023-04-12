@@ -16,6 +16,7 @@ MonoBehaviour:
     ID: ClimbTree Ginkgo
     Conversant: N/A
     Unlocks: GCOLLECTED
+    Sound: N/A
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0

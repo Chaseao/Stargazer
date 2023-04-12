@@ -16,6 +16,7 @@ MonoBehaviour:
     ID: Dig Sunhat
     Conversant: N/A
     Unlocks: SHCOLLECTED
+    Sound: N/A
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0

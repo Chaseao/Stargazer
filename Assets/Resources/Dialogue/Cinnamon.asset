@@ -16,6 +16,7 @@ MonoBehaviour:
     ID: Cinnamon
     Conversant: N/A
     Unlocks: N/A
+    Sound: N/A
     Dialogues: []
     Choices: []
     LeadsTo:
@@ -28,7 +29,7 @@ MonoBehaviour:
     - BranchText: CinnamonPuzzle
       isPuzzle: 0
       Requirements:
-      - label: bpuzzles
+      - label: puzzles
         isItemID: 0
         consumesItem: 0
     - BranchText: CinnamonIntro

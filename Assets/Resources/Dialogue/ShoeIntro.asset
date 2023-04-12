@@ -16,6 +16,7 @@ MonoBehaviour:
     ID: ShoeIntro
     Conversant: N/A
     Unlocks: N/A
+    Sound: N/A
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0

@@ -16,6 +16,7 @@ MonoBehaviour:
     ID: Water Shoe
     Conversant: N/A
     Unlocks: SCOLLECTED
+    Sound: N/A
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0

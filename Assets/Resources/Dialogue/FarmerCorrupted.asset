@@ -15,7 +15,8 @@ MonoBehaviour:
   conversationData:
     ID: FarmerCorrupted
     Conversant: Primrose the Flower Farmer
-    Unlocks: FPUZZLES
+    Unlocks: PUZZLES
+    Sound: N/A
     Dialogues:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96832c86ca0350f4a99cae2715a39c74, type: 3}
-  m_Name: Help Baker
+  m_Name: Help Farmer
   m_EditorClassIdentifier: 
-  startTrigger: BSEEN
-  endTrigger: BSUCCESS
+  startTrigger: FSEEN
+  endTrigger: FSUCCESS
   objective:
-    Title: Save the Baker!
+    Title: Save The Farmer
     Description: Look around for some ingredients that can be combined into a potion
-      that'll cure the baker
+      that'll cure the farmer

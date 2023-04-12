@@ -16,6 +16,7 @@ MonoBehaviour:
     ID: ChildDrawing
     Conversant: N/A
     Unlocks: N/A
+    Sound: N/A
     Dialogues: []
     Choices: []
     LeadsTo:
@@ -28,7 +29,7 @@ MonoBehaviour:
     - BranchText: ChildDrawingPuzzle
       isPuzzle: 0
       Requirements:
-      - label: fpuzzles
+      - label: puzzles
         isItemID: 0
         consumesItem: 0
     - BranchText: ChildDrawingIntro
