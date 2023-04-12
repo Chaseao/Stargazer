@@ -15505,6 +15505,10 @@ PrefabInstance:
       value: BakerSuccess
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241878, guid: ff4902ce83793de41b741918efacfff8, type: 3}
+      propertyPath: UICamera
+      value: 
+      objectReference: {fileID: 1897652781}
+    - target: {fileID: 1040369300490241878, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: puzzleUI
       value: 
       objectReference: {fileID: 5099415843116466039}

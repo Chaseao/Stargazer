@@ -24,7 +24,6 @@ public class CursorController : MonoBehaviour
 
     [SerializeField] private List<Transform> interactables;
 
-    [SerializeField] private Camera mainCamera;
 
     private void OnEnable()
     {
@@ -50,7 +49,7 @@ public class CursorController : MonoBehaviour
         for (int itemIndex = 0; itemIndex < interactables.Count; itemIndex++)
         {
 
-            Vector2 fromMouseToInteractableOffset = mainCamera.WorldToScreenPoint(interactables[itemIndex].position) - new Vector3(inputPositionVector.x, inputPositionVector.y, 0f);
+            Vector2 fromMouseToInteractableOffset = Camera.main.WorldToScreenPoint(interactables[itemIndex].position) - new Vector3(inputPositionVector.x, inputPositionVector.y, 0f);
             if (fromMouseToInteractableOffset.sqrMagnitude < distanceThreshold * distanceThreshold)
             {
                 //Found an interable exit out of loop

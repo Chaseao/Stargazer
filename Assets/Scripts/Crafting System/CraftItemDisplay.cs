@@ -16,9 +16,11 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public void OnPointerEnter(PointerEventData eventData)
     {
         hoverObjects = eventData.hovered;
+
         foreach (var Object in hoverObjects)
         {
-            if(Object.TryGetComponent<CraftingSlotUIButton>(out var itemData))
+            print(Object);
+            if (Object.TryGetComponent<CraftingSlotUIButton>(out var itemData))
             {
                 item = itemData.item;
                 itemDisplay.transform.position = eventData.position;

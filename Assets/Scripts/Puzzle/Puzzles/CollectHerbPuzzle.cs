@@ -20,6 +20,8 @@ public class CollectHerbPuzzle : MonoBehaviour
     [SerializeField] private float distanceThreshold;
     [SerializeField] private float delayBeforeLeavingPuzzle = 2f;
 
+    [SerializeField] private Camera UICamera;
+
     [SerializeField] private GameObject puzzleUI;
 
     private bool inHerbPuzzle;
@@ -98,7 +100,7 @@ public class CollectHerbPuzzle : MonoBehaviour
 
         for (int itemIndex = 0; itemIndex < herbs.Count; itemIndex++)
         {
-            Vector2 fromMouseToInteractableOffset = herbs[itemIndex].transform.position - new Vector3(inputPositionVector.x, inputPositionVector.y, 0f);
+            Vector2 fromMouseToInteractableOffset = UICamera.WorldToScreenPoint(herbs[itemIndex].transform.position) - new Vector3(inputPositionVector.x, inputPositionVector.y, 0f);
             if (fromMouseToInteractableOffset.sqrMagnitude < distanceThreshold * distanceThreshold)
             {
                 newSelectionTransform = herbs[itemIndex].transform;
