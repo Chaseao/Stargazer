@@ -15,6 +15,6 @@ MonoBehaviour:
   startTrigger: FSEEN
   endTrigger: FSUCCESS
   objective:
-    Title: Save The Farmer
+    Title: Save The Farmer!
     Description: Look around for some ingredients that can be combined into a potion
       that'll cure the farmer

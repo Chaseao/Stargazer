@@ -15,7 +15,7 @@ MonoBehaviour:
   conversationData:
     ID: Baker-TopNode
     Conversant: N/A
-    Unlocks: N/A
+    Unlocks: BSEEN
     Sound: N/A
     Dialogues: []
     Choices: []

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Item
   - Key
+  - Craft
   layers:
   - Default
   - TransparentFX
