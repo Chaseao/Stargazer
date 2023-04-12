@@ -48,8 +48,6 @@ public class DigPuzzle : MonoBehaviour
     public void StartPuzzle(PuzzleHelper.PuzzleData puzzle)
     {
         puzzleUI.SetActive(true);
-        bar.fillAmount = 0;
-        numOfClicks = 0;
         puzzleMusic.Play();
         backgroundMusic.Stop();
         inDigPuzzle = true;
@@ -95,22 +93,23 @@ public class DigPuzzle : MonoBehaviour
 
     private void OnClick()
     {
-        numOfClicks++;
-        bar.fillAmount += ((float)1 / numOfClicksNeeded);
-        if (numOfClicks % numOfClicksToRemoveDirt == 0 && Dirt.Length > (numOfClicks / numOfClicksToRemoveDirt) -1)
+        if(inDigPuzzle)
         {
-            Dirt[(numOfClicks / numOfClicksToRemoveDirt) - 1].SetActive(false);
+            numOfClicks++;
+            bar.fillAmount += ((float)1 / numOfClicksNeeded);
+            if (numOfClicks % numOfClicksToRemoveDirt == 0 && Dirt.Length > (numOfClicks / numOfClicksToRemoveDirt) - 1)
+            {
+                Dirt[(numOfClicks / numOfClicksToRemoveDirt) - 1].SetActive(false);
+            }
+            CreateParticle();
         }
-        StartCoroutine(CreateParticle());
     }
 
-    private IEnumerator CreateParticle()
+    private void CreateParticle()
     {
-        var mousePos = UICam.ScreenToWorldPoint(inputPositionVector);
-        dirtParticles.SetActive(true);
-        dirtParticles.transform.position = new Vector3(mousePos.x, mousePos.y, 0f);
-        yield return new WaitForSecondsRealtime(1f);
-        dirtParticles.SetActive(false);
+        var mousePos = Camera.main.ScreenToWorldPoint(inputPositionVector);
+        GameObject dirt = Instantiate(dirtParticles, new Vector3(mousePos.x, mousePos.y, 0f), Quaternion.identity) as GameObject;
+        dirt.transform.SetParent(puzzleUI.transform);
     }
 
     private IEnumerator ResetPuzzle()
