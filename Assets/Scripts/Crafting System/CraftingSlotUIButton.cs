@@ -10,7 +10,7 @@ public class CraftingSlotUIButton : UIButton
     [SerializeField] Color frameSelected;
 
     Color frameStart;
-    ItemData item;
+    public ItemData item;
 
     public ItemData Item => item;
     public bool IsFilled => item != null;
