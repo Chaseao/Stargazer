@@ -8,7 +8,6 @@ using static InventoryHelper;
 public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] GameObject itemDisplay;
-    [SerializeField] TextMeshProUGUI itemText;
     [SerializeField] private float delayTime;
 
     private List<GameObject> hoverObjects;
@@ -27,7 +26,7 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
         }
         item = craftItem.GetComponent<CraftingSlotUIButton>().item;
         itemDisplay.transform.position = eventData.position;
-        
+        itemDisplay.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = item.name;
         StartCoroutine(Delay());
     }
 
