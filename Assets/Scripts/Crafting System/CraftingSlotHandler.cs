@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using static InventoryHelper;
 
 public class CraftingSlotHandler : SlotHandlerBase
@@ -11,6 +12,8 @@ public class CraftingSlotHandler : SlotHandlerBase
     [SerializeField] CraftButton craftButton;
     [SerializeField] CraftingResultsTable resultsTable;
     [SerializeField] Sprite failedSprite;
+    [SerializeField] Image itemSelectedOne;
+    [SerializeField] Image itemSelectedTwo;
 
     private CraftingSlotUIButton firstItem;
     private CraftingSlotUIButton secondItem;
@@ -60,22 +63,29 @@ public class CraftingSlotHandler : SlotHandlerBase
         {
             craftingButton.ToggleFrame(false);
             firstItem = null;
+            itemSelectedOne.sprite = null;
         }
         else if (craftingButton.Equals(secondItem))
         {
             craftingButton.ToggleFrame(false);
             secondItem = null;
+            itemSelectedTwo.sprite = null;
         }
         else if (firstItem == null)
         {
             craftingButton.ToggleFrame(true);
             firstItem = craftingButton;
+            itemSelectedOne.sprite = firstItem.item.itemImage;
         }
         else if (secondItem == null)
         {
             craftingButton.ToggleFrame(true);
             secondItem = craftingButton;
+            itemSelectedTwo.sprite = secondItem.item.itemImage;
         }
+        
+        itemSelectedOne.enabled = itemSelectedOne.sprite != null;
+        itemSelectedTwo.enabled = itemSelectedTwo.sprite != null;
     }
 }
 

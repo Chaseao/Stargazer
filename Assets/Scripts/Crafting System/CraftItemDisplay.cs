@@ -11,7 +11,6 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
     [SerializeField] private float delayTime;
 
     private List<GameObject> hoverObjects;
-    private GameObject craftItem;
     private ItemData item;
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -19,15 +18,14 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
         hoverObjects = eventData.hovered;
         foreach (var Object in hoverObjects)
         {
-            if(Object.GetComponent<CraftingSlotUIButton>() != null)
+            if(Object.TryGetComponent<CraftingSlotUIButton>(out var itemData))
             {
-                craftItem = Object;
+                item = itemData.item;
+                itemDisplay.transform.position = eventData.position;
+                itemDisplay.transform.GetComponentInChildren<TextMeshProUGUI>(true).text = item.name;
+                StartCoroutine(Delay());
             }
         }
-        item = craftItem.GetComponent<CraftingSlotUIButton>().item;
-        itemDisplay.transform.position = eventData.position;
-        itemDisplay.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = item.name;
-        StartCoroutine(Delay());
     }
 
     private IEnumerator Delay()
