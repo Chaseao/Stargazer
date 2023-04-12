@@ -6,7 +6,6 @@ using static InventoryHelper;
 public class CraftingSlotUIButton : UIButton
 {
     [SerializeField] Image image;
-    [SerializeField] Image frame;
     [SerializeField] Animator animator;
     [SerializeField] Color frameSelected;
 
@@ -18,13 +17,13 @@ public class CraftingSlotUIButton : UIButton
 
     private void Awake()
     {
-        frameStart = frame.color;
+        //frameStart = frame.color;
         image.sprite = null;
     }
 
     public void ToggleFrame(bool selected)
     {
-        frame.color = selected ? frameSelected : frameStart;
+        //frame.color = selected ? frameSelected : frameStart;
         animator.enabled = selected;
     }
 
