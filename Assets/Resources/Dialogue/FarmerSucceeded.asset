@@ -15,44 +15,18 @@ MonoBehaviour:
   conversationData:
     ID: FarmerSucceeded
     Conversant: Primrose the Flower Farmer
-    Unlocks: FSUCCESS
+    Unlocks: N/A
     Sound: N/A
     Dialogues:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
-      Dialogue: I can breathe. I can see. I can- WOAH!
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: "G\u2019day, Primrose ~(^3^)~"
+      Dialogue: L0-1D, I owe you.
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
-      Dialogue: "That voice\u2026Loid??"
+      Dialogue: I can see my children again.
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: AHEM- L0-1D. :)
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 0
-      Dialogue: "Okay\u2026?"
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: You are freed from corruption by the power of my computing and the
-        elixir I was able to concoct. >:)
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 0
-      Dialogue: GASP! MY CHILDREN! Are they alright??
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: All of your offspring are accounted for, uncorrupted, and have sufficient
-        HP. (0w0)
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 0
-      Dialogue: "HP\u2026? L0-1D:...they are in good health. :3"
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 0
-      Dialogue: "Thank goodness. Thank you\u2026L0-1D."
-    - PlayerIsSpeaker: 1
-      VoiceSpeaker: 0
-      Dialogue: MHM! ;)
+      Dialogue: (^w^)
     Choices: []
     LeadsTo:
     - BranchText: Exit

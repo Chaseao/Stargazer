@@ -15487,14 +15487,30 @@ PrefabInstance:
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: serializationData.Prefab
       value: 
-      objectReference: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
+      propertyPath: validSelections.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[0].person
       value: Baker
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
+      propertyPath: validSelections.Array.data[1].person
+      value: Farmer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[0].desiredItem
       value: antidote_d
+      objectReference: {fileID: 0}
+    - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
+      propertyPath: validSelections.Array.data[1].desiredItem
+      value: antidote_c
+      objectReference: {fileID: 0}
+    - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
+      propertyPath: validSelections.Array.data[1].dialogueOnCancel
+      value: exit
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[0].dialogueOnFailure
@@ -15503,6 +15519,14 @@ PrefabInstance:
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[0].dialogueOnSuccess
       value: BakerSuccess
+      objectReference: {fileID: 0}
+    - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
+      propertyPath: validSelections.Array.data[1].dialogueOnFailure
+      value: FarmerFail
+      objectReference: {fileID: 0}
+    - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
+      propertyPath: validSelections.Array.data[1].dialogueOnSuccess
+      value: FarmerSuccess
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241878, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: UICamera

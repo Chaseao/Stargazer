@@ -16,7 +16,7 @@ MonoBehaviour:
     ID: BakerFail
     Conversant: Rye the Baker
     Unlocks: BFAIL
-    Sound: N/A
+    Sound: Death
     Dialogues:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0

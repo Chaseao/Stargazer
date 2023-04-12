@@ -24,6 +24,9 @@ MonoBehaviour:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
       Dialogue: "I am lost \u2018til the end of time."
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: (;_;)
     Choices: []
     LeadsTo:
     - BranchText: Exit

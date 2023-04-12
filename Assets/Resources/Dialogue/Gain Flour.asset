@@ -16,7 +16,7 @@ MonoBehaviour:
     ID: Gain Flour
     Conversant: N/A
     Unlocks: FCOLLECTED
-    Sound: N/A
+    Sound: GetItem
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0

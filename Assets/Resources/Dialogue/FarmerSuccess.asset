@@ -10,47 +10,49 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: BakerSuccess
+  m_Name: FarmerSuccess
   m_EditorClassIdentifier: 
   conversationData:
-    ID: BakerSuccess
-    Conversant: Rye the Baker
-    Unlocks: BSUCCESS
+    ID: FarmerSuccess
+    Conversant: Primrose the Flower Farmer
+    Unlocks: FSUCCESS
     Sound: Life
     Dialogues:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
-      Dialogue: "Loid\u2026is that you\u2026?"
+      Dialogue: I can breathe. I can see. I can- WOAH!
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: "No, I\u2019m L0-1D ;)"
+      Dialogue: "G\u2019day, Primrose ~(^3^)~"
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
-      Dialogue: You sound different, friend.
+      Dialogue: "That voice\u2026Loid??"
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: I have always had sound, however, my voice is newly optimized. Perhaps
-        a system update :O
+      Dialogue: AHEM- L0-1D. :)
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
-      Dialogue: "\u2026"
+      Dialogue: "Okay\u2026?"
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: I have freed you with the powdery substance you call flour and a
-        Ginkgo herb for your self-diagnosed dizziness. How do you feel? :3
+      Dialogue: You are freed from corruption by the power of my computing and the
+        elixir I was able to concoct. >:)
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
-      Dialogue: "I feel\u2026good\u2026and\u2026I can see reality again! It\u2019s
-        so-GASP! LOID! What happened to you?"
+      Dialogue: GASP! MY CHILDREN! Are they alright??
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: I am not sure what you mean. :(
+      Dialogue: All of your offspring are accounted for, uncorrupted, and have sufficient
+        HP. (0w0)
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
-      Dialogue: "I\u2026uhh\u2026never mind. Thank you."
+      Dialogue: "HP\u2026? L0-1D:...they are in good health. :3"
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: "Thank goodness. Thank you\u2026L0-1D."
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: I am at your service. (^w^)
+      Dialogue: MHM! ;)
     Choices: []
     LeadsTo:
     - BranchText: Exit

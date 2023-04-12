@@ -16,7 +16,7 @@ MonoBehaviour:
     ID: Gain ChildDrawing
     Conversant: N/A
     Unlocks: CDCOLLECTED
-    Sound: N/A
+    Sound: GetItem
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0

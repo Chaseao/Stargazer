@@ -16,18 +16,19 @@ MonoBehaviour:
     ID: SunhatPuzzle
     Conversant: N/A
     Unlocks: FI
-    Sound: N/A
+    Sound: Dirt
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: This sunhat would be good to use while you garden or farm. :>
+      Dialogue: There is a sunhat buried here! It would be good to use while you
+        garden or farm. :>
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
       Dialogue: If the sun is too bright, my circuits might get too hot, and I could
         disappear from the world forever as a result of my failing system, so this
         could come in handy for me. ;v;
     Choices:
-    - Get sunhat.
+    - Dig up sunhat.
     - Never mind.
     LeadsTo:
     - BranchText: Dig Sunhat
