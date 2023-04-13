@@ -15423,7 +15423,19 @@ PrefabInstance:
     - target: {fileID: 1040369300490241872, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: itemList.Array.data[9].itemSprite
       value: 
-      objectReference: {fileID: 21300000, guid: fc32a03b19f9965488f404d3661809aa, type: 3}
+      objectReference: {fileID: 21300000, guid: 3b82dfa5887f08f45a295763fead4124, type: 3}
+    - target: {fileID: 1040369300490241872, guid: ff4902ce83793de41b741918efacfff8, type: 3}
+      propertyPath: itemList.Array.data[10].itemSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0e6145a2278d902409d095b374047a7e, type: 3}
+    - target: {fileID: 1040369300490241872, guid: ff4902ce83793de41b741918efacfff8, type: 3}
+      propertyPath: itemList.Array.data[11].itemSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ce6409d9f2d08f044a8e19e7655b8ee3, type: 3}
+    - target: {fileID: 1040369300490241872, guid: ff4902ce83793de41b741918efacfff8, type: 3}
+      propertyPath: itemList.Array.data[12].itemSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9d309516275c841428d71376cb822752, type: 3}
     - target: {fileID: 1040369300490241873, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -16844,6 +16856,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1084812234102216465, guid: 3fe487997b30d6348b0f44d262d31ce6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084812234102216479, guid: 3fe487997b30d6348b0f44d262d31ce6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2587021993730923181, guid: 3fe487997b30d6348b0f44d262d31ce6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
