@@ -13,6 +13,8 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
     private List<GameObject> hoverObjects;
     private ItemData item;
 
+    private bool display;
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         hoverObjects = eventData.hovered;
@@ -25,6 +27,7 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
                 item = itemData.item;
                 itemDisplay.transform.position = eventData.position;
                 itemDisplay.transform.GetComponentInChildren<TextMeshProUGUI>(true).text = item.name;
+                display = true;
                 StartCoroutine(Delay());
             }
         }
@@ -33,11 +36,12 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
     private IEnumerator Delay()
     {
         yield return new WaitForSecondsRealtime(delayTime);
-        itemDisplay.SetActive(true);
+        if(display) itemDisplay.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         itemDisplay.SetActive(false);
+        display= false;
     }
 }
