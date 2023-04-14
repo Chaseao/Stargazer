@@ -23,68 +23,35 @@ MonoBehaviour:
       Dialogue: Every 100 years, the stars shower the Earth.
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 1
-      Dialogue: While beautiful, this phenomenon is deadly. Humans are paved over
-        like ants, the ground cratering like it has been punched by a Titan.
+      Dialogue: While beautiful, this phenomenon is deadly. However, from that destruction,
+        a new magical landscape is born, flourishing despite its trauma and rebuilding
+        itself into something fantastical.
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 1
-      Dialogue: "It\u2019s over in minutes, and their victims are left obliterated."
+      Dialogue: The village of Alora is built upon those remains.
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 1
-      Dialogue: However, from that destruction, a new magical landscape is born,
-        flourishing despite its trauma and rebuilding itself into something fantastical.
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 1
-      Dialogue: "The village of Alora is built upon those remains. It\u2019s built
-        around a forest that was once victim to these falling stars a long time ago,
-        though no soul in the village knows this."
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 1
-      Dialogue: With access to the magical, abundant resources of the forest, the
-        village was able to build itself on good food and advanced technology. This
-        is evident by thousands upon thousands of technological failures and experiments
-        buried beneath present Alora, their ancestors' progress recorded through
-        fossilization.
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 1
-      Dialogue: Over the years, the village has become a simple, yet prosperous place
-        full of unique and skilled people. By some evil irony, this village, too,
-        will suffer the wrath of the stars.
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 1
-      Dialogue: After years of thriving, Alora was awoken one night by bright lights
-        in the sky. The village was soon overcome by a cosmic meltdown, stars descending
-        at speeds faster than imaginable and crushing everything in their path.
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 1
-      Dialogue: Stardust sprayed into the air, and no soul could escape.
+      Dialogue: But, after years of thriving, Alora was awoken one night by bright
+        lights in the sky. The land was once again overcome by a cosmic meltdown.
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 1
       Dialogue: "Villagers exposed to the stardust were soon corrupted, overwhelmed
         by the stars\u2019 magical energy, forgetting their past selves."
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 1
-      Dialogue: One unfortunate individual, in their attempt to escape, was completely
-        crushed by a falling star.
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 1
-      Dialogue: As magic seeped into their body, their soul was extracted and released
-        into the Earth. It wandered free, but its lonely journey, one without a vessel,
+      Dialogue: One individual was completely crushed by a falling star, and their
+        soul was released into the Earth. It wandered free, but its lonely journey
         was short lived.
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 1
-      Dialogue: "It soon found a small robot\u2014one of the failed technological
-        experiments buried below Alora. The soul breathed life into this small droid,
-        awaking them. Using what strength remained in them, every gear turning, the
-        robot emerged from the ground."
+      Dialogue: It soon found a small robot. The soul breathed life into this small
+        droid, and using what strength remained in the robot, every gear turning,
+        they emerged from the ground.
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 1
-      Dialogue: Their name is Loid, they have no memory of the person they once were,
-        but they feel an emotional attachment to the destroyed village before them.
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 1
-      Dialogue: "The corrupted people are friends, though Loid does not remember
-        them, the village is home, though the land is unfamiliar, and they all must
-        be saved, though Loid doesn\u2019t know why."
+      Dialogue: "Their name is Loid. They have no memory of the person they once
+        were, but they feel some kind of attachment to the people of the village.
+        They all must be saved, though Loid doesn\u2019t know why."
     Choices: []
     LeadsTo:
     - BranchText: Exit

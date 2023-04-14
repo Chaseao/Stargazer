@@ -48,7 +48,8 @@ MonoBehaviour:
     Choices:
     - Gimme that flower, little munchkin. :3
     - "INTENSE SNIFF\u2026need smelly flower. (owo)"
-    - "Your parental figure needs that flower to survive the stars\u2019 wrath. 0_0"
+    - "The people of this village need that flower to survive the stars\u2019 wrath.
+      0_0"
     - Never mind.
     LeadsTo:
     - BranchText: Gain Hibiscus

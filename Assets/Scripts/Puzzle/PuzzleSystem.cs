@@ -70,7 +70,6 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
                 break;
             case PuzzleData.Puzzle.Gain:
                 InventoryManager.Instance.GainItem(puzzle.Item);
-                SwapNextDialogueID("Exit");
                 ExitPuzzle();
                 break;
             case PuzzleData.Puzzle.Select:

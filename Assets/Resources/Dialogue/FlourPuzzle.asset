@@ -60,7 +60,7 @@ MonoBehaviour:
     - "Mmmmmm it\u2019s a good snack for the road :3"
     - It is so aesthetic. I cannot digest things, so I will merely enjoy the look
       of such an ingredient X(
-    - I must save your wife *o*
+    - I must save everyone *o*
     - Never mind.
     LeadsTo:
     - BranchText: Gain Flour

@@ -16,9 +16,12 @@ public class ClimbTreePuzzle : MonoBehaviour
 
     [SerializeField] private GameObject player;
 
-    [SerializeField] private Image bar;
-
+    [Header("Bar Settings")]
+    [SerializeField] private Transform bar;
     [SerializeField] private float barRate;
+    [SerializeField] private float barHeight;
+    [SerializeField] private float barReachedHeight;
+    
 
     [SerializeField] private float climbRate;
 
@@ -39,7 +42,7 @@ public class ClimbTreePuzzle : MonoBehaviour
 
     private void Start()
     {
-        bar.fillAmount = 0;
+        bar.localPosition = Vector3.down * barHeight;
         numOfClimbs = 0;
         goingUp= true;
         inClimbPuzzle= false;
@@ -75,15 +78,15 @@ public class ClimbTreePuzzle : MonoBehaviour
     {
         if(inClimbPuzzle)
         {
-            if (bar.fillAmount == 1) goingUp = false;
-            else if (bar.fillAmount == 0) goingUp = true;
+            if (bar.localPosition.y > 0) goingUp = false;
+            else if (bar.localPosition.y < -barHeight) goingUp = true;
             if (goingUp)
             {
-                bar.fillAmount += barRate;
+                bar.localPosition += Vector3.up * barRate * Time.deltaTime;
             }
             else
             {
-                bar.fillAmount -= barRate;
+                bar.localPosition += Vector3.down * barRate * Time.deltaTime;
             }
 
             if (numOfClimbs == numOfClimbsNeeded)
@@ -98,20 +101,16 @@ public class ClimbTreePuzzle : MonoBehaviour
 
     private void OnClick()
     {
-        if(bar.fillAmount >= 0.85f)
+        if(bar.localPosition.y >= barReachedHeight)
         {
             MovePlayerUp();
-            bar.fillAmount = 0;
         }
         else if(numOfClimbs !=0)
         {
             MovePlayerDown();
-            bar.fillAmount = 0;
         }
-        else
-        {
-            bar.fillAmount = 0;
-        }
+        
+        bar.localPosition = Vector3.down * barHeight;
     }
 
     private void MovePlayerUp()
@@ -134,7 +133,7 @@ public class ClimbTreePuzzle : MonoBehaviour
         puzzleMusic.Stop();
         backgroundMusic.Play();
         player.transform.Translate(new Vector3(0, -50, 0));
-        bar.fillAmount = 0;
+        bar.localPosition = Vector3.down * barHeight;
         goingUp = true;
         InventoryManager.Instance.GainItem(currentPuzzle.Item);
         PuzzleSystem.Instance.ExitPuzzle();
