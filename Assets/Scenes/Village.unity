@@ -15518,7 +15518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[1].desiredItem
-      value: antidote_c
+      value: antidote_l
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[1].dialogueOnCancel
@@ -16528,7 +16528,22 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 21300000, guid: 56faecb5d0a65fe4497cac8acf8b9709, type: 3}
+    - {fileID: 21300000, guid: 155ec1c69c5c06b4fbc7b0bddffc04e4, type: 3}
+    - {fileID: 21300000, guid: ecdeae6a96c36dd4ca0d7109bc99ad2b, type: 3}
+    - {fileID: 21300000, guid: c0a650e28cd16cb4a9c3e210ddbfd203, type: 3}
+    - {fileID: 21300000, guid: 54fb3b701549d2143adf96b8e55a562e, type: 3}
+    - {fileID: 21300000, guid: a1a37ee9e42dbe4408fa0f192f6b9e1f, type: 3}
+    - {fileID: 21300000, guid: 1424ba46245d67f48a02d82544b30e32, type: 3}
+    - {fileID: 21300000, guid: 81ef9d0753edf794fbb95547de0ef5b8, type: 3}
+    - {fileID: 21300000, guid: 6d53381b9e800a9499e6a0abf6c8a480, type: 3}
+    - {fileID: 21300000, guid: 405c0d8992367a54caa88e501e03edda, type: 3}
+    - {fileID: 21300000, guid: 8a04f7fb654ce2a4aa5755b824cda56c, type: 3}
+    - {fileID: 21300000, guid: 4c023bd5e7f72484e93c18040837d7f7, type: 3}
+    - {fileID: 21300000, guid: 19cf0f7ef4cff1e4aac2619481702c53, type: 3}
+    - {fileID: 21300000, guid: 78804df288b6b9d42a292769a94b9ed3, type: 3}
+    - {fileID: 21300000, guid: 7f2f1199f2b8a0442a0fa952d8bcf458, type: 3}
+    - {fileID: 21300000, guid: 4b8d1e1ae960a4a40bad8ae9bb3fe104, type: 3}
+    - {fileID: 21300000, guid: 82c916b40b9ff1a41a414657328a89c1, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -16547,7 +16562,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 6
+      Data: 16
     - Name: 
       Entry: 7
       Data: 
@@ -16586,10 +16601,10 @@ MonoBehaviour:
       Data: 4|InventoryHelper+ItemPair, Assembly-CSharp
     - Name: itemOne
       Entry: 1
-      Data: shoe
+      Data: lavender
     - Name: itemTwo
       Entry: 1
-      Data: flour
+      Data: shoe
     - Name: 
       Entry: 8
       Data: 
@@ -16598,10 +16613,10 @@ MonoBehaviour:
       Data: 5|InventoryHelper+ItemData, Assembly-CSharp
     - Name: name
       Entry: 1
-      Data: antidote_b
+      Data: antidote_e
     - Name: itemImage
       Entry: 10
-      Data: 0
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -16616,10 +16631,10 @@ MonoBehaviour:
       Data: 6|InventoryHelper+ItemPair, Assembly-CSharp
     - Name: itemOne
       Entry: 1
-      Data: ginkgo
+      Data: lavender
     - Name: itemTwo
       Entry: 1
-      Data: cinnamon
+      Data: sunhat
     - Name: 
       Entry: 8
       Data: 
@@ -16628,10 +16643,10 @@ MonoBehaviour:
       Data: 7|InventoryHelper+ItemData, Assembly-CSharp
     - Name: name
       Entry: 1
-      Data: antidote_c
+      Data: antidote_f
     - Name: itemImage
       Entry: 10
-      Data: 0
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -16658,10 +16673,10 @@ MonoBehaviour:
       Data: 9|InventoryHelper+ItemData, Assembly-CSharp
     - Name: name
       Entry: 1
-      Data: antidote_d
+      Data: antidote_b
     - Name: itemImage
       Entry: 10
-      Data: 0
+      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -16688,10 +16703,10 @@ MonoBehaviour:
       Data: 11|InventoryHelper+ItemData, Assembly-CSharp
     - Name: name
       Entry: 1
-      Data: antidote_e
+      Data: antidote_c
     - Name: itemImage
       Entry: 10
-      Data: 0
+      Data: 4
     - Name: 
       Entry: 8
       Data: 
@@ -16718,10 +16733,310 @@ MonoBehaviour:
       Data: 13|InventoryHelper+ItemData, Assembly-CSharp
     - Name: name
       Entry: 1
-      Data: antidote_f
+      Data: antidote_d
     - Name: itemImage
       Entry: 10
-      Data: 0
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 14|InventoryHelper+ItemPair, Assembly-CSharp
+    - Name: itemOne
+      Entry: 1
+      Data: lavender
+    - Name: itemTwo
+      Entry: 1
+      Data: flour
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 15|InventoryHelper+ItemData, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: antidote_g
+    - Name: itemImage
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 16|InventoryHelper+ItemPair, Assembly-CSharp
+    - Name: itemOne
+      Entry: 1
+      Data: hibiscus
+    - Name: itemTwo
+      Entry: 1
+      Data: flour
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 17|InventoryHelper+ItemData, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: antidote_h
+    - Name: itemImage
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 18|InventoryHelper+ItemPair, Assembly-CSharp
+    - Name: itemOne
+      Entry: 1
+      Data: hibiscus
+    - Name: itemTwo
+      Entry: 1
+      Data: shoe
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 19|InventoryHelper+ItemData, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: antidote_i
+    - Name: itemImage
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 20|InventoryHelper+ItemPair, Assembly-CSharp
+    - Name: itemOne
+      Entry: 1
+      Data: hibiscus
+    - Name: itemTwo
+      Entry: 1
+      Data: childdrawing
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 21|InventoryHelper+ItemData, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: antidote_j
+    - Name: itemImage
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 22|InventoryHelper+ItemPair, Assembly-CSharp
+    - Name: itemOne
+      Entry: 1
+      Data: hibiscus
+    - Name: itemTwo
+      Entry: 1
+      Data: sunhat
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 23|InventoryHelper+ItemData, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: antidote_k
+    - Name: itemImage
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 24|InventoryHelper+ItemPair, Assembly-CSharp
+    - Name: itemOne
+      Entry: 1
+      Data: childdrawing
+    - Name: itemTwo
+      Entry: 1
+      Data: lavender
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 25|InventoryHelper+ItemData, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: antidote_l
+    - Name: itemImage
+      Entry: 10
+      Data: 11
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 26|InventoryHelper+ItemPair, Assembly-CSharp
+    - Name: itemOne
+      Entry: 1
+      Data: childdrawing
+    - Name: itemTwo
+      Entry: 1
+      Data: cinnamon
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 27|InventoryHelper+ItemData, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: antidote_m
+    - Name: itemImage
+      Entry: 10
+      Data: 12
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 28|InventoryHelper+ItemPair, Assembly-CSharp
+    - Name: itemOne
+      Entry: 1
+      Data: childdrawing
+    - Name: itemTwo
+      Entry: 1
+      Data: ginkgo
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 29|InventoryHelper+ItemData, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: antidote_n
+    - Name: itemImage
+      Entry: 10
+      Data: 13
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 30|InventoryHelper+ItemPair, Assembly-CSharp
+    - Name: itemOne
+      Entry: 1
+      Data: sunhat
+    - Name: itemTwo
+      Entry: 1
+      Data: ginkgo
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 31|InventoryHelper+ItemData, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: antidote_o
+    - Name: itemImage
+      Entry: 10
+      Data: 14
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 32|InventoryHelper+ItemPair, Assembly-CSharp
+    - Name: itemOne
+      Entry: 1
+      Data: sunhat
+    - Name: itemTwo
+      Entry: 1
+      Data: cinnamon
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 33|InventoryHelper+ItemData, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: antidote_p
+    - Name: itemImage
+      Entry: 10
+      Data: 15
     - Name: 
       Entry: 8
       Data: 
@@ -21664,7 +21979,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: acc249dbc0422004398f49363eba693a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8ac7391e453720f449b416c99f6e53e5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -22155,7 +22470,7 @@ MonoBehaviour:
   results: {fileID: 2877595221788036348}
   craftButton: {fileID: 890482748}
   resultsTable: {fileID: 155160130138667575}
-  failedSprite: {fileID: 21300000, guid: 42dc50205a6ac834fa2583b8e7048521, type: 3}
+  failedSprite: {fileID: 21300000, guid: 79d5eb6d16d12b44297968a694cad20e, type: 3}
   itemSelectedOne: {fileID: 142119902}
   itemSelectedTwo: {fileID: 719859078}
 --- !u!114 &8511159377030268812

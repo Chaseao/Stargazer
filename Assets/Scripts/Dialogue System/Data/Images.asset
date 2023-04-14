@@ -22,6 +22,9 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 34897480687bd43479b13c582d03328f, type: 3}
     - {fileID: 21300000, guid: 815550c7ebf0e604ea55f330f7243ca1, type: 3}
     - {fileID: 21300000, guid: 43ad51e043491b94d8f6c62d55ac5ede, type: 3}
+    - {fileID: 21300000, guid: ce6409d9f2d08f044a8e19e7655b8ee3, type: 3}
+    - {fileID: 21300000, guid: 9d309516275c841428d71376cb822752, type: 3}
+    - {fileID: 21300000, guid: 0e6145a2278d902409d095b374047a7e, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -132,8 +135,8 @@ MonoBehaviour:
       Entry: 1
       Data: Lavender
     - Name: $v
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 6
     - Name: 
       Entry: 8
       Data: 
@@ -144,8 +147,8 @@ MonoBehaviour:
       Entry: 1
       Data: Sunhat
     - Name: $v
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 7
     - Name: 
       Entry: 8
       Data: 
@@ -156,8 +159,8 @@ MonoBehaviour:
       Entry: 1
       Data: ChildDrawing
     - Name: $v
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 8
     - Name: 
       Entry: 8
       Data: 
