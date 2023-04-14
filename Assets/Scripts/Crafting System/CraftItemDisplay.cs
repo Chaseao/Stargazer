@@ -12,36 +12,48 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
     [SerializeField] private float delayTime;
 
     private List<GameObject> hoverObjects;
-    private ItemData item;
 
     private bool display;
+    private bool onlyDisplayOnce;
+
+    private void Start()
+    {
+        onlyDisplayOnce = true;
+    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         hoverObjects = eventData.hovered;
-
-        foreach (var Object in hoverObjects)
+        if(onlyDisplayOnce)
         {
-            print(Object);
-            if (Object.name.Equals("Item"))
+            foreach (var Object in hoverObjects)
             {
-                itemDisplay.transform.position = eventData.position;
-                itemDisplay.transform.GetComponentInChildren<TextMeshProUGUI>(true).text = Object.GetComponent<Image>().sprite.name;
-                display = true;
-                StartCoroutine(Delay());
+                if (Object.name.Equals("Item"))
+                {
+                    itemDisplay.transform.position = eventData.position + new Vector2(0f, 2f);
+                    itemDisplay.transform.GetComponentInChildren<TextMeshProUGUI>(true).text = Object.GetComponent<Image>().sprite.name;
+                    if(onlyDisplayOnce)
+                    {
+                        onlyDisplayOnce= false;
+                        StartCoroutine(Delay());
+                    }
+
+                }
             }
         }
+
     }
 
     private IEnumerator Delay()
     {
         yield return new WaitForSecondsRealtime(delayTime);
-        if(display) itemDisplay.SetActive(true);
+        itemDisplay.SetActive(true);
+
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         itemDisplay.SetActive(false);
-        display= false;
+        onlyDisplayOnce = true;
     }
 }
