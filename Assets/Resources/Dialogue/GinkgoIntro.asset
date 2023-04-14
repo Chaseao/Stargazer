@@ -20,7 +20,8 @@ MonoBehaviour:
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: "It\u2019s a ginkgo tree. But, I should look for survivors. :>"
+      Dialogue: "It\u2019s a ginkgo tree. But, I should look for people who need
+        help. :>"
     Choices: []
     LeadsTo:
     - BranchText: Exit

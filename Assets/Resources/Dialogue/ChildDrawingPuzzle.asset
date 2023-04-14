@@ -15,7 +15,7 @@ MonoBehaviour:
   conversationData:
     ID: ChildDrawingPuzzle
     Conversant: "Indigo the Flower Farmer\u2019s Youngest"
-    Unlocks: FI
+    Unlocks: N/A
     Sound: N/A
     Dialogues:
     - PlayerIsSpeaker: 0

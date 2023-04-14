@@ -15,7 +15,7 @@ MonoBehaviour:
   conversationData:
     ID: HibiscusPuzzle
     Conversant: "Lily the Flower Farmer\u2019s Oldest"
-    Unlocks: FI
+    Unlocks: N/A
     Sound: N/A
     Dialogues:
     - PlayerIsSpeaker: 1

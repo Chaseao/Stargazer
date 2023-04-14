@@ -15,7 +15,7 @@ MonoBehaviour:
   conversationData:
     ID: LavenderPuzzle
     Conversant: N/A
-    Unlocks: FI
+    Unlocks: N/A
     Sound: Leaves
     Dialogues:
     - PlayerIsSpeaker: 1

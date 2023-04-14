@@ -15,7 +15,7 @@ MonoBehaviour:
   conversationData:
     ID: CinnamonPuzzle
     Conversant: "Pumpernickel the Baker\u2019s Assistant"
-    Unlocks: BI
+    Unlocks: N/A
     Sound: N/A
     Dialogues:
     - PlayerIsSpeaker: 0

@@ -35,7 +35,7 @@ MonoBehaviour:
     - BranchText: FarmerInventory
       isPuzzle: 0
       Requirements:
-      - label: fi
+      - label: itemcrafted
         isItemID: 0
         consumesItem: 0
     - BranchText: FarmerCorrupted

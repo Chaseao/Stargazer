@@ -5938,7 +5938,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -900, y: 488}
+  m_AnchoredPosition: {x: -783, y: 443}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &717482316
@@ -5962,7 +5962,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 1
   m_CellSize: {x: 450, y: 150}
-  m_Spacing: {x: 50, y: 0}
+  m_Spacing: {x: 50, y: 50}
   m_Constraint: 1
   m_ConstraintCount: 1
 --- !u!114 &717482317
@@ -22327,7 +22327,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8ac7391e453720f449b416c99f6e53e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0db8e8bc10780a4caf2d3e6eca75b9b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -22818,7 +22818,7 @@ MonoBehaviour:
   results: {fileID: 2877595221788036348}
   craftButton: {fileID: 890482748}
   resultsTable: {fileID: 155160130138667575}
-  failedSprite: {fileID: 21300000, guid: 79d5eb6d16d12b44297968a694cad20e, type: 3}
+  failedSprite: {fileID: 21300000, guid: 42dc50205a6ac834fa2583b8e7048521, type: 3}
   itemSelectedOne: {fileID: 142119902}
   itemSelectedTwo: {fileID: 719859078}
 --- !u!114 &8511159377030268812

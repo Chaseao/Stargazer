@@ -21,7 +21,7 @@ MonoBehaviour:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
       Dialogue: "The baker\u2019s assistant has cinnamon. Spicy :p But, I should
-        look for survivors. :>"
+        look for people who need help. :>"
     Choices: []
     LeadsTo:
     - BranchText: Exit

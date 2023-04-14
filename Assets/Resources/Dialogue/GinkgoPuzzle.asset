@@ -15,7 +15,7 @@ MonoBehaviour:
   conversationData:
     ID: GinkgoPuzzle
     Conversant: N/A
-    Unlocks: BI
+    Unlocks: N/A
     Sound: Shake
     Dialogues:
     - PlayerIsSpeaker: 1

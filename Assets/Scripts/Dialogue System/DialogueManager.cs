@@ -33,9 +33,14 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
     public bool ValidateID(string id) => conversationGroup.Find(data => data.Data.ID.ToLower().Equals(id.ToLower()));
     public List<string> DialogueUnlocks => dialogueUnlocks;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        conversationGroup = Resources.LoadAll<SOConversationData>("Dialogue").ToList();
+    }
+
     private void Start()
     {
-        conversationGroup = Resources.LoadAll<SOConversationData>("Dialogue").ToList();
         SceneManager.activeSceneChanged += ClearManager;
     }
 
@@ -48,6 +53,11 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
     private void ClearManager(Scene arg0, Scene arg1)
     {
         dialogueUnlocks.Clear();
+    }
+
+    public void GainUnlock(string unlockKey)
+    {
+        HandleUnlock(unlockKey);
     }
 
     [Button]

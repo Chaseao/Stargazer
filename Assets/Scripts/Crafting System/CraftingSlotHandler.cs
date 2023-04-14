@@ -48,6 +48,9 @@ public class CraftingSlotHandler : SlotHandlerBase
         InventoryManager.Instance.GainItem(result);
         InventoryManager.Instance.DiscardItem(firstItem.Item);
         InventoryManager.Instance.DiscardItem(secondItem.Item);
+        itemSelectedOne.sprite = null;
+        itemSelectedTwo.sprite = null;
+        DialogueManager.Instance.GainUnlock(DialogueHelperClass.POTION_MADE_UNLOCK);
 
         Close();
         Open();

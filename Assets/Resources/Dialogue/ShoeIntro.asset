@@ -20,8 +20,8 @@ MonoBehaviour:
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: Is there a shoe in that river? O_O But, I should look for survivors.
-        :>
+      Dialogue: Is there a shoe in that river? O_O But, I should look for people
+        who need help. :>
     Choices: []
     LeadsTo:
     - BranchText: Exit

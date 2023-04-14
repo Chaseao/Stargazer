@@ -35,7 +35,7 @@ MonoBehaviour:
     - BranchText: BakerInventory
       isPuzzle: 0
       Requirements:
-      - label: bi
+      - label: itemcrafted
         isItemID: 0
         consumesItem: 0
     - BranchText: BakerCorrupted

@@ -15,7 +15,7 @@ MonoBehaviour:
   conversationData:
     ID: ShoePuzzle
     Conversant: N/A
-    Unlocks: BI
+    Unlocks: N/A
     Sound: Splash
     Dialogues:
     - PlayerIsSpeaker: 1

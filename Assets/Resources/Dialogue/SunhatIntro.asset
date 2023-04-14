@@ -21,7 +21,7 @@ MonoBehaviour:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
       Dialogue: It looks like a sunhat is buried here. They are used to block the
-        sun as you garden. But, I should look for survivors. :>
+        sun as you garden. But, I should look for people who need help. :>
     Choices: []
     LeadsTo:
     - BranchText: Exit

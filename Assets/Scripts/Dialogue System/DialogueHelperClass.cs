@@ -14,6 +14,7 @@ public static class DialogueHelperClass
     public static readonly string LEADS_TO_MARKER = "Leads to:";
     public static readonly string SOUND_MARKER = "Music:";
     public static readonly string EMPTY_MARKER = "N/A";
+    public static readonly string POTION_MADE_UNLOCK = "ITEMCRAFTED";
 
     [System.Serializable]
     public class DialogueData

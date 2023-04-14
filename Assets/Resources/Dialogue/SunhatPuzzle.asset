@@ -15,7 +15,7 @@ MonoBehaviour:
   conversationData:
     ID: SunhatPuzzle
     Conversant: N/A
-    Unlocks: FI
+    Unlocks: N/A
     Sound: Dirt
     Dialogues:
     - PlayerIsSpeaker: 1

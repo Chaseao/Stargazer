@@ -21,7 +21,7 @@ MonoBehaviour:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
       Dialogue: That little child is holding a drawing of their family, I think.
-        But, I should look for survivors. :>
+        But, I should look for people who need help. :>
     Choices: []
     LeadsTo:
     - BranchText: Exit
