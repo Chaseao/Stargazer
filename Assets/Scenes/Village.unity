@@ -9001,6 +9001,10 @@ PrefabInstance:
       propertyPath: interactSound
       value: 
       objectReference: {fileID: 6046080912197708782}
+    - target: {fileID: 4265234315050445954, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
+      propertyPath: startingDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: ddef70de6a0bfec4a891520ac2167abf, type: 2}
     - target: {fileID: 4265234315050445955, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: m_Size.x
       value: 1.0141273

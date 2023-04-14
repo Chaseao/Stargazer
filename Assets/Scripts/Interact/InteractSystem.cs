@@ -14,7 +14,7 @@ public class InteractSystem : MonoBehaviour
     private IInteractable item;
     private GameObject glowPlane;
     private Dictionary<GameObject, Boolean> objectsHit = new Dictionary<GameObject, bool>();
-    //[SerializeField] private SOConversationData startingDialogue;
+    [SerializeField] private SOConversationData startingDialogue;
     private bool hasHitItem;
     private bool hasHitItem1;
     private GameObject closestItem;
@@ -31,7 +31,7 @@ public class InteractSystem : MonoBehaviour
 
     void Start()
     {
-        //DialogueManager.Instance.StartDialogue(startingDialogue);
+        DialogueManager.Instance.StartDialogue(startingDialogue);
     }
 
     void Update()
