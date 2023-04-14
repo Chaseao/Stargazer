@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using static InventoryHelper;
 
 public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
@@ -22,11 +23,10 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
         foreach (var Object in hoverObjects)
         {
             print(Object);
-            if (Object.TryGetComponent<CraftingSlotUIButton>(out var itemData))
+            if (Object.name.Equals("Item"))
             {
-                item = itemData.item;
                 itemDisplay.transform.position = eventData.position;
-                itemDisplay.transform.GetComponentInChildren<TextMeshProUGUI>(true).text = item.name;
+                itemDisplay.transform.GetComponentInChildren<TextMeshProUGUI>(true).text = Object.GetComponent<Image>().sprite.name;
                 display = true;
                 StartCoroutine(Delay());
             }

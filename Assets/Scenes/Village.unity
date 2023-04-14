@@ -1143,6 +1143,7 @@ GameObject:
   - component: {fileID: 215327318}
   - component: {fileID: 215327317}
   - component: {fileID: 215327316}
+  - component: {fileID: 215327320}
   m_Layer: 0
   m_Name: Crafting Slot (10)
   m_TagString: Craft
@@ -1285,6 +1286,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &215327320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215327314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDisplay: {fileID: 971932118}
+  delayTime: 1
 --- !u!1 &229984436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,6 +2055,7 @@ GameObject:
   - component: {fileID: 327638583}
   - component: {fileID: 327638582}
   - component: {fileID: 327638581}
+  - component: {fileID: 327638585}
   m_Layer: 0
   m_Name: Crafting Slot (12)
   m_TagString: Craft
@@ -2182,6 +2198,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &327638585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327638579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDisplay: {fileID: 971932118}
+  delayTime: 1
 --- !u!1 &328267828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,6 +2688,7 @@ GameObject:
   - component: {fileID: 405003861}
   - component: {fileID: 405003860}
   - component: {fileID: 405003859}
+  - component: {fileID: 405003863}
   m_Layer: 0
   m_Name: Crafting Slot (11)
   m_TagString: Craft
@@ -2800,6 +2831,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &405003863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405003857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDisplay: {fileID: 971932118}
+  delayTime: 1
 --- !u!1001 &407006626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4011,6 +4056,7 @@ GameObject:
   - component: {fileID: 530162260}
   - component: {fileID: 530162259}
   - component: {fileID: 530162258}
+  - component: {fileID: 530162262}
   m_Layer: 0
   m_Name: Crafting Slot (8)
   m_TagString: Craft
@@ -4153,6 +4199,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &530162262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530162256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDisplay: {fileID: 971932118}
+  delayTime: 1
 --- !u!1 &533815366
 GameObject:
   m_ObjectHideFlags: 0
@@ -4756,6 +4816,7 @@ GameObject:
   - component: {fileID: 620845272}
   - component: {fileID: 620845271}
   - component: {fileID: 620845270}
+  - component: {fileID: 620845274}
   m_Layer: 0
   m_Name: Crafting Slot (7)
   m_TagString: Craft
@@ -4898,6 +4959,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &620845274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620845268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDisplay: {fileID: 971932118}
+  delayTime: 1
 --- !u!1 &629806614
 GameObject:
   m_ObjectHideFlags: 0
@@ -6528,6 +6603,7 @@ GameObject:
   - component: {fileID: 796025207}
   - component: {fileID: 796025206}
   - component: {fileID: 796025205}
+  - component: {fileID: 796025209}
   m_Layer: 0
   m_Name: Crafting Slot (3)
   m_TagString: Craft
@@ -6670,6 +6746,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &796025209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796025203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDisplay: {fileID: 971932118}
+  delayTime: 1
 --- !u!1 &800833693
 GameObject:
   m_ObjectHideFlags: 0
@@ -7006,6 +7096,7 @@ GameObject:
   - component: {fileID: 870595050}
   - component: {fileID: 870595049}
   - component: {fileID: 870595048}
+  - component: {fileID: 870595052}
   m_Layer: 0
   m_Name: Crafting Slot (6)
   m_TagString: Craft
@@ -7148,6 +7239,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &870595052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870595046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDisplay: {fileID: 971932118}
+  delayTime: 1
 --- !u!1 &871846602
 GameObject:
   m_ObjectHideFlags: 0
@@ -8692,6 +8797,7 @@ GameObject:
   - component: {fileID: 1098661508}
   - component: {fileID: 1098661507}
   - component: {fileID: 1098661506}
+  - component: {fileID: 1098661510}
   m_Layer: 0
   m_Name: Crafting Slot (4)
   m_TagString: Craft
@@ -8834,6 +8940,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1098661510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098661504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDisplay: {fileID: 971932118}
+  delayTime: 1
 --- !u!1 &1114486486
 GameObject:
   m_ObjectHideFlags: 0
@@ -9482,6 +9602,7 @@ GameObject:
   - component: {fileID: 1269876013}
   - component: {fileID: 1269876012}
   - component: {fileID: 1269876011}
+  - component: {fileID: 1269876015}
   m_Layer: 0
   m_Name: Crafting Slot (9)
   m_TagString: Craft
@@ -9624,6 +9745,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1269876015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269876009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDisplay: {fileID: 971932118}
+  delayTime: 1
 --- !u!224 &1284061692 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
@@ -12096,6 +12231,7 @@ GameObject:
   - component: {fileID: 1586516454}
   - component: {fileID: 1586516453}
   - component: {fileID: 1586516452}
+  - component: {fileID: 1586516456}
   m_Layer: 0
   m_Name: Crafting Slot (5)
   m_TagString: Craft
@@ -12238,6 +12374,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1586516456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586516450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDisplay: {fileID: 971932118}
+  delayTime: 1
 --- !u!1 &1595523842
 GameObject:
   m_ObjectHideFlags: 0
@@ -15079,6 +15229,7 @@ GameObject:
   - component: {fileID: 1951695753}
   - component: {fileID: 1951695752}
   - component: {fileID: 1951695751}
+  - component: {fileID: 1951695755}
   m_Layer: 0
   m_Name: Crafting Slot (2)
   m_TagString: Craft
@@ -15221,6 +15372,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1951695755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951695749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDisplay: {fileID: 971932118}
+  delayTime: 1
 --- !u!1 &1971253411
 GameObject:
   m_ObjectHideFlags: 0
@@ -17468,7 +17633,6 @@ GameObject:
   - component: {fileID: 8511159377030268812}
   - component: {fileID: 8511159377030268822}
   - component: {fileID: 155160130138667575}
-  - component: {fileID: 8511159377030268823}
   m_Layer: 0
   m_Name: Crafting System
   m_TagString: Untagged
@@ -18814,6 +18978,7 @@ GameObject:
   - component: {fileID: 8855244733949161633}
   - component: {fileID: 6464115730182125836}
   - component: {fileID: 7171152838075044689}
+  - component: {fileID: 8855244733949161634}
   m_Layer: 0
   m_Name: Crafting Slot (1)
   m_TagString: Craft
@@ -22684,20 +22849,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
---- !u!114 &8511159377030268823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178812059736616705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 971932118}
-  delayTime: 0.5
 --- !u!1 &8573299086221947106
 GameObject:
   m_ObjectHideFlags: 0
@@ -22819,6 +22970,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8855244733949161634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4468651572601146038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDisplay: {fileID: 971932118}
+  delayTime: 1
 --- !u!224 &9131913035433842130
 RectTransform:
   m_ObjectHideFlags: 0
