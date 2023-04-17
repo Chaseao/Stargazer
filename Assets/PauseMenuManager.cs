@@ -6,7 +6,10 @@ using UnityEngine;
 public class PauseMenuManager : MonoBehaviour
 {
     [SerializeField] Canvas canvas;
-    [SerializeField] ButtonGroup buttons;
+    [SerializeField] GameObject coverPages;
+    [SerializeField] GameObject journalPages;
+    [SerializeField] ButtonGroup coverButtons;
+    [SerializeField] ButtonGroup journalButtons;
     [SerializeField] TextMeshProUGUI textField;
     
 
@@ -16,6 +19,24 @@ public class PauseMenuManager : MonoBehaviour
         Controller.OnPause += PauseGame;
         ObjectiveHandler.OnObjectivesUpdated += UpdateObjectiveList;
         textField.text = "";
+    }
+
+    public void SwitchToJournal()
+    {
+        coverButtons.DisableButtons();
+        coverPages.SetActive(false);
+
+        journalButtons.EnableButtons();
+        journalPages.SetActive(true);
+    }
+
+    public void SwitchToCover()
+    {
+        journalButtons.DisableButtons();
+        journalPages.SetActive(false);
+
+        coverButtons.EnableButtons();
+        coverPages.SetActive(true);
     }
 
     private void UpdateObjectiveList(List<Objective> obj)
@@ -37,7 +58,8 @@ public class PauseMenuManager : MonoBehaviour
     private void DisableMenu()
     {
         canvas.enabled = false;
-        buttons.DisableButtons();
+        coverButtons.DisableButtons();
+        journalButtons.DisableButtons();
     }
 
     public void PauseGame()
@@ -45,12 +67,12 @@ public class PauseMenuManager : MonoBehaviour
         Controller.OnResume += ResumeGame;
         Controller.Instance.SwapToUI();
         canvas.enabled = true;
-        buttons.EnableButtons();
+        SwitchToCover();
     }
 
     private void OnDestroy()
     {
-        buttons.DisableButtons();
+        coverButtons.DisableButtons();
         Controller.OnPause -= PauseGame;
         Controller.OnResume -= ResumeGame;
     }
