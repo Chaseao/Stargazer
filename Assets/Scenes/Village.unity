@@ -212,11 +212,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
   m_PrefabInstance: {fileID: 505386556}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7451126 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
-  m_PrefabInstance: {fileID: 237402966}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &15867239
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,44 +412,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 1}
   m_SizeDelta: {x: 140, y: 84}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &32956052 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
-  m_PrefabInstance: {fileID: 505386556}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &32956057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32956052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 1814496806}
-  delayTime: 1
 --- !u!224 &43780694 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
   m_PrefabInstance: {fileID: 237402966}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &43780699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7451126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 1814496806}
-  delayTime: 1
 --- !u!1 &44597187
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,11 +605,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65064563}
   m_CullTransparentMesh: 1
---- !u!1 &88049659 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
-  m_PrefabInstance: {fileID: 407006626}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &98598376
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,11 +748,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104346832}
   m_CullTransparentMesh: 1
---- !u!1 &109592356 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
-  m_PrefabInstance: {fileID: 762480841}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &111862962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,6 +1032,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263612796458694124, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: itemDisplay
+      value: 
+      objectReference: {fileID: 1814496806}
+    - target: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
     - target: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
       propertyPath: m_Name
       value: Crafting Slot (10)
@@ -1121,11 +1081,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!1 &137292356 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
-  m_PrefabInstance: {fileID: 1583254035}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &138137562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,11 +1246,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
   m_PrefabInstance: {fileID: 172465447}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &150832559 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
-  m_PrefabInstance: {fileID: 1310950717}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &172465447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1387,6 +1337,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263612796458694124, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: itemDisplay
+      value: 
+      objectReference: {fileID: 1814496806}
+    - target: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
     - target: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
       propertyPath: m_Name
       value: Crafting Slot (2)
@@ -1820,7 +1778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1935,17 +1893,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263612796458694124, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: itemDisplay
+      value: 
+      objectReference: {fileID: 1814496806}
+    - target: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
     - target: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
       propertyPath: m_Name
       value: Crafting Slot (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
---- !u!1 &244166363 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
-  m_PrefabInstance: {fileID: 1667901334}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &264370789
 GameObject:
   m_ObjectHideFlags: 0
@@ -2986,20 +2947,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
   m_PrefabInstance: {fileID: 762480841}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &350409227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109592356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 1814496806}
-  delayTime: 1
 --- !u!1 &372371403
 GameObject:
   m_ObjectHideFlags: 0
@@ -3421,6 +3368,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263612796458694124, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: itemDisplay
+      value: 
+      objectReference: {fileID: 1814496806}
+    - target: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
     - target: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
       propertyPath: m_Name
       value: Crafting Slot (1)
@@ -3862,6 +3817,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263612796458694124, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: itemDisplay
+      value: 
+      objectReference: {fileID: 1814496806}
+    - target: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
     - target: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
       propertyPath: m_Name
       value: Crafting Slot (6)
@@ -4361,6 +4324,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263612796458694124, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: itemDisplay
+      value: 
+      objectReference: {fileID: 1814496806}
+    - target: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
     - target: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
       propertyPath: m_Name
       value: Crafting Slot (15)
@@ -4458,17 +4429,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263612796458694124, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: itemDisplay
+      value: 
+      objectReference: {fileID: 1814496806}
+    - target: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
     - target: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
       propertyPath: m_Name
       value: Crafting Slot (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
---- !u!1 &518768071 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
-  m_PrefabInstance: {fileID: 900879237}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519322199
 GameObject:
   m_ObjectHideFlags: 0
@@ -5226,20 +5200,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
   m_PrefabInstance: {fileID: 407006626}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &577208012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88049659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 1814496806}
-  delayTime: 1
 --- !u!1 &583345976
 GameObject:
   m_ObjectHideFlags: 0
@@ -5381,6 +5341,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263612796458694124, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: itemDisplay
+      value: 
+      objectReference: {fileID: 1814496806}
+    - target: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
     - target: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
       propertyPath: m_Name
       value: Crafting Slot (5)
@@ -6070,20 +6038,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
   m_PrefabInstance: {fileID: 900879237}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &661598127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518768071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 1814496806}
-  delayTime: 1
 --- !u!1 &662558792
 GameObject:
   m_ObjectHideFlags: 0
@@ -6711,6 +6665,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263612796458694124, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: itemDisplay
+      value: 
+      objectReference: {fileID: 1814496806}
+    - target: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
     - target: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
       propertyPath: m_Name
       value: Crafting Slot (7)
@@ -7650,6 +7612,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263612796458694124, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: itemDisplay
+      value: 
+      objectReference: {fileID: 1814496806}
+    - target: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
     - target: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
       propertyPath: m_Name
       value: Crafting Slot (9)
@@ -7987,11 +7957,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803812127}
   m_CullTransparentMesh: 1
---- !u!1 &811011803 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
-  m_PrefabInstance: {fileID: 451660143}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &814529229
 GameObject:
   m_ObjectHideFlags: 0
@@ -8954,6 +8919,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263612796458694124, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: itemDisplay
+      value: 
+      objectReference: {fileID: 1814496806}
+    - target: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
     - target: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
       propertyPath: m_Name
       value: Crafting Slot (11)
@@ -9025,30 +8998,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
   m_PrefabInstance: {fileID: 593899067}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &917968814 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
-  m_PrefabInstance: {fileID: 131499058}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &929509211 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
   m_PrefabInstance: {fileID: 451660143}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &929509216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 811011803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 1814496806}
-  delayTime: 1
 --- !u!1 &929931348
 GameObject:
   m_ObjectHideFlags: 0
@@ -9172,25 +9126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef3cb8e4e16e7de4992d7b2ae6c1bfbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &941190175 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
-  m_PrefabInstance: {fileID: 593899067}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &941190180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941190175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 1814496806}
-  delayTime: 1
 --- !u!1 &958215234
 GameObject:
   m_ObjectHideFlags: 0
@@ -9987,6 +9922,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263612796458694124, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: itemDisplay
+      value: 
+      objectReference: {fileID: 1814496806}
+    - target: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
     - target: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
       propertyPath: m_Name
       value: Crafting Slot
@@ -11465,20 +11408,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
   m_PrefabInstance: {fileID: 131499058}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1180210992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917968814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 1814496806}
-  delayTime: 1
 --- !u!1 &1187273603
 GameObject:
   m_ObjectHideFlags: 0
@@ -11671,25 +11600,6 @@ CanvasRenderer:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
   m_PrefabInstance: {fileID: 1583254035}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1219650342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137292356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 1814496806}
-  delayTime: 1
---- !u!1 &1239804415 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
-  m_PrefabInstance: {fileID: 690962284}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1255760016
 GameObject:
@@ -11950,20 +11860,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
   m_PrefabInstance: {fileID: 1667901334}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1284061697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 244166363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 1814496806}
-  delayTime: 1
 --- !u!1001 &1286038497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12708,6 +12604,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263612796458694124, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: itemDisplay
+      value: 
+      objectReference: {fileID: 1814496806}
+    - target: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
     - target: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
       propertyPath: m_Name
       value: Crafting Slot (3)
@@ -13525,16 +13429,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397032455}
   m_CullTransparentMesh: 1
---- !u!1 &1419139696 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
-  m_PrefabInstance: {fileID: 505880010}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1422276450 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
-  m_PrefabInstance: {fileID: 1476297008}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1425813412
 GameObject:
   m_ObjectHideFlags: 0
@@ -13905,6 +13799,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263612796458694124, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: itemDisplay
+      value: 
+      objectReference: {fileID: 1814496806}
+    - target: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
     - target: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
       propertyPath: m_Name
       value: Crafting Slot (12)
@@ -14837,6 +14739,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263612796458694124, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: itemDisplay
+      value: 
+      objectReference: {fileID: 1814496806}
+    - target: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
     - target: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
       propertyPath: m_Name
       value: Crafting Slot (13)
@@ -15298,20 +15208,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
   m_PrefabInstance: {fileID: 1476297008}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1602236001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422276450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 1814496806}
-  delayTime: 1
 --- !u!1 &1624469833
 GameObject:
   m_ObjectHideFlags: 0
@@ -15709,6 +15605,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263612796458694124, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: itemDisplay
+      value: 
+      objectReference: {fileID: 1814496806}
+    - target: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8318302298203705245, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
     - target: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
       propertyPath: m_Name
       value: Crafting Slot (14)
@@ -15815,39 +15719,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
   m_PrefabInstance: {fileID: 1310950717}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1682318924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150832559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 1814496806}
-  delayTime: 1
 --- !u!224 &1683118724 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
   m_PrefabInstance: {fileID: 690962284}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1683118729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1239804415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 1814496806}
-  delayTime: 1
 --- !u!1 &1688036058
 GameObject:
   m_ObjectHideFlags: 0
@@ -17115,25 +16991,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1793549647 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
-  m_PrefabInstance: {fileID: 1043200557}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1793549652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1793549647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 1814496806}
-  delayTime: 1
 --- !u!1 &1797259688
 GameObject:
   m_ObjectHideFlags: 0
@@ -17561,6 +17418,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5099415845002499004}
     m_Modifications:
+    - target: {fileID: 4374733888496110354, guid: c85ac23fbb6fcc84e9e461f66d3c0429, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4374733888496110364, guid: c85ac23fbb6fcc84e9e461f66d3c0429, type: 3}
       propertyPath: m_Name
       value: ItemDisplay
@@ -19921,20 +19782,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
   m_PrefabInstance: {fileID: 505880010}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2053803281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1419139696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 1814496806}
-  delayTime: 1
 --- !u!1 &2061727089
 GameObject:
   m_ObjectHideFlags: 0
@@ -20291,25 +20138,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086612000}
   m_CullTransparentMesh: 1
---- !u!1 &2089821377 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9013504439085263478, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
-  m_PrefabInstance: {fileID: 172465447}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2089821382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089821377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6225cf51f9a43a4429af7f26a402a0c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDisplay: {fileID: 1814496806}
-  delayTime: 1
 --- !u!4 &2102743498 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4265234315050445964, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
@@ -22844,7 +22672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.36862746, g: 0.41176474, b: 0.45098042, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -23695,7 +23523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

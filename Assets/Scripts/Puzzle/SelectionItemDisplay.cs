@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static InventoryHelper;
 
-public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class SelectionItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] GameObject itemDisplay;
     [SerializeField] private float delayTime;
@@ -24,16 +24,16 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public void OnPointerEnter(PointerEventData eventData)
     {
         hoverObjects = eventData.hovered;
-        if(onlyDisplayOnce)
-        {   
+        if (onlyDisplayOnce)
+        {
             onlyDisplayOnce = false;
             print(onlyDisplayOnce);
             foreach (var Object in hoverObjects)
             {
-    
+
                 if (Object.name.Equals("Item"))
                 {
-                    itemDisplay.transform.position = Object.transform.position + new Vector3(0f, -50f, 0f);
+                    itemDisplay.transform.position = Object.transform.position + new Vector3(0f, -5f, 0f);
                     itemDisplay.transform.GetComponentInChildren<TextMeshProUGUI>(true).text = Object.GetComponent<Image>().sprite.name;
                     StartCoroutine(Delay());
                 }
@@ -55,3 +55,4 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
         onlyDisplayOnce = true;
     }
 }
+

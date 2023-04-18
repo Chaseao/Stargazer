@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 4175283594903982177}
   - component: {fileID: 1918699913461471692}
   - component: {fileID: 2346584204882211729}
+  - component: {fileID: 7263612796458694124}
   m_Layer: 0
   m_Name: Crafting Slot
   m_TagString: Untagged
@@ -385,3 +386,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7263612796458694124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9013504439085263478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dd7a028e4eb454898da4f00a74dc0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDisplay: {fileID: 4374733888496110364, guid: c85ac23fbb6fcc84e9e461f66d3c0429, type: 3}
+  delayTime: 1
