@@ -28,9 +28,10 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
         {
             foreach (var Object in hoverObjects)
             {
+                print(Object.name);
                 if (Object.name.Equals("Item"))
                 {
-                    itemDisplay.transform.position = eventData.position + new Vector2(0f, 2f);
+                    itemDisplay.transform.position = Object.transform.position + new Vector3(0f, 2f, 0f);
                     itemDisplay.transform.GetComponentInChildren<TextMeshProUGUI>(true).text = Object.GetComponent<Image>().sprite.name;
                     if(onlyDisplayOnce)
                     {

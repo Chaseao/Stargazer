@@ -360,9 +360,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 8167946176833071580}
-  frame: {fileID: 8873835407300510736}
   animator: {fileID: 2346584204882211729}
   frameSelected: {r: 0.48627454, g: 1, b: 0.7686275, a: 1}
+  item:
+    name: 
+    itemImage: {fileID: 0}
 --- !u!95 &2346584204882211729
 Animator:
   serializedVersion: 4
