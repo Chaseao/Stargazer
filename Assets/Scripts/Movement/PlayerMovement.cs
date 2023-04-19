@@ -37,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
                 if (playerInput.x > 0)
                 {
                     direction = Direction.Right;
+                    playerAnimation.SetBool("IsLeft", true);
+                    playerAnimation.SetBool("IsRight", false);
                 }
 
                 break;
@@ -44,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
                 if (playerInput.x < 0)
                 {
                     direction = Direction.Left;
+                    playerAnimation.SetBool("IsLeft", false);
+                    playerAnimation.SetBool("IsRight", true);
                 }
 
                 break;
