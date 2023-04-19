@@ -24,6 +24,10 @@ public class CollectHerbPuzzle : MonoBehaviour
 
     [SerializeField] private GameObject puzzleUI;
 
+    [SerializeField] private AudioSource puzzleMusic;
+
+    [SerializeField] private AudioSource backgroundMusic;
+
     private bool inHerbPuzzle;
 
 
@@ -48,6 +52,8 @@ public class CollectHerbPuzzle : MonoBehaviour
     {
         currentPuzzle = puzzle;
         puzzleUI.SetActive(true);
+        puzzleMusic.Play();
+        backgroundMusic.Stop();
         inHerbPuzzle = true;
         foreach(var herb in herbsInBasket) { herb.GetComponent<Image>().sprite = puzzle.Item.itemImage; }
         foreach (var herb in herbs)
@@ -159,6 +165,8 @@ public class CollectHerbPuzzle : MonoBehaviour
         {
             herb.SetActive(false);
         }
+        puzzleMusic.Stop();
+        backgroundMusic.Play();
         puzzleUI.SetActive(false);
         InventoryManager.Instance.GainItem(currentPuzzle.Item);
         PuzzleSystem.Instance.ExitPuzzle();
