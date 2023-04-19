@@ -52,6 +52,15 @@ MonoBehaviour:
       Dialogue: "Their name is Loid. They have no memory of the person they once
         were, but they feel some kind of attachment to the people of the village.
         They all must be saved, though Loid doesn\u2019t know why."
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 1
+      Dialogue: Each individual must be cured by a unique elixir, which Loid can
+        make by gathering ingredients around the village. One herb and one item of
+        personal value should do the trick.
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 1
+      Dialogue: Pay attention to what each person needs. Free them from cosmic corruption
+        by bringing them a concoction of what they most desire.
     Choices: []
     LeadsTo:
     - BranchText: Exit
