@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4265234315050445955}
   - component: {fileID: 4265234315050445954}
   - component: {fileID: 2503269199534082203}
+  - component: {fileID: 66288651120792009}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -103,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMove: 1
   speed: 2
+  playerAnimation: {fileID: 0}
 --- !u!50 &4265234315050445952
 Rigidbody2D:
   serializedVersion: 4
@@ -185,3 +187,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &66288651120792009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4265234315050445965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7fbe99d4cbf9c4aabb6f40499daf54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: spriteData
+      Entry: 6
+      Data: 
+  Baker: {fileID: 0}
+  Famer: {fileID: 0}
+  deadBaker: {fileID: 0}
+  aliveBaker: {fileID: 0}
