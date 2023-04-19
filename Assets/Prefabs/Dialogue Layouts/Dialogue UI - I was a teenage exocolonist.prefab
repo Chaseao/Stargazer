@@ -1082,8 +1082,8 @@ MonoBehaviour:
   m_text: "Your daughter is safe, I will bring her no harm. Though I suppose your
     brother-in-law could take your place\u2026 or even your daughter\u2019s dog.abcdefghijklmnop"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3faad0fd198f2f141b51e6b4222e3e0b, type: 2}
-  m_sharedMaterial: {fileID: -5445233881496616917, guid: 3faad0fd198f2f141b51e6b4222e3e0b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f36f2825d9b4af348a25a57a21215f4f, type: 2}
+  m_sharedMaterial: {fileID: 8954951040673282120, guid: f36f2825d9b4af348a25a57a21215f4f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1107,8 +1107,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1117,9 +1117,9 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 4.47
+  m_characterSpacing: 6.14
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 1.61
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
