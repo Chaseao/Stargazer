@@ -28,6 +28,7 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
     bool inDialogue;
     bool nextIsPuzzle;
     bool continueInputRecieved;
+    bool abortDialogue;
     string choiceSelected;
     public bool InDialogue => inDialogue;
     public bool ValidateID(string id) => conversationGroup.Find(data => data.Data.ID.ToLower().Equals(id.ToLower()));
@@ -68,7 +69,7 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
 
     public void StartDialogue(string dialogueId)
     {
-        if(dialogueId == null || dialogueId.ToLowerInvariant().Equals("exit"))
+        if (dialogueId == null || dialogueId.ToLowerInvariant().Equals("exit"))
         {
             ExitDialogue();
             return;
@@ -96,16 +97,30 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
         Controller.Instance.SwapToGameplay();
     }
 
+    private void OnAbort() 
+    {
+        abortDialogue = true;
+        OnContinueInput();
+    }
+
     private IEnumerator HandleConversation(ConversationData data)
     {
         OnDialogueStarted?.Invoke(data);
 
         if (data.Dialogues.Count >= 1 && !data.Dialogues[0].Dialogue.IsNullOrWhitespace())
         {
+            abortDialogue = false;
+            Controller.OnOverrideSkip += OnAbort;
+
             foreach (var dialogue in data.Dialogues)
             {
                 yield return ProcessDialogue(dialogue, data.Conversant);
+                if (abortDialogue) break;
             }
+
+            Controller.OnOverrideSkip -= OnAbort;
+            
+
         }
 
         HandleUnlock(data.Unlocks);
@@ -234,6 +249,7 @@ public class DialogueManager : SingletonMonoBehavior<DialogueManager>
             atSpecialCharacter = false;
             OnTextUpdated?.Invoke(loadedText, isWickSpeaker);
             yield return new WaitForSeconds(1 / currentDialogueSpeed);
+            if (abortDialogue) { OnTextUpdated?.Invoke(name + line, isWickSpeaker); break; }
         }
         Controller.OnNextDialogue -= SpeedUpText;
     }

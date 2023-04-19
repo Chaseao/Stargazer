@@ -18,6 +18,7 @@ public class Controller : SingletonMonoBehavior<Controller>
     public static Action OnSkip;
     public static Action OnResume;
     public static Action OnNextDialogue;
+    public static Action OnOverrideSkip;
 
     public static Action OnCancel;
 
@@ -114,6 +115,14 @@ public class Controller : SingletonMonoBehavior<Controller>
         if (context.started)
         {
             OnNextDialogue?.Invoke();
+        }
+    }
+
+    public void OverrideSkip(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            OnOverrideSkip?.Invoke();
         }
     }
 
