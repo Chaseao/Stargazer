@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 playerInput;
     [SerializeField] private bool canMove = true;
     [SerializeField] private float speed = 0.25f;
+    [SerializeField] private Animator playerAnimation;
     private Direction direction = Direction.Left;
 
     private enum Direction
@@ -46,6 +47,14 @@ public class PlayerMovement : MonoBehaviour
                 }
 
                 break;
+        }
+        if(rigidbody.velocity != Vector2.zero)
+        {
+            playerAnimation.SetBool("IsWalking", true);
+        }
+        else
+        {
+            playerAnimation.SetBool("IsWalking", false);
         }
 
     }
