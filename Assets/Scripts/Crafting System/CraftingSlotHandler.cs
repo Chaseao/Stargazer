@@ -18,6 +18,8 @@ public class CraftingSlotHandler : SlotHandlerBase
     private CraftingSlotUIButton firstItem;
     private CraftingSlotUIButton secondItem;
 
+    public enum Slot { one = 0, two = 1}
+
     protected override UIButton ActivateButton { get => craftButton; }
 
     protected override List<ItemData> Inventory => InventoryManager.Instance.Inventory;
@@ -25,13 +27,12 @@ public class CraftingSlotHandler : SlotHandlerBase
     public override void Close()
     {
         base.Close();
-        firstItem = null;
-        secondItem = null;
+        ClearSlots();
     }
 
     protected override void ActivateButton_OnClick(IButton obj)
     {
-        if(firstItem == null || secondItem == null) return;
+        if (firstItem == null || secondItem == null) return;
 
         var pairToCraft = new ItemPair(firstItem.Item, secondItem.Item);
         var result = resultsTable.GetResults(pairToCraft);
@@ -48,12 +49,38 @@ public class CraftingSlotHandler : SlotHandlerBase
         InventoryManager.Instance.GainItem(result);
         InventoryManager.Instance.DiscardItem(firstItem.Item);
         InventoryManager.Instance.DiscardItem(secondItem.Item);
-        itemSelectedOne.sprite = null;
-        itemSelectedTwo.sprite = null;
         DialogueManager.Instance.GainUnlock(DialogueHelperClass.POTION_MADE_UNLOCK);
 
         Close();
         Open();
+    }
+
+    public void ClearSlot(Slot slot)
+    {
+        ClearSlot((int)slot);
+    }
+
+    public void ClearSlot(int slot)
+    {
+        switch (slot)
+        {
+            case 0:
+                firstItem = null;
+                itemSelectedOne.sprite = null;
+                itemSelectedOne.enabled = false;
+                break;
+            case 1:
+                secondItem = null;
+                itemSelectedTwo.sprite = null;
+                itemSelectedTwo.enabled = false;
+                break;
+        }
+    }
+
+    public void ClearSlots()
+    {
+        ClearSlot(Slot.one);
+        ClearSlot(Slot.two);
     }
 
     protected override void Handle_Click(IButton button)
