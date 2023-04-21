@@ -16,6 +16,7 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
     [SerializeField] private SelectItemPuzzle selectItemPuzzle;
     [SerializeField] private RiverPuzzle riverPuzzle;
     [SerializeField] private DigPuzzle digPuzzle;
+    [SerializeField] private StarPuzzle starPuzzle;
 
     [Serializable]
     public class itemImage
@@ -80,6 +81,9 @@ public class PuzzleSystem : SingletonMonoBehavior<PuzzleSystem>
                 break;
             case PuzzleData.Puzzle.Dig:
                 digPuzzle.StartPuzzle(puzzle);
+                break;
+            case PuzzleData.Puzzle.Star:
+                starPuzzle.StartPuzzle(puzzle);
                 break;
             default:
                 print("Could not find puzzle type");

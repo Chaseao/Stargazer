@@ -15,7 +15,8 @@ public class PuzzleHelper
             Gain,
             Select,
             Water,
-            Dig
+            Dig,
+            Star
         }
 
         public Puzzle Type;
@@ -45,6 +46,9 @@ public class PuzzleHelper
                     break;
                 case "Dig":
                     Type = Puzzle.Dig;
+                    break;
+                case "Star":
+                    Type = Puzzle.Star;
                     break;
                 default:
                     Debug.Log("ERROR: Could not find Puzzle Type");
