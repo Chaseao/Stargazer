@@ -15,7 +15,7 @@ MonoBehaviour:
   conversationData:
     ID: ClimbTree Ginkgo
     Conversant: N/A
-    Unlocks: GCOLLECTED
+    Unlocks: N/A
     Sound: GetItem
     Dialogues:
     - PlayerIsSpeaker: 1

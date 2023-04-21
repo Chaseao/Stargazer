@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: AstronomerCorrupted
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: AstronomerCorrupted
+    Conversant: Pluto the Astronomer
+    Unlocks: PUZZLES
+    Sound: N/A
+    Dialogues:
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: My chest is tight, my heart is beating too fast, and my whole body
+        is shaking. How unfortunate.
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: "To make matters worse, the stars have descended and I can\u2019t
+        see them or study them. SIGH. A plight, indeed."
+    Choices: []
+    LeadsTo:
+    - BranchText: Exit
+      isPuzzle: 0
+      Requirements: []
+    - BranchText: ID:AstronomerInventory
+      isPuzzle: 0
+      Requirements: []
+    - BranchText: 'Conversant: Pluto the Astronomer'
+      isPuzzle: 0
+      Requirements: []
+    - BranchText: 'Unlocks: N/A'
+      isPuzzle: 0
+      Requirements: []
+    - BranchText: 'Music: N/A'
+      isPuzzle: 0
+      Requirements: []
+    - BranchText: 'Dialogue:'
+      isPuzzle: 0
+      Requirements: []
+    - BranchText: 'Pluto the Astronomer: My chest hurts, my whole body feels weak,
+        and I get this feeling that there is a groundbreaking space discovery happening
+        outside of this daydream.'
+      isPuzzle: 0
+      Requirements: []
+    - BranchText: 'L0-1D: It is probable that I can be of assistance. OvO'
+      isPuzzle: 0
+      Requirements: []
+    - BranchText: 'Choices:'
+      isPuzzle: 0
+      Requirements: []
+    - BranchText: Open inventory.
+      isPuzzle: 0
+      Requirements: []
+    - BranchText: Exit.
+      isPuzzle: 0
+      Requirements: []
+    - BranchText: 'Leads to:'
+      isPuzzle: 0
+      Requirements: []
+    - BranchText: Select Astronomer
+      isPuzzle: 1
+      Requirements: []
+    - BranchText: Exit
+      isPuzzle: 0
+      Requirements: []

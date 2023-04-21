@@ -15,7 +15,7 @@ MonoBehaviour:
   conversationData:
     ID: Dig Sunhat
     Conversant: N/A
-    Unlocks: SHCOLLECTED
+    Unlocks: N/A
     Sound: GetItem
     Dialogues:
     - PlayerIsSpeaker: 1

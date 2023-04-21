@@ -23,7 +23,7 @@ MonoBehaviour:
     - BranchText: CinnamonCollected
       isPuzzle: 0
       Requirements:
-      - label: ccollected
+      - label: $cinnamon
         isItemID: 0
         consumesItem: 0
     - BranchText: CinnamonPuzzle

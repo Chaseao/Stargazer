@@ -15,7 +15,7 @@ MonoBehaviour:
   conversationData:
     ID: Gain Hibiscus
     Conversant: N/A
-    Unlocks: HCOLLECTED
+    Unlocks: N/A
     Sound: GetItem
     Dialogues:
     - PlayerIsSpeaker: 1

@@ -15,7 +15,7 @@ MonoBehaviour:
   conversationData:
     ID: Water Shoe
     Conversant: N/A
-    Unlocks: SCOLLECTED
+    Unlocks: N/A
     Sound: GetItem
     Dialogues:
     - PlayerIsSpeaker: 1

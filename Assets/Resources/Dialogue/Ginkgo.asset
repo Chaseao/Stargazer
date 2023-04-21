@@ -23,7 +23,7 @@ MonoBehaviour:
     - BranchText: GinkgoCollected
       isPuzzle: 0
       Requirements:
-      - label: gcollected
+      - label: $ginkgo
         isItemID: 0
         consumesItem: 0
     - BranchText: GinkgoPuzzle

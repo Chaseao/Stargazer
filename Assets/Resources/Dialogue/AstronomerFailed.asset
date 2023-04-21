@@ -10,31 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: ChildDrawing
+  m_Name: AstronomerFailed
   m_EditorClassIdentifier: 
   conversationData:
-    ID: ChildDrawing
-    Conversant: N/A
+    ID: AstronomerFailed
+    Conversant: Pluto the Astronomer
     Unlocks: N/A
     Sound: N/A
-    Dialogues: []
+    Dialogues:
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: "The stars have taken me. It\u2019s a discovery in itself, but sadly,
+        I can\u2019t write this down."
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: (;_;)
     Choices: []
     LeadsTo:
-    - BranchText: ChildDrawingCollected
-      isPuzzle: 0
-      Requirements:
-      - label: $childdrawing
-        isItemID: 0
-        consumesItem: 0
-    - BranchText: ChildDrawingPuzzle
-      isPuzzle: 0
-      Requirements:
-      - label: puzzles
-        isItemID: 0
-        consumesItem: 0
-    - BranchText: ChildDrawingIntro
-      isPuzzle: 0
-      Requirements: []
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []

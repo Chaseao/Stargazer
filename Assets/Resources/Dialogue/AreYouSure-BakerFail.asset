@@ -10,29 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: ChildDrawing
+  m_Name: AreYouSure-BakerFail
   m_EditorClassIdentifier: 
   conversationData:
-    ID: ChildDrawing
+    ID: AreYouSure-BakerFail
     Conversant: N/A
     Unlocks: N/A
     Sound: N/A
-    Dialogues: []
-    Choices: []
+    Dialogues:
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 1
+      Dialogue: Are you sure you want to give this elixir? If it is the correct mixture,
+        the person will be saved, but if it is wrong, the individual will be lost.
+    Choices:
+    - Yes, use elixir.
+    - No, go back.
     LeadsTo:
-    - BranchText: ChildDrawingCollected
-      isPuzzle: 0
-      Requirements:
-      - label: $childdrawing
-        isItemID: 0
-        consumesItem: 0
-    - BranchText: ChildDrawingPuzzle
-      isPuzzle: 0
-      Requirements:
-      - label: puzzles
-        isItemID: 0
-        consumesItem: 0
-    - BranchText: ChildDrawingIntro
+    - BranchText: BakerFail
       isPuzzle: 0
       Requirements: []
     - BranchText: Exit

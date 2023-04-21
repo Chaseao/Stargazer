@@ -23,7 +23,7 @@ MonoBehaviour:
     - BranchText: SunhatCollected
       isPuzzle: 0
       Requirements:
-      - label: shcollected
+      - label: $sunhat
         isItemID: 0
         consumesItem: 0
     - BranchText: SunhatPuzzle

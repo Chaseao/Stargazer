@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: AstronomerSuccess
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: AstronomerSuccess
+    Conversant: Pluto the Astronomer
+    Unlocks: ASUCCESS
+    Sound: Life
+    Dialogues:
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: "You! You saved me. You\u2019re a robot."
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: "I am! L0-1D is at your service. \\(\u2018v\u2019)/"
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: Mm. Fascinating. Mind if I take you apart and figure out your inner-workings?
+        L0-1D :0
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: I presume you will think about it?
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: I cannot think. I compute an appropriate response to human voice
+        or text input. :)
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: Right, right, of course, little one.
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: I am big on the inside. 0_0
+    - PlayerIsSpeaker: 0
+      VoiceSpeaker: 0
+      Dialogue: Haha. How extraordinary.
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: Thank you!
+    Choices: []
+    LeadsTo:
+    - BranchText: Exit
+      isPuzzle: 0
+      Requirements: []
