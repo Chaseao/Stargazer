@@ -6,12 +6,24 @@ using UnityEngine;
 public class PauseMenuManager : MonoBehaviour
 {
     [SerializeField] Canvas canvas;
-    [SerializeField] GameObject coverPages;
-    [SerializeField] GameObject journalPages;
-    [SerializeField] ButtonGroup coverButtons;
-    [SerializeField] ButtonGroup journalButtons;
+    [SerializeField] List<Page> pages;
     [SerializeField] TextMeshProUGUI textField;
-    
+
+    int currentPageIndex;
+
+    [Serializable, ExpandedClass]
+    public class Page
+    {
+        [SerializeField] GameObject page;
+        [SerializeField] ButtonGroup buttons;
+
+        public void ToggleDisplay(bool isEnabled)
+        {
+            page.SetActive(isEnabled);
+            if (isEnabled) buttons.EnableButtons();
+            else buttons.DisableButtons();
+        }
+    }
 
     private void Start()
     {
@@ -19,24 +31,25 @@ public class PauseMenuManager : MonoBehaviour
         Controller.OnPause += PauseGame;
         ObjectiveHandler.OnObjectivesUpdated += UpdateObjectiveList;
         textField.text = "";
+        currentPageIndex = 0;
     }
 
-    public void SwitchToJournal()
+    public void SwitchToNext()
     {
-        coverButtons.DisableButtons();
-        coverPages.SetActive(false);
-
-        journalButtons.EnableButtons();
-        journalPages.SetActive(true);
+        SwitchPage(1);
     }
 
-    public void SwitchToCover()
+    public void SwitchToPrevious()
     {
-        journalButtons.DisableButtons();
-        journalPages.SetActive(false);
+        SwitchPage(-1);
+    }
 
-        coverButtons.EnableButtons();
-        coverPages.SetActive(true);
+    private void SwitchPage(int amount)
+    {
+        if (currentPageIndex + amount >= pages.Count || currentPageIndex + amount < 0) return;
+        pages[currentPageIndex].ToggleDisplay(false);
+        currentPageIndex += amount;
+        pages[currentPageIndex].ToggleDisplay(true);
     }
 
     private void UpdateObjectiveList(List<Objective> obj)
@@ -58,8 +71,7 @@ public class PauseMenuManager : MonoBehaviour
     private void DisableMenu()
     {
         canvas.enabled = false;
-        coverButtons.DisableButtons();
-        journalButtons.DisableButtons();
+        pages.ForEach(page => page.ToggleDisplay(false));
     }
 
     public void PauseGame()
@@ -67,12 +79,13 @@ public class PauseMenuManager : MonoBehaviour
         Controller.OnResume += ResumeGame;
         Controller.Instance.SwapToUI();
         canvas.enabled = true;
-        SwitchToCover();
+        currentPageIndex = 0;
+        pages[currentPageIndex].ToggleDisplay(true);
     }
 
     private void OnDestroy()
     {
-        coverButtons.DisableButtons();
+        pages.ForEach(page => page.ToggleDisplay(false));
         Controller.OnPause -= PauseGame;
         Controller.OnResume -= ResumeGame;
     }
