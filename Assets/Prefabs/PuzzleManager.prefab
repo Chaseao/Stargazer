@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1040369300490241876}
   - component: {fileID: 8879073101846571685}
   - component: {fileID: 8223902375524877837}
+  - component: {fileID: 7372632916040743993}
   m_Layer: 0
   m_Name: PuzzleManager
   m_TagString: Untagged
@@ -56,6 +57,7 @@ MonoBehaviour:
   selectItemPuzzle: {fileID: 1040369300490241876}
   riverPuzzle: {fileID: 8879073101846571685}
   digPuzzle: {fileID: 0}
+  starPuzzle: {fileID: 0}
   itemList:
   - itemName: Carrot
     itemSprite: {fileID: 21300000, guid: bc0cedfcc701f3149b43e79fc95f0f07, type: 3}
@@ -88,7 +90,10 @@ MonoBehaviour:
   newSelectionTransform: {fileID: 0}
   distanceThreshold: 60
   delayBeforeLeavingPuzzle: 1
+  UICamera: {fileID: 0}
   puzzleUI: {fileID: 0}
+  puzzleMusic: {fileID: 0}
+  backgroundMusic: {fileID: 0}
   interactiveCursorTexture: {fileID: 2800000, guid: 4c7dddea8379f4c49926fd4c65710885, type: 3}
 --- !u!114 &1040369300490241879
 MonoBehaviour:
@@ -108,6 +113,8 @@ MonoBehaviour:
   player: {fileID: 0}
   bar: {fileID: 0}
   barRate: 0.005
+  barHeight: 0
+  barReachedHeight: 0
   climbRate: 25
   numOfClimbsNeeded: 5
   puzzleMusic: {fileID: 0}
@@ -179,9 +186,28 @@ MonoBehaviour:
   puzzleUI: {fileID: 0}
   item: {fileID: 0}
   bar: {fileID: 0}
-  barRate: 0
   numOfClicksNeeded: 0
   numOfClicksToRemoveDirt: 0
   puzzleMusic: {fileID: 0}
   backgroundMusic: {fileID: 0}
+  dirtParticles: {fileID: 0}
+  UICam: {fileID: 0}
   Dirt: []
+--- !u!114 &7372632916040743993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040369300490241875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8a46c6437e77549bbb98975c98cd41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBeforeLeavingPuzzle: 5
+  puzzleUI: {fileID: 0}
+  puzzleMusic: {fileID: 0}
+  backgroundMusic: {fileID: 0}
+  StarFinished: 0
+  inputPositionVector: {x: 0, y: 0}
