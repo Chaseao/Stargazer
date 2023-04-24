@@ -11,13 +11,13 @@ public abstract class SlotHandlerBase : MonoBehaviour
     public virtual void Close()
     {
         ClearSlots();
-        ActivateButton.OnClick -= ActivateButton_OnClick;
+        ActivateButton.OnSelect -= ActivateButton_OnClick;
     }
 
     public void Open()
     {
         SetUpSlots();
-        ActivateButton.OnClick += ActivateButton_OnClick;
+        ActivateButton.OnSelect += ActivateButton_OnClick;
     }
 
     private void Awake()
@@ -31,7 +31,7 @@ public abstract class SlotHandlerBase : MonoBehaviour
     {
         for (int i = 0; i < slots.Count; i++)
         {
-            slots[i].OnClick -= Handle_Click;
+            slots[i].OnSelect -= Handle_Click;
             slots[i].SetItem(null);
             slots[i].ToggleFrame(false);
         }
@@ -46,7 +46,7 @@ public abstract class SlotHandlerBase : MonoBehaviour
 
         for (int i = 0; i < Inventory.Count; i++)
         {
-            slots[i].OnClick += Handle_Click;
+            slots[i].OnSelect += Handle_Click;
             slots[i].SetItem(Inventory[i]);
         }
     }

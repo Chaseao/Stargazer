@@ -30,7 +30,7 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
     {
         ShowScreen();
         Controller.OnCancel += CancelScreen;
-        cancelButton.OnClick += Button_OnClick;
+        cancelButton.OnSelect += Button_OnClick;
         slotHandler.Open();
     }
 
@@ -60,7 +60,7 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
     {
         HideScreen();
         Controller.OnCancel -= CancelScreen;
-        cancelButton.OnClick -= Button_OnClick;
+        cancelButton.OnSelect -= Button_OnClick;
         slotHandler.Close();
     }
 
