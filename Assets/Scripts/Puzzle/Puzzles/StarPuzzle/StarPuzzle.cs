@@ -19,7 +19,7 @@ public class StarPuzzle : MonoBehaviour
 
     private PuzzleHelper.PuzzleData currentPuzzle;
 
-    private bool inStarPuzzle;
+    public bool inStarPuzzle;
 
     public Vector2 inputPositionVector;
 
@@ -54,7 +54,14 @@ public class StarPuzzle : MonoBehaviour
         currentPuzzle = puzzle;
     }
 
-
+    private void Update()
+    {
+        if(StarFinished >=5 && inStarPuzzle)
+        {
+            inStarPuzzle = false;
+            StartCoroutine(ResetPuzzle());
+        }
+    }
 
 
     private IEnumerator ResetPuzzle()
@@ -63,6 +70,7 @@ public class StarPuzzle : MonoBehaviour
         puzzleUI.SetActive(false);
         puzzleMusic.Stop();
         backgroundMusic.Play();
+        StarFinished = 0;
         InventoryManager.Instance.GainItem(currentPuzzle.Item);
         PuzzleSystem.Instance.ExitPuzzle();
     }

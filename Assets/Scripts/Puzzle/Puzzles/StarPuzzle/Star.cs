@@ -8,19 +8,22 @@ using UnityEngine.UI;
 
 public class Star : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    private bool pressed = false;
+    private bool pressed = true;
     private bool placed = false;
     private Vector2 orginialPosition;
     [SerializeField] private StarPuzzle starPuzzle;
 
     private List<GameObject> hoverObjects;
 
+    private void Start()
+    {
+        orginialPosition = this.transform.position;
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("Clicked");
         if(!placed)
         {
-            orginialPosition = this.transform.position;
             pressed = true;
             StartCoroutine(FollowCursor());
         }
@@ -29,19 +32,20 @@ public class Star : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        pressed= false;
+        pressed = false;
         hoverObjects = eventData.hovered;
     }
 
 
     private IEnumerator FollowCursor()
     {
-        yield return null;
-        this.transform.position = starPuzzle.inputPositionVector;
-        if(!pressed)
+        while(pressed)
         {
-            CheckForStar();
+            yield return null;
+            this.transform.position = starPuzzle.inputPositionVector;
         }
+        CheckForStar(); 
+
     }
     private void CheckForStar()
     {
@@ -61,11 +65,20 @@ public class Star : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private void PlaceStar(GameObject Object)
     {
         this.transform.position = Object.transform.position;
-        starPuzzle.StarFinished++; placed= true;
+        starPuzzle.StarFinished++; 
+        placed= true;
     }
 
     private void ReturnStar()
     {
         this.transform.position = orginialPosition;
+    }
+
+    private void Update()
+    {
+        if(starPuzzle.StarFinished ==0 && starPuzzle.inStarPuzzle)
+        {
+           this.transform.position = orginialPosition;
+        }
     }
 }
