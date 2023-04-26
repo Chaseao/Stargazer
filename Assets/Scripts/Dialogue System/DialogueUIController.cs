@@ -58,15 +58,8 @@ public class DialogueUIController : MonoBehaviour
 
     private void OnChoiceClicked(int index)
     {
-        if (index == currentChoice)
-        {
-            SelectChoice();
-        }
-        else
-        {
-            currentChoice = index;
-            choicesDisplay.SelectChoice(index);
-        }
+        currentChoice = index;
+        SelectChoice();
     }
 
     private void SelectChoice()

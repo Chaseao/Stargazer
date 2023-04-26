@@ -14,9 +14,9 @@ public class ChoicesDisplay : MonoBehaviour
     List<TextMeshProUGUI> choicesText = new List<TextMeshProUGUI>();
     List<RectTransform> choices = new List<RectTransform>();
 
-    Action<int> onSelect;
+    Action<int> OnClick;
 
-    public void Display(List<string> validChoices, Action<int> onSelect)
+    public void Display(List<string> validChoices, Action<int> OnClick)
     {
         foreach(var choiceOption in validChoices)
         {
@@ -26,17 +26,23 @@ public class ChoicesDisplay : MonoBehaviour
             textBox.color = Color.gray;
             var uiButton = instance.transform.GetComponent<SimpleButton>();
             uiButton.OnClick += UiButton_OnClick;
+            uiButton.OnSelect += UiButton_OnSelect;
             choicesText.Add(textBox);
             choices.Add(instance.GetComponent<RectTransform>());
         }
 
-        this.onSelect = onSelect;
+        this.OnClick = OnClick;
         if (choicesText.Count > 0) SelectChoice(0);
     }
 
     private void UiButton_OnClick(IButton obj)
     {
-        onSelect(choices.Select(x => x.GetComponent<IButton>()).ToList().IndexOf(obj));
+        OnClick(choices.Select(x => x.GetComponent<IButton>()).ToList().IndexOf(obj));
+    }
+
+    private void UiButton_OnSelect(IButton obj)
+    {
+        SelectChoice(choices.Select(x => x.GetComponent<IButton>()).ToList().IndexOf(obj));
     }
 
     public void SelectChoice(int index)
@@ -61,7 +67,8 @@ public class ChoicesDisplay : MonoBehaviour
         while(children >= 0)
         {
             var uiButton = transform.GetChild(children).transform.GetComponent<SimpleButton>();
-            uiButton.OnClick += UiButton_OnClick;
+            uiButton.OnSelect -= UiButton_OnClick;
+            uiButton.OnSelect -= UiButton_OnSelect;
             Destroy(transform.GetChild(children).gameObject);
             children--;
         }

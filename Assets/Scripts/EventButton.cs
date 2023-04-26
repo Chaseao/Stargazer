@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class EventButton : UIButton
 {
@@ -7,6 +8,6 @@ public class EventButton : UIButton
 
     public override void Use()
     {
-        if (isSelected) eventToTrigger?.Invoke();
+        eventToTrigger?.Invoke();
     }
 }

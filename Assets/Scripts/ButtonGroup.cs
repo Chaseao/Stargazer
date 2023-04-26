@@ -30,7 +30,7 @@ public class ButtonGroup : MonoBehaviour
     private void Awake()
     {
         buttons = GetComponentsInChildren<IButton>().ToList();
-        buttons.ForEach(button => button.OnClick += Button_OnClick);
+        buttons.ForEach(button => button.OnSelect += Button_OnClick);
     }
 
     private void Button_OnClick(IButton obj)
@@ -106,7 +106,7 @@ public class ButtonGroup : MonoBehaviour
 
     private void OnDestroy()
     {
-        buttons.ForEach(button => button.OnClick -= Button_OnClick);
+        buttons.ForEach(button => button.OnSelect -= Button_OnClick);
 
         Controller.OnNavigateMenu -= SwapButton;
         Controller.OnSelect -= ActivateButton;

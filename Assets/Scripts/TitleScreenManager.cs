@@ -6,14 +6,12 @@ using UnityEngine.InputSystem;
 public class TitleScreenManager : MonoBehaviour
 {
     [SerializeField] ButtonGroup menuButtons;
-    [SerializeField] AudioControls audioControls;
     [SerializeField] int firstLevelIndex;
 
     private void Start()
     {
         Controller.Instance.SwapToUI();
         menuButtons.EnableButtons();
-        audioControls.SetAudio(new int[] { 50 }, false) ;
     }
 
     public void StartGame()

@@ -1069,6 +1069,8 @@ MonoBehaviour:
   craftButton: {fileID: 447402042}
   resultsTable: {fileID: 155160129590696497}
   failedSprite: {fileID: 21300000, guid: 42dc50205a6ac834fa2583b8e7048521, type: 3}
+  itemSelectedOne: {fileID: 0}
+  itemSelectedTwo: {fileID: 0}
 --- !u!1001 &4833963726770913478
 PrefabInstance:
   m_ObjectHideFlags: 0
