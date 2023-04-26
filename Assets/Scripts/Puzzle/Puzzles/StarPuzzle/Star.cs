@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Star : MonoBehaviour, IPointerDownHandler
+public class Star : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     private bool pressed = false;
     private bool placed = false;
@@ -17,6 +17,7 @@ public class Star : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        Debug.Log("Clicked");
         if(!placed)
         {
             orginialPosition = this.transform.position;
