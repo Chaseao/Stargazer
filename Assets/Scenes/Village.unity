@@ -21892,27 +21892,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[0].dialogueOnFailure
-      value: BakerFail
+      value: AreYouSure-BakerFail
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[0].dialogueOnSuccess
-      value: BakerSuccess
+      value: AreYouSure-BakerSuccess
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[1].dialogueOnFailure
-      value: FarmerFail
+      value: AreYouSure-FarmerFail
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[1].dialogueOnSuccess
-      value: FarmerSuccess
+      value: AreYouSure-FarmerSuccess
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[2].dialogueOnFailure
-      value: AstronomerFail
+      value: AreYouSure-AstronomerFail
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[2].dialogueOnSuccess
-      value: AstronomerSuccess
+      value: AreYouSure-AstronomerSuccess
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241878, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: UICamera

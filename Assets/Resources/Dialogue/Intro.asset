@@ -20,12 +20,10 @@ MonoBehaviour:
     Dialogues:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 1
-      Dialogue: Every 100 years, the stars shower the Earth.
-    - PlayerIsSpeaker: 0
-      VoiceSpeaker: 1
-      Dialogue: While beautiful, this phenomenon is deadly. However, from that destruction,
-        a new magical landscape is born, flourishing despite its trauma and rebuilding
-        itself into something fantastical.
+      Dialogue: 'Every 100 years, the stars shower the Earth. astVoice: While beautiful,
+        this phenomenon is deadly. However, from that destruction, a new magical
+        landscape is born, flourishing despite its trauma and rebuilding itself into
+        something fantastical.'
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 1
       Dialogue: The village of Alora is built upon those remains.

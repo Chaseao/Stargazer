@@ -10,24 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: AstronomerCorrupted
+  m_Name: AstronomerInventory
   m_EditorClassIdentifier: 
   conversationData:
-    ID: AstronomerCorrupted
+    ID: AstronomerInventory
     Conversant: Pluto the Astronomer
-    Unlocks: PUZZLES
+    Unlocks: N/A
     Sound: N/A
     Dialogues:
     - PlayerIsSpeaker: 0
       VoiceSpeaker: 0
-      Dialogue: My chest is tight, my heart is beating too fast, and my whole body
-        is shaking. How unfortunate.
-    - PlayerIsSpeaker: 0
+      Dialogue: My chest hurts, my whole body feels weak, and I get this feeling
+        that there is a groundbreaking space discovery happening outside of this
+        daydream.
+    - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: "To make matters worse, the stars have descended and I can\u2019t
-        see them or study them. SIGH. A plight, indeed."
-    Choices: []
+      Dialogue: It is probable that I can be of assistance. OvO
+    Choices:
+    - Open inventory.
+    - Exit.
     LeadsTo:
+    - BranchText: Select Astronomer
+      isPuzzle: 1
+      Requirements: []
     - BranchText: Exit
       isPuzzle: 0
       Requirements: []
