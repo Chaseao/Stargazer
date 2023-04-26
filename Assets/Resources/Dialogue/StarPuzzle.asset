@@ -16,7 +16,7 @@ MonoBehaviour:
     ID: StarPuzzle
     Conversant: N/A
     Unlocks: N/A
-    Sound: N/A
+    Sound: Twinkle
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0

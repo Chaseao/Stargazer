@@ -108,7 +108,7 @@ public class DigPuzzle : MonoBehaviour
     private void CreateParticle()
     {
         var mousePos = Camera.main.ScreenToWorldPoint(inputPositionVector);
-        GameObject dirt = Instantiate(dirtParticles, new Vector3(mousePos.x, mousePos.y, 0f), Quaternion.identity) as GameObject;
+        GameObject dirt = Instantiate(dirtParticles, new Vector3(mousePos.x-15, mousePos.y, 0f), Quaternion.identity) as GameObject;
         dirt.transform.SetParent(puzzleUI.transform);
     }
 
