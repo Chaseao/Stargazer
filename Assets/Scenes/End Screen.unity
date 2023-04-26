@@ -507,7 +507,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 90}
+  m_AnchoredPosition: {x: 0, y: 15}
   m_SizeDelta: {x: 1300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1244151066
@@ -532,8 +532,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: To Be Continued...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2bfb69f7a97391847a7e7ebef87ab389, type: 2}
-  m_sharedMaterial: {fileID: -1094391697012299349, guid: 2bfb69f7a97391847a7e7ebef87ab389, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 18f6b85c1c96b4144b00c727d0e07ac3, type: 2}
+  m_sharedMaterial: {fileID: 5989421425098127615, guid: 18f6b85c1c96b4144b00c727d0e07ac3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -637,10 +637,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423033543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a612ffc99b6d6be41b107238ab5e6bff, type: 3}
+  m_Script: {fileID: 11500000, guid: dcfe34ec0caeb1b4aa02f0fe12f91441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startFullAplha: 1
+  startFullAplha: 0
   autoFadeOut: 1
 --- !u!223 &1423033545
 Canvas:

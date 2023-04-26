@@ -23,8 +23,8 @@ MonoBehaviour:
     - BranchText: ShoeCollected
       isPuzzle: 0
       Requirements:
-      - label: $shoe
-        isItemID: 0
+      - label: shoe
+        isItemID: 1
         consumesItem: 0
     - BranchText: ShoePuzzle
       isPuzzle: 0

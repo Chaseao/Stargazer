@@ -1,6 +1,7 @@
 ﻿using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public static class DialogueHelperClass
 {
@@ -15,7 +16,12 @@ public static class DialogueHelperClass
     public static readonly string SOUND_MARKER = "Music:";
     public static readonly string EMPTY_MARKER = "N/A";
     public static readonly string POTION_MADE_UNLOCK = "ITEMCRAFTED";
-    public static readonly string CONSUME_CONFIRMED = "CONSUMECONFIRMED";
+    public static readonly string SUCCESS = "SUCCESS";
+    public static readonly string FAILURE = "FAIL";
+    public static readonly List<string> PREFIXES = new List<string>() { "F", "B", "A" };
+
+    public static List<string> POTION_GIVEN_MARKERS => PREFIXES.Select(p => p + SUCCESS).Concat(PREFIXES.Select(p => p + FAILURE)).Select(p => p.ToLower()).ToList();
+
 
     [System.Serializable]
     public class DialogueData

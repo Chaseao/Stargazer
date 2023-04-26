@@ -16,6 +16,13 @@ public class TransistionSceneManager : MonoBehaviour
         yield return new WaitForSeconds(transitionLength);
 
         var nextScene = SceneTools.NextSceneExists ? SceneTools.NextSceneIndex : 0;
+        var p = FindObjectOfType<PuzzleSystem>();
+        if(p != null)
+        {
+            Destroy(p.gameObject);
+        }
+
         StartCoroutine(SceneTools.TransitionToScene(nextScene));
+
     }
 }

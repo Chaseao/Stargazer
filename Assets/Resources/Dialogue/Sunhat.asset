@@ -23,8 +23,8 @@ MonoBehaviour:
     - BranchText: SunhatCollected
       isPuzzle: 0
       Requirements:
-      - label: $sunhat
-        isItemID: 0
+      - label: sunhat
+        isItemID: 1
         consumesItem: 0
     - BranchText: SunhatPuzzle
       isPuzzle: 0

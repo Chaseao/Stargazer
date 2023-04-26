@@ -33,4 +33,9 @@ public class UpdateVictimSprite : SerializedMonoBehaviour
             }
         }
     }
+
+    void OnDestroy()
+    {
+        DialogueManager.OnDialogueEnded -= UpdateSprite;
+    }
 }

@@ -23,8 +23,8 @@ MonoBehaviour:
     - BranchText: ChildDrawingCollected
       isPuzzle: 0
       Requirements:
-      - label: $childdrawing
-        isItemID: 0
+      - label: childdrawing
+        isItemID: 1
         consumesItem: 0
     - BranchText: ChildDrawingPuzzle
       isPuzzle: 0

@@ -20,9 +20,8 @@ MonoBehaviour:
     Dialogues:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
-      Dialogue: A got a lil lavender friend to help my spiraling brain from thinking
-        about the inevitable misfortunes of the world and all the sadness I have
-        built up inside. :3
+      Dialogue: A got a lil sunhat to help protect my robot guts from the bright,
+        hot, deadly sun. :3
     Choices: []
     LeadsTo:
     - BranchText: Exit

@@ -23,8 +23,8 @@ MonoBehaviour:
     - BranchText: LavenderCollected
       isPuzzle: 0
       Requirements:
-      - label: $lavender
-        isItemID: 0
+      - label: lavender
+        isItemID: 1
         consumesItem: 0
     - BranchText: LavenderPuzzle
       isPuzzle: 0

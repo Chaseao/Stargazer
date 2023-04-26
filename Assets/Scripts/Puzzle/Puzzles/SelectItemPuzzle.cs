@@ -1,6 +1,7 @@
 ﻿using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static InventoryHelper;
 using static PuzzleHelper;
@@ -8,6 +9,7 @@ using static PuzzleHelper;
 public class SelectItemPuzzle : SerializedMonoBehaviour
 {
     [SerializeField] List<SelectPuzzleData> validSelections;
+    [SerializeField, ReadOnly] List<string> keysForSuccessOrFail;
     [SerializeField] GameObject display;
     [SerializeField] SlotHandlerBase slotHandler;
     [SerializeField] UIButton cancelButton;
@@ -19,6 +21,7 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
 
     private void Start()
     {
+        keysForSuccessOrFail = DialogueHelperClass.POTION_GIVEN_MARKERS;
         ShowScreen();
         HideScreen();
     }
@@ -34,7 +37,7 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
     {
         ShowScreen();
         Controller.OnCancel += CancelScreen;
-        cancelButton.OnSelect += Button_OnClick;
+        cancelButton.OnClick += Button_OnClick;
         slotHandler.Open();
     }
 
@@ -64,11 +67,21 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
     private void SelectionConfirmationListnerTrigger()
     {
         DialogueManager.OnDialogueEnded -= SelectionConfirmationListnerTrigger;
-        if (DialogueManager.Instance.DialogueUnlocks.Contains(DialogueHelperClass.CONSUME_CONFIRMED) && itemToConsume != null)
+        string found = "";
+        foreach (var key in keysForSuccessOrFail)
         {
-            DialogueManager.Instance.DialogueUnlocks.Remove(DialogueHelperClass.CONSUME_CONFIRMED);
+            if (DialogueManager.Instance.DialogueUnlocks.Contains(key.ToLowerInvariant()) && itemToConsume != null)
+            {
+                found = key;
+                break;
+            }
+        }
+
+        if (found != "")
+        {
             InventoryManager.Instance.Inventory.Remove(ItemToConsume);
             itemToConsume = null;
+            keysForSuccessOrFail.Remove(found);
         }
     }
 
@@ -76,7 +89,7 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
     {
         HideScreen();
         Controller.OnCancel -= CancelScreen;
-        cancelButton.OnSelect -= Button_OnClick;
+        cancelButton.OnClick -= Button_OnClick;
         slotHandler.Close();
     }
 

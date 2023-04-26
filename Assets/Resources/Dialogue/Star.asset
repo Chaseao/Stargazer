@@ -23,8 +23,8 @@ MonoBehaviour:
     - BranchText: StarCollected
       isPuzzle: 0
       Requirements:
-      - label: $star
-        isItemID: 0
+      - label: star
+        isItemID: 1
         consumesItem: 0
     - BranchText: StarPuzzle
       isPuzzle: 0

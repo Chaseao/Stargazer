@@ -23,8 +23,8 @@ MonoBehaviour:
     - BranchText: HibiscusCollected
       isPuzzle: 0
       Requirements:
-      - label: $hibiscus
-        isItemID: 0
+      - label: hibiscus
+        isItemID: 1
         consumesItem: 0
     - BranchText: HibiscusPuzzle
       isPuzzle: 0

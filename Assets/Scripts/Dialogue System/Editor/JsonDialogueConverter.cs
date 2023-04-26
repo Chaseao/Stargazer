@@ -136,12 +136,12 @@ public static class JsonDialogueConverter
             var requirment = new RequirementData();
             int offset = 0;
 
-            if (branchLines[i][0] == '*')
+            if (branchLines[i][0] == '$')
             {
                 offset++;
                 requirment.isItemID = true;
             }
-            if (branchLines[i][0] == '*')
+            if (branchLines[i].Length > 1 && branchLines[i][1] == '$')
             {
                 offset++;
                 requirment.consumesItem = true;

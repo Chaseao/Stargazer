@@ -23,8 +23,8 @@ MonoBehaviour:
     - BranchText: FlourCollected
       isPuzzle: 0
       Requirements:
-      - label: $flour
-        isItemID: 0
+      - label: flour
+        isItemID: 1
         consumesItem: 0
     - BranchText: FlourPuzzle
       isPuzzle: 0

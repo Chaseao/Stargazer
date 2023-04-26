@@ -27,6 +27,10 @@ MonoBehaviour:
     - PlayerIsSpeaker: 1
       VoiceSpeaker: 0
       Dialogue: alsodestroyedthisentirevillage :3
+    - PlayerIsSpeaker: 1
+      VoiceSpeaker: 0
+      Dialogue: BUT, this star would actually be an excellent object of human scientific
+        research. :O
     Choices: []
     LeadsTo:
     - BranchText: Exit
