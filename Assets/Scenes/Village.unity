@@ -13082,7 +13082,7 @@ PrefabInstance:
       objectReference: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
-      value: 18
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[0]
@@ -13094,7 +13094,7 @@ PrefabInstance:
         Assembly-CSharp","spriteAnimator":$eref:1,"Condition":"IsCured","hasOccured":false}},{"$k":"FFAIL","$v":{"$id":5,"$type":"UpdateVictimSprite+SpriteData,
         Assembly-CSharp","spriteAnimator":$eref:1,"Condition":"IsDead","hasOccured":false}},{"$k":"AFAIL","$v":{"$id":6,"$type":"UpdateVictimSprite+SpriteData,
         Assembly-CSharp","spriteAnimator":$eref:2,"Condition":"IsDead","hasOccured":false}},{"$k":"ASUCCESS","$v":{"$id":7,"$type":"UpdateVictimSprite+SpriteData,
-        Assembly-CSharp","spriteAnimator":$eref:2,"Condition":"isCured","hasOccured":false}}]}'
+        Assembly-CSharp","spriteAnimator":$eref:2,"Condition":"IsCured","hasOccured":false}}]}'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[1]
@@ -13118,12 +13118,12 @@ PrefabInstance:
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[5]
       value: '"path":"spriteData.{\"ASUCCESS\"}","value":{"$id":0,"$type":"UpdateVictimSprite+SpriteData,
-        Assembly-CSharp","spriteAnimator":$eref:2,"Condition":"isCured","hasOccured":false}'
+        Assembly-CSharp","spriteAnimator":$eref:2,"Condition":"IsCured","hasOccured":false}'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[6]
       value: '"path":"spriteData.{\"ASUCCESS\"}.Condition","value":{"$id":0,"$type":"System.String,
-        mscorlib","isCured"}'
+        mscorlib","IsCured"}'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[7]
@@ -13176,6 +13176,39 @@ PrefabInstance:
       propertyPath: serializationData.PrefabModifications.Array.data[17]
       value: '"path":"spriteData.{\"FFAIL\"}","value":{"$id":0,"$type":"UpdateVictimSprite+SpriteData,
         Assembly-CSharp","spriteAnimator":$eref:1,"Condition":"IsDead","hasOccured":false}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[18]
+      value: '"path":"spriteData.{\"FFAIL\"}.Condition","value":{"$id":0,"$type":"System.String,
+        mscorlib","IsDead"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[19]
+      value: '"path":"spriteData.{\"FFAIL\"}.hasOccured","value":{"$id":0,"$type":"System.Boolean,
+        mscorlib",false}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[20]
+      value: '"path":"spriteData.{\"FFAIL\"}.spriteAnimator","value":$eref:1'
+      objectReference: {fileID: 0}
+    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[21]
+      value: '"path":"spriteData.{\"FSUCCESS\"}","value":{"$id":0,"$type":"UpdateVictimSprite+SpriteData,
+        Assembly-CSharp","spriteAnimator":$eref:1,"Condition":"IsCured","hasOccured":false}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[22]
+      value: '"path":"spriteData.{\"FSUCCESS\"}.Condition","value":{"$id":0,"$type":"System.String,
+        mscorlib","IsCured"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[23]
+      value: '"path":"spriteData.{\"FSUCCESS\"}.hasOccured","value":{"$id":0,"$type":"System.Boolean,
+        mscorlib",false}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[24]
+      value: '"path":"spriteData.{\"FSUCCESS\"}.spriteAnimator","value":$eref:1'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
@@ -22661,7 +22694,7 @@ PrefabInstance:
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: serializationData.Prefab
       value: 
-      objectReference: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.size
       value: 3
@@ -22716,7 +22749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[2].desiredItem
-      value: antidote_g
+      value: antidote_t
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[1].dialogueOnCancel
@@ -24269,6 +24302,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 7f2f1199f2b8a0442a0fa952d8bcf458, type: 3}
     - {fileID: 21300000, guid: 4b8d1e1ae960a4a40bad8ae9bb3fe104, type: 3}
     - {fileID: 21300000, guid: 82c916b40b9ff1a41a414657328a89c1, type: 3}
+    - {fileID: 21300000, guid: 79d5eb6d16d12b44297968a694cad20e, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -24287,7 +24321,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 16
+      Data: 20
     - Name: 
       Entry: 7
       Data: 
@@ -24578,7 +24612,7 @@ MonoBehaviour:
       Data: 21|InventoryHelper+ItemData, Assembly-CSharp
     - Name: name
       Entry: 1
-      Data: antidote_j
+      Data: antidote_k
     - Name: itemImage
       Entry: 10
       Data: 9
@@ -24762,6 +24796,126 @@ MonoBehaviour:
     - Name: itemImage
       Entry: 10
       Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 34|InventoryHelper+ItemPair, Assembly-CSharp
+    - Name: itemOne
+      Entry: 1
+      Data: star
+    - Name: itemTwo
+      Entry: 1
+      Data: ginkgo
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 35|InventoryHelper+ItemData, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: antidote_q
+    - Name: itemImage
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 36|InventoryHelper+ItemPair, Assembly-CSharp
+    - Name: itemOne
+      Entry: 1
+      Data: star
+    - Name: itemTwo
+      Entry: 1
+      Data: lavender
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 37|InventoryHelper+ItemData, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: antidote_r
+    - Name: itemImage
+      Entry: 10
+      Data: 13
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 38|InventoryHelper+ItemPair, Assembly-CSharp
+    - Name: itemOne
+      Entry: 1
+      Data: star
+    - Name: itemTwo
+      Entry: 1
+      Data: cinnamon
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 39|InventoryHelper+ItemData, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: antidote_s
+    - Name: itemImage
+      Entry: 10
+      Data: 16
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 40|InventoryHelper+ItemPair, Assembly-CSharp
+    - Name: itemOne
+      Entry: 1
+      Data: star
+    - Name: itemTwo
+      Entry: 1
+      Data: hibiscus
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 41|InventoryHelper+ItemData, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: antidote_t
+    - Name: itemImage
+      Entry: 10
+      Data: 12
     - Name: 
       Entry: 8
       Data: 
