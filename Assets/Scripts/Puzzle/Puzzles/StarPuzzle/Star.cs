@@ -80,5 +80,10 @@ public class Star : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         {
            this.transform.position = orginialPosition;
         }
+        if(starPuzzle.StarFinished >= 7)
+        {
+            pressed = true;
+            placed = false;
+        }
     }
 }

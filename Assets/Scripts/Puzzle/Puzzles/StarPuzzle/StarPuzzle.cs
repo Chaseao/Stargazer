@@ -56,7 +56,7 @@ public class StarPuzzle : MonoBehaviour
 
     private void Update()
     {
-        if(StarFinished >=5 && inStarPuzzle)
+        if(StarFinished >=7 && inStarPuzzle)
         {
             inStarPuzzle = false;
             StartCoroutine(ResetPuzzle());
