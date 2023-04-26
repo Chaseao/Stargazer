@@ -3662,7 +3662,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386180879}
   m_LocalRotation: {x: -0, y: 1.13686824e-13, z: -0.70710695, w: 0.7071067}
-  m_LocalPosition: {x: -9.08, y: -13.18, z: -0}
+  m_LocalPosition: {x: -9, y: -13.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3710,7 +3710,7 @@ SpriteRenderer:
   m_SortingLayerID: 1862774573
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8fe1dc5e628369f40b5de9bc2a465147, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 690fd468a3541b44caaade2387a2c669, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6111,6 +6111,7 @@ GameObject:
   - component: {fileID: 574017227}
   - component: {fileID: 574017228}
   - component: {fileID: 574017229}
+  - component: {fileID: 574017230}
   m_Layer: 0
   m_Name: Baker
   m_TagString: Item
@@ -6215,6 +6216,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!95 &574017230
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574017225}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c7b8376584b85e44481a8b91a65d7032, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &577208007 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
@@ -8465,7 +8486,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5aad3597734ae2f4396893287eddedd3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e55edb951335ad14b9283516add852ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11714,11 +11735,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.048582554, y: -1.9643749}
-  - {x: 4.0746913, y: -4.4001355}
+  - {x: 0.034363158, y: -1.8952533}
+  - {x: 4.060737, y: -4.499781}
   - {x: 4.069303, y: -4.12317}
   - {x: 4.3741407, y: -4.078795}
-  - {x: 4.3232555, y: -4.4943047}
+  - {x: 4.3372097, y: -4.5361648}
   - {x: 8.709971, y: -1.8371075}
   - {x: 4.413738, y: 0.77446306}
   - {x: 4.535395, y: 0.32144895}
@@ -11727,13 +11748,13 @@ EdgeCollider2D:
   - {x: 2.8211956, y: -0.17570344}
   - {x: 3.0847685, y: -0.55281895}
   - {x: 2.7192655, y: -0.7029927}
-  - {x: 2.3916385, y: -0.177689}
+  - {x: 2.5172193, y: -0.2055956}
   - {x: 2.6054778, y: 0.043630317}
   - {x: 2.7796636, y: 0.017820328}
   - {x: 4.1379805, y: 0.7649188}
   - {x: 4.1488504, y: 1.5033964}
   - {x: 4.467416, y: 1.4037387}
-  - {x: 4.418923, y: 1.0948989}
+  - {x: 4.4049687, y: 1.0390855}
   - {x: 8.630693, y: -1.4813695}
   - {x: 8.852438, y: -1.3024851}
   - {x: 9.057461, y: -1.4347773}
@@ -11741,24 +11762,25 @@ EdgeCollider2D:
   - {x: 9.136443, y: -2.3795626}
   - {x: 8.753878, y: -2.468954}
   - {x: 8.714456, y: -2.0774086}
-  - {x: 4.372389, y: -4.706139}
+  - {x: 6.6835413, y: -3.3807077}
+  - {x: 4.386343, y: -4.761953}
   - {x: 4.4138794, y: -4.9876375}
   - {x: 4.2732778, y: -5.142705}
   - {x: 4.0458417, y: -5.053034}
-  - {x: 4.087494, y: -4.636109}
-  - {x: -0.4094274, y: -2.0292664}
-  - {x: -0.19965965, y: -2.3945374}
-  - {x: -0.50335044, y: -2.514917}
-  - {x: -1.0048699, y: -1.5046945}
-  - {x: -0.6757105, y: -1.2977842}
-  - {x: -0.39180475, y: -1.8703808}
-  - {x: 1.1267283, y: -0.9820852}
-  - {x: 1.2540941, y: -0.74376756}
-  - {x: 1.4860487, y: -0.7739154}
-  - {x: 1.5152596, y: -1.4450892}
-  - {x: 1.1892546, y: -1.430724}
-  - {x: 1.1702192, y: -1.2518581}
-  - {x: -0.08495498, y: -1.9519423}
+  - {x: 4.0735397, y: -4.761689}
+  - {x: -0.23335248, y: -2.0041125}
+  - {x: 0.0015684068, y: -2.3693836}
+  - {x: -0.37758368, y: -2.4897633}
+  - {x: -0.7030275, y: -1.3789264}
+  - {x: -0.37386796, y: -1.2474768}
+  - {x: -0.24088308, y: -1.7949198}
+  - {x: 1.2662623, y: -1.051852}
+  - {x: 1.3796741, y: -0.85539424}
+  - {x: 1.6116287, y: -0.81577533}
+  - {x: 1.6547925, y: -1.4311355}
+  - {x: 1.2869282, y: -1.4865373}
+  - {x: 1.3237054, y: -1.2518579}
+  - {x: 0.052142188, y: -1.8438427}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -11776,7 +11798,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -4.284942, y: 0.272058}
+  m_Offset: {x: -4.2267685, y: 0.10040536}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11787,7 +11809,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.45405674, y: 0.48835313}
+  m_Size: {x: 0.68674946, y: 0.6862254}
   m_EdgeRadius: 0
 --- !u!61 &1060980002
 BoxCollider2D:
@@ -11802,7 +11824,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -7.005501, y: 3.1966858}
+  m_Offset: {x: -7.041859, y: 2.8286982}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11813,7 +11835,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.45400667, y: 0.6243839}
+  m_Size: {x: 0.7012415, y: 0.60410595}
   m_EdgeRadius: 0
 --- !u!212 &1060980003
 SpriteRenderer:
@@ -12841,111 +12863,99 @@ PrefabInstance:
       value: '"path":"spriteData","value":{"$id":0,"$type":"System.Collections.Generic.Dictionary`2[[System.String,
         mscorlib],[UpdateVictimSprite+SpriteData, Assembly-CSharp]], mscorlib","comparer":{"$id":1,"$type":"System.Collections.Generic.GenericEqualityComparer`1[[System.String,
         mscorlib]], mscorlib"},"$rlength":4,"$rcontent":[{"$k":"BSUCCESS","$v":{"$id":2,"$type":"UpdateVictimSprite+SpriteData,
-        Assembly-CSharp","spriteRenderer":$eref:0,"sprite":$eref:1,"hasOccured":false}},{"$k":"BFAIL","$v":{"$id":3,"$type":"UpdateVictimSprite+SpriteData,
-        Assembly-CSharp","spriteRenderer":$eref:0,"sprite":$eref:2,"hasOccured":false}},{"$k":"FSUCCESS","$v":{"$id":4,"$type":"UpdateVictimSprite+SpriteData,
-        Assembly-CSharp","spriteRenderer":$eref:3,"sprite":$eref:4,"hasOccured":false}},{"$k":"FFAIL","$v":{"$id":5,"$type":"UpdateVictimSprite+SpriteData,
-        Assembly-CSharp","spriteRenderer":$eref:3,"sprite":$eref:5,"hasOccured":false}}]}'
+        Assembly-CSharp","spriteAnimator":$eref:0,"Condition":"IsCured","hasOccured":false}},{"$k":"BFAIL","$v":{"$id":3,"$type":"UpdateVictimSprite+SpriteData,
+        Assembly-CSharp","spriteAnimator":$eref:0,"Condition":"IsDead","hasOccured":false}},{"$k":"FSUCCESS","$v":{"$id":4,"$type":"UpdateVictimSprite+SpriteData,
+        Assembly-CSharp","spriteAnimator":$eref:1,"Condition":"IsCured","hasOccured":false}},{"$k":"FFAIL","$v":{"$id":5,"$type":"UpdateVictimSprite+SpriteData,
+        Assembly-CSharp","spriteAnimator":$eref:1,"Condition":"IsDead","hasOccured":false}}]}'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[1]
       value: '"path":"spriteData.{\"BFAIL\"}","value":{"$id":0,"$type":"UpdateVictimSprite+SpriteData,
-        Assembly-CSharp","spriteRenderer":$eref:0,"sprite":$eref:2,"hasOccured":false}'
+        Assembly-CSharp","spriteAnimator":$eref:0,"Condition":"IsDead","hasOccured":false}'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[2]
+      value: '"path":"spriteData.{\"BFAIL\"}.Condition","value":{"$id":0,"$type":"System.String,
+        mscorlib","IsDead"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[3]
       value: '"path":"spriteData.{\"BFAIL\"}.hasOccured","value":{"$id":0,"$type":"System.Boolean,
         mscorlib",false}'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[3]
-      value: '"path":"spriteData.{\"BFAIL\"}.sprite","value":$eref:2'
-      objectReference: {fileID: 0}
-    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[4]
-      value: '"path":"spriteData.{\"BFAIL\"}.spriteRenderer","value":$eref:0'
+      value: '"path":"spriteData.{\"BFAIL\"}.spriteAnimator","value":$eref:0'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[5]
       value: '"path":"spriteData.{\"BSUCCESS\"}","value":{"$id":0,"$type":"UpdateVictimSprite+SpriteData,
-        Assembly-CSharp","spriteRenderer":$eref:0,"sprite":$eref:1,"hasOccured":false}'
+        Assembly-CSharp","spriteAnimator":$eref:0,"Condition":"IsCured","hasOccured":false}'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[6]
+      value: '"path":"spriteData.{\"BSUCCESS\"}.Condition","value":{"$id":0,"$type":"System.String,
+        mscorlib","IsCured"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[7]
       value: '"path":"spriteData.{\"BSUCCESS\"}.hasOccured","value":{"$id":0,"$type":"System.Boolean,
         mscorlib",false}'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[7]
-      value: '"path":"spriteData.{\"BSUCCESS\"}.sprite","value":$eref:1'
-      objectReference: {fileID: 0}
-    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[8]
-      value: '"path":"spriteData.{\"BSUCCESS\"}.spriteRenderer","value":$eref:0'
+      value: '"path":"spriteData.{\"BSUCCESS\"}.spriteAnimator","value":$eref:0'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[9]
       value: '"path":"spriteData.{\"FFAIL\"}","value":{"$id":0,"$type":"UpdateVictimSprite+SpriteData,
-        Assembly-CSharp","spriteRenderer":$eref:3,"sprite":$eref:5,"hasOccured":false}'
+        Assembly-CSharp","spriteAnimator":$eref:1,"Condition":"IsDead","hasOccured":false}'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[10]
+      value: '"path":"spriteData.{\"FFAIL\"}.Condition","value":{"$id":0,"$type":"System.String,
+        mscorlib","IsDead"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[11]
       value: '"path":"spriteData.{\"FFAIL\"}.hasOccured","value":{"$id":0,"$type":"System.Boolean,
         mscorlib",false}'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[11]
-      value: '"path":"spriteData.{\"FFAIL\"}.sprite","value":$eref:5'
-      objectReference: {fileID: 0}
-    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[12]
-      value: '"path":"spriteData.{\"FFAIL\"}.spriteRenderer","value":$eref:3'
+      value: '"path":"spriteData.{\"FFAIL\"}.spriteAnimator","value":$eref:1'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[13]
       value: '"path":"spriteData.{\"FSUCCESS\"}","value":{"$id":0,"$type":"UpdateVictimSprite+SpriteData,
-        Assembly-CSharp","spriteRenderer":$eref:3,"sprite":$eref:4,"hasOccured":false}'
+        Assembly-CSharp","spriteAnimator":$eref:1,"Condition":"IsCured","hasOccured":false}'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[14]
+      value: '"path":"spriteData.{\"FSUCCESS\"}.Condition","value":{"$id":0,"$type":"System.String,
+        mscorlib","IsCured"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[15]
       value: '"path":"spriteData.{\"FSUCCESS\"}.hasOccured","value":{"$id":0,"$type":"System.Boolean,
         mscorlib",false}'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[15]
-      value: '"path":"spriteData.{\"FSUCCESS\"}.sprite","value":$eref:4'
-      objectReference: {fileID: 0}
-    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[16]
-      value: '"path":"spriteData.{\"FSUCCESS\"}.spriteRenderer","value":$eref:3'
+      value: '"path":"spriteData.{\"FSUCCESS\"}.spriteAnimator","value":$eref:1'
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 574017227}
+      objectReference: {fileID: 574017230}
     - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 3ace8de17850b5a46948e8fa67fd5c2a, type: 3}
-    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: 80956df715db36e4980b0dd12e0846bc, type: 3}
-    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[3]
-      value: 
-      objectReference: {fileID: 1316425942}
-    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: ca4ef388e1d55b543867c42e85bbed35, type: 3}
-    - target: {fileID: 66288651120792009, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[5]
-      value: 
-      objectReference: {fileID: 21300000, guid: 365b92323fde5c4439e689c820032c9f, type: 3}
+      objectReference: {fileID: 1316425943}
     - target: {fileID: 4265234315050445953, guid: 323a2433bb8a08d4099b96fbb399b5cb, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -13204,6 +13214,7 @@ GameObject:
   - component: {fileID: 1170884522}
   - component: {fileID: 1170884521}
   - component: {fileID: 1170884520}
+  - component: {fileID: 1170884523}
   m_Layer: 0
   m_Name: 'Poppy '
   m_TagString: Item
@@ -13297,7 +13308,7 @@ SpriteRenderer:
   m_SortingLayerID: 1862774573
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ac80ed008dd5546438b9d869c66e2246, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9651e3fc2b39e0941a8dcc7c39d3d87f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -13308,6 +13319,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1170884523
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170884518}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c094a14bd29f2f47815ae9dff7449a7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &1180210987 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3708360557860375538, guid: d7dafd0e8cc68bd46b51e4f503713b05, type: 3}
@@ -14668,6 +14699,7 @@ GameObject:
   - component: {fileID: 1316425942}
   - component: {fileID: 1316425941}
   - component: {fileID: 1316425940}
+  - component: {fileID: 1316425943}
   m_Layer: 0
   m_Name: Farmer
   m_TagString: Item
@@ -14683,7 +14715,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316425938}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.62, y: 5.33, z: -0.5}
+  m_LocalPosition: {x: 8.35, y: 5.76, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14761,7 +14793,7 @@ SpriteRenderer:
   m_SortingLayerID: 1862774573
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5f8799ea2e6702c4ca160a6fffdb71cf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cadc8578420b6794c8e0108010167714, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14772,6 +14804,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1316425943
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316425938}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d340779f27f345d4194280d442584885, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1326305494
 GameObject:
   m_ObjectHideFlags: 0
@@ -15429,6 +15481,7 @@ GameObject:
   - component: {fileID: 1387862705}
   - component: {fileID: 1387862704}
   - component: {fileID: 1387862706}
+  - component: {fileID: 1387862707}
   m_Layer: 0
   m_Name: Pumpernickel
   m_TagString: Item
@@ -15506,7 +15559,7 @@ SpriteRenderer:
   m_SortingLayerID: 1862774573
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0e712584a2f67f24783e8a1fe85e4196, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b20a0ee3d4d5dbe45bfcabed1f416804, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15533,6 +15586,26 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.7, y: 1.51}
   m_Direction: 0
+--- !u!95 &1387862707
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387862701}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e6cc6cbe7459c3f46aff27ed53391f2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1397032455
 GameObject:
   m_ObjectHideFlags: 0
@@ -16249,6 +16322,7 @@ GameObject:
   - component: {fileID: 1510095525}
   - component: {fileID: 1510095524}
   - component: {fileID: 1510095523}
+  - component: {fileID: 1510095526}
   m_Layer: 0
   m_Name: ChildHibiscus
   m_TagString: Item
@@ -16353,6 +16427,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1510095526
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510095521}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 691154ed365e4334a835161435835539, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1512126072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21670,7 +21764,7 @@ PrefabInstance:
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: serializationData.Prefab
       value: 
-      objectReference: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.size
       value: 2
@@ -21685,7 +21779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[0].desiredItem
-      value: antidote_d
+      value: antidote_b
       objectReference: {fileID: 0}
     - target: {fileID: 1040369300490241876, guid: ff4902ce83793de41b741918efacfff8, type: 3}
       propertyPath: validSelections.Array.data[1].desiredItem
@@ -21993,6 +22087,7 @@ GameObject:
   - component: {fileID: 2025334112}
   - component: {fileID: 2025334111}
   - component: {fileID: 2025334110}
+  - component: {fileID: 2025334113}
   m_Layer: 0
   m_Name: ChildDrawing
   m_TagString: Item
@@ -22086,7 +22181,7 @@ SpriteRenderer:
   m_SortingLayerID: 1862774573
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 20eb19486e7e85148a4e9da5fb5d6f2e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 393adb31c5528784a83866a140faa47c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -22097,6 +22192,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2025334113
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025334108}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f7eaf6fb851b4ec4b990222654ad672e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2026338214
 GameObject:
   m_ObjectHideFlags: 0

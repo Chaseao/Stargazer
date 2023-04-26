@@ -10,8 +10,8 @@ public class UpdateVictimSprite : SerializedMonoBehaviour
     [System.Serializable]
     private class SpriteData
     {
-        public SpriteRenderer spriteRenderer;
-        public Sprite sprite;
+        public Animator spriteAnimator;
+        public string Condition;
         public bool hasOccured;
     }
 
@@ -28,7 +28,7 @@ public class UpdateVictimSprite : SerializedMonoBehaviour
         {
             if(DialogueManager.Instance.DialogueUnlocks.Contains(key.Key.ToLower()) && !key.Value.hasOccured)
             {
-                key.Value.spriteRenderer.sprite = key.Value.sprite;
+                key.Value.spriteAnimator.SetBool(key.Value.Condition, true);
                 key.Value.hasOccured = true;
             }
         }
