@@ -31,7 +31,7 @@ public class SelectionPuzzleSlotHandler : SlotHandlerBase
             return;
         }
 
-        Inventory.Remove(itemSelected);
+        itemPuzzle.ItemToConsume = itemSelected;
         itemPuzzle.SelectItem(itemSelected.name);
         Close();
     }

@@ -15,6 +15,7 @@ public static class DialogueHelperClass
     public static readonly string SOUND_MARKER = "Music:";
     public static readonly string EMPTY_MARKER = "N/A";
     public static readonly string POTION_MADE_UNLOCK = "ITEMCRAFTED";
+    public static readonly string CONSUME_CONFIRMED = "CONSUMECONFIRMED";
 
     [System.Serializable]
     public class DialogueData

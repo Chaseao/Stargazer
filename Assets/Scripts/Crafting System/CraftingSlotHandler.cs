@@ -45,7 +45,6 @@ public class CraftingSlotHandler : SlotHandlerBase
             return;
         }
 
-        results.SetSprite(result.itemImage);
         InventoryManager.Instance.GainItem(result);
         InventoryManager.Instance.DiscardItem(firstItem.Item);
         InventoryManager.Instance.DiscardItem(secondItem.Item);
@@ -53,6 +52,7 @@ public class CraftingSlotHandler : SlotHandlerBase
 
         Close();
         Open();
+        results.SetSprite(result.itemImage);
     }
 
     public void ClearSlot(Slot slot)
@@ -81,6 +81,7 @@ public class CraftingSlotHandler : SlotHandlerBase
     {
         ClearSlot(Slot.one);
         ClearSlot(Slot.two);
+        results.SetSprite(null);
     }
 
     protected override void Handle_Click(IButton button)

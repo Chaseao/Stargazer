@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static InventoryHelper;
 using static PuzzleHelper;
 
 public class SelectItemPuzzle : SerializedMonoBehaviour
@@ -12,6 +13,9 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
     [SerializeField] UIButton cancelButton;
 
     SelectPuzzleData currentPuzzleData;
+    ItemData itemToConsume;
+
+    public ItemData ItemToConsume { get => itemToConsume; set => itemToConsume = value; }
 
     private void Start()
     {
@@ -52,8 +56,20 @@ public class SelectItemPuzzle : SerializedMonoBehaviour
         CloseScreen();
 
         string result = item.ToLowerInvariant() == currentPuzzleData.desiredItem.ToLowerInvariant() ? currentPuzzleData.dialogueOnSuccess : currentPuzzleData.dialogueOnFailure;
+        DialogueManager.OnDialogueEnded += SelectionConfirmationListnerTrigger;
         PuzzleSystem.Instance.SwapNextDialogueID(result);
         PuzzleSystem.Instance.ExitPuzzle();
+    }
+
+    private void SelectionConfirmationListnerTrigger()
+    {
+        DialogueManager.OnDialogueEnded -= SelectionConfirmationListnerTrigger;
+        if (DialogueManager.Instance.DialogueUnlocks.Contains(DialogueHelperClass.CONSUME_CONFIRMED) && itemToConsume != null)
+        {
+            DialogueManager.Instance.DialogueUnlocks.Remove(DialogueHelperClass.CONSUME_CONFIRMED);
+            InventoryManager.Instance.Inventory.Remove(ItemToConsume);
+            itemToConsume = null;
+        }
     }
 
     private void CloseScreen()
