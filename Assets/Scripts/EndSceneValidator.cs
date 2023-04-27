@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class EndSceneValidator : MonoBehaviour
 {
+
+    [SerializeField] private float timeBeforeExit;
+
     private void Start()
     {
         DialogueManager.OnDialogueEnded += CheckForEnding;
@@ -24,8 +27,14 @@ public class EndSceneValidator : MonoBehaviour
 
         if (totalFound >= keysToCheck.Count / 2)
         {
-            StartCoroutine(SceneTools.TransitionToScene(SceneTools.NextSceneIndex));
+            StartCoroutine(WaitForEnding());
         }
+    }
+
+    private IEnumerator WaitForEnding()
+    {
+        yield return new WaitForSecondsRealtime(timeBeforeExit);
+        StartCoroutine(SceneTools.TransitionToScene(SceneTools.NextSceneIndex));
     }
 
     private void OnDestroy()
