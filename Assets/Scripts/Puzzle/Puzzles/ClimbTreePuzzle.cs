@@ -132,7 +132,7 @@ public class ClimbTreePuzzle : MonoBehaviour
         puzzleUI.SetActive(false);
         puzzleMusic.Stop();
         backgroundMusic.Play();
-        player.transform.Translate(new Vector3(0, -50, 0));
+        player.transform.Translate(new Vector3(0, -climbRate * numOfClimbsNeeded, 0));
         bar.localPosition = Vector3.down * barHeight;
         goingUp = true;
         InventoryManager.Instance.GainItem(currentPuzzle.Item);
