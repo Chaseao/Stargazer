@@ -46,6 +46,6 @@ public class WaterTarget : MonoBehaviour
             transform.localPosition = Vector2.left * Screen.width;
         }
 
-        transform.position += direction * Time.deltaTime * smoothFunc.Evaluate((yPos - bottomY) / (topY - bottomY)); 
+        transform.position += smoothFunc.Evaluate((yPos - bottomY) / (topY - bottomY)) * Time.deltaTime * direction; 
     }
 }

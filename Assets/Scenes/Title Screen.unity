@@ -206,7 +206,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: aef4309c1c44fe84dacee3af660cdcf5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e25bd67d4d334c5499702ef5af4d67dc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
@@ -553,6 +553,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 493971778724417050, guid: b8e1547423b4b204db61cbe67e7c0f54, type: 3}
+      propertyPath: cursorOption
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b4cf265ee4ed1f4ca1a72ea6e63e3d8, type: 2}
+    - target: {fileID: 493971778724417050, guid: b8e1547423b4b204db61cbe67e7c0f54, type: 3}
       propertyPath: eventToTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 806788086}
@@ -584,6 +588,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 493971779266081030, guid: b8e1547423b4b204db61cbe67e7c0f54, type: 3}
+      propertyPath: cursorOption
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b4cf265ee4ed1f4ca1a72ea6e63e3d8, type: 2}
     - target: {fileID: 493971779266081030, guid: b8e1547423b4b204db61cbe67e7c0f54, type: 3}
       propertyPath: eventToTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

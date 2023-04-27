@@ -1118,7 +1118,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Terminate Program
+  m_text: 'Quit Program
 
 '
   m_isRightToLeft: 0

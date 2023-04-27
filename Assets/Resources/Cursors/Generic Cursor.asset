@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f556fccf9d11f7b47ab63aa2f9b3c5ef, type: 3}
+  m_Name: Generic Cursor
+  m_EditorClassIdentifier: 
+  defaultCursor: {fileID: 0}
+  hoverCursor: {fileID: 2800000, guid: 4c7dddea8379f4c49926fd4c65710885, type: 3}
