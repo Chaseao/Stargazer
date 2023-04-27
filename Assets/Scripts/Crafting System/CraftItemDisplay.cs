@@ -15,16 +15,19 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     private bool display;
     private static bool onlyDisplayOnce;
+    private bool second;
 
     private void Start()
     {
         onlyDisplayOnce = true;
+        second = false;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         hoverObjects = eventData.hovered;
-        if(onlyDisplayOnce)
+        second = true;
+        if(onlyDisplayOnce && second)
         {   
             onlyDisplayOnce = false;
             print(onlyDisplayOnce);
@@ -53,5 +56,6 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         itemDisplay.SetActive(false);
         onlyDisplayOnce = true;
+        second = false;
     }
 }
