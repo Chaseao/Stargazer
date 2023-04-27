@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: AstronomerSucceeded
-    Conversant: Pluto the Astronomer
+    Conversant: Pluto the Astronomer.
     Unlocks: N/A
     Sound: N/A
     Dialogues:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: BakerSuccess
-    Conversant: Rye the Baker
+    Conversant: Rye the Baker.
     Unlocks: BSUCCESS
     Sound: Life
     Dialogues:

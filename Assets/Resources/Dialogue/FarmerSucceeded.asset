@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: FarmerSucceeded
-    Conversant: Primrose the Flower Farmer
+    Conversant: Primrose the Flower Farmer.
     Unlocks: N/A
     Sound: N/A
     Dialogues:

@@ -17,6 +17,8 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
     private static bool onlyDisplayOnce;
     private bool second;
 
+    private bool lastWasExit;
+
     private void Start()
     {
         onlyDisplayOnce = true;
@@ -38,6 +40,7 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
                 {
                     itemDisplay.transform.position = Object.transform.position + new Vector3(0f, -50f, 0f);
                     itemDisplay.transform.GetComponentInChildren<TextMeshProUGUI>(true).text = Object.GetComponent<Image>().sprite.name;
+
                     StartCoroutine(Delay());
                 }
             }
@@ -47,13 +50,17 @@ public class CraftItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     private IEnumerator Delay()
     {
+        lastWasExit = false;
         yield return new WaitForSecondsRealtime(delayTime);
+        
+        if(!lastWasExit)
         itemDisplay.SetActive(true);
 
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        lastWasExit = true;
         itemDisplay.SetActive(false);
         onlyDisplayOnce = true;
         second = false;
